@@ -17,6 +17,8 @@ const BlogPage = () => {
 
   const username = useSelector((state) => state.userInfo.username);
 
+  console.log(BASE_URL);
+
   useEffect(() => {
     fetch(`${BASE_URL}/profile`, {
       credentials: "include",
