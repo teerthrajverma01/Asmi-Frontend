@@ -1,5 +1,5 @@
 // config.js
-const BASE_URL = process.env.VITE_APP_BASE_URL || "http://localhost:4001";
+const BASE_URL = process.env.VITE_APP_BASE_URL || "http://13.233.9.241:4001";
 
 console.log(BASE_URL);
 
