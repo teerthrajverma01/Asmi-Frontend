@@ -21,7 +21,7 @@ const BlogPage = () => {
     fetch(`${BASE_URL}/profile`, {
       credentials: "include",
       method: "GET",
-      mode: "cors",
+      mode: "no-cors",
       headers: {
         "Access-Control-Allow-Origin": "*",
       },
@@ -35,7 +35,7 @@ const BlogPage = () => {
   useEffect(() => {
     fetch(`http://13.233.9.241:4001/post`, {
       method: "GET",
-      mode: "cors",
+      mode: "no-cors",
       headers: {
         "Access-Control-Allow-Origin": "*",
       },
