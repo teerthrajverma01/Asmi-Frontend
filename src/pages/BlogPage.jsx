@@ -18,12 +18,7 @@ const BlogPage = () => {
   const username = useSelector((state) => state.userInfo.username);
 
   useEffect(() => {
-    fetch(`http://localhost:4001/profile`, {
-      method: "GET",
-      mode: "no-cors",
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-      },
+    fetch(`${BASE_URL}/profile`, {
       credentials: "include",
     }).then((response) => {
       response.json().then((userInfo) => {
@@ -33,20 +28,12 @@ const BlogPage = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    fetch(`http://localhost:4001/post`, {
-      method: "GET",
-      mode: "no-cors",
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-      },
-    })
-      .then((response) => response.json())
-      .then((posts) => {
+    fetch(`${BASE_URL}/post`).then((response) => {
+      response.json().then((posts) => {
+        console.log(posts);
         setPosts(posts);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
       });
+    });
   }, []);
 
   const logout = () => {
