@@ -1,4 +1,5 @@
 import React, { useState, Fragment } from "react";
+import BASE_URL from "../apis/Config";
 
 const PsychoIntern = () => {
   const [firstName, setFirstName] = useState("");

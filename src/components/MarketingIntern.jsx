@@ -1,4 +1,5 @@
 import { useState, Fragment } from "react";
+import BASE_URL from "../apis/Config";
 
 const MarketingIntern = () => {
   const [firstName, setFirstName] = useState("");
