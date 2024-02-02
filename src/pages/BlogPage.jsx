@@ -28,11 +28,17 @@ const BlogPage = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    fetch(`http://13.233.9.241:4001/post`).then((response) => {
-      response.json().then((posts) => {
+    fetch(`http://13.233.9.241:4001/post`, {
+      method: "GET",
+      mode: "cors", // Add this line
+    })
+      .then((response) => response.json())
+      .then((posts) => {
         setPosts(posts);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
       });
-    });
   }, []);
 
   const logout = () => {
