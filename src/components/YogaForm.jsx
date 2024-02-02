@@ -49,7 +49,7 @@ const YogaForm = () => {
     yogaData.append("spiritualGrowth", spiritualGrowth.toString());
 
     try {
-      const response = await fetch("http://localhost:4000/send-yoga", {
+      const response = await fetch("http://localhost:4001/send-yoga", {
         method: "POST",
 
         body: yogaData,

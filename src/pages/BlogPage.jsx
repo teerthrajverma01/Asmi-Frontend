@@ -17,23 +17,23 @@ const BlogPage = () => {
 
   const username = useSelector((state) => state.userInfo.username);
 
-  // useEffect(() => {
-  //   fetch(`${BASE_URL}/profile`, {
-  //     credentials: "include",
-  //     method: "GET",
-  //     mode: "no-cors",
-  //     headers: {
-  //       "Access-Control-Allow-Origin": "*",
-  //     },
-  //   }).then((response) => {
-  //     response.json().then((userInfo) => {
-  //       dispatch(setUserName(userInfo.username));
-  //     });
-  //   });
-  // }, [dispatch]);
+  useEffect(() => {
+    fetch(`http://localhost:4001/profile`, {
+      method: "GET",
+      mode: "no-cors",
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+      credentials: "include",
+    }).then((response) => {
+      response.json().then((userInfo) => {
+        dispatch(setUserName(userInfo.username));
+      });
+    });
+  }, [dispatch]);
 
   useEffect(() => {
-    fetch(`http://13.233.9.241:4001/post`, {
+    fetch(`http://localhost:4001/post`, {
       method: "GET",
       mode: "no-cors",
       headers: {
