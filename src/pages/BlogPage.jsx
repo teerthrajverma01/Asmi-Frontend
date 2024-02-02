@@ -31,6 +31,9 @@ const BlogPage = () => {
     fetch(`http://13.233.9.241:4001/post`, {
       method: "GET",
       mode: "no-cors",
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
     })
       .then((response) => response.json())
       .then((posts) => {
