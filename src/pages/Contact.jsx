@@ -14,11 +14,10 @@ const Contact = () => {
 
     if (recipient_email && message) {
       try {
-        const response = await fetch(`${BASE_URL}/send-email`, {
+        const response = await fetch("/api/send-email", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            // "Access-Control-Allow-Origin": "*",
           },
           body: JSON.stringify({
             recipient_email,
