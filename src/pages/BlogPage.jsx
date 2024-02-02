@@ -17,20 +17,20 @@ const BlogPage = () => {
 
   const username = useSelector((state) => state.userInfo.username);
 
-  useEffect(() => {
-    fetch(`${BASE_URL}/profile`, {
-      credentials: "include",
-      method: "GET",
-      mode: "no-cors",
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-      },
-    }).then((response) => {
-      response.json().then((userInfo) => {
-        dispatch(setUserName(userInfo.username));
-      });
-    });
-  }, [dispatch]);
+  // useEffect(() => {
+  //   fetch(`${BASE_URL}/profile`, {
+  //     credentials: "include",
+  //     method: "GET",
+  //     mode: "no-cors",
+  //     headers: {
+  //       "Access-Control-Allow-Origin": "*",
+  //     },
+  //   }).then((response) => {
+  //     response.json().then((userInfo) => {
+  //       dispatch(setUserName(userInfo.username));
+  //     });
+  //   });
+  // }, [dispatch]);
 
   useEffect(() => {
     fetch(`http://13.233.9.241:4001/post`, {

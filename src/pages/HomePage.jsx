@@ -407,6 +407,10 @@ const HomePage = () => {
                 Pay
               </button>
             </section> */}
+
+            <button>
+              <NavLink to={"/test"}>Test</NavLink>
+            </button>
           </div>
         </div>
       </div>

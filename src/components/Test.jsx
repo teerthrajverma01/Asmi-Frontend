@@ -2,7 +2,7 @@ import React from "react";
 
 const Test = () => {
   const testroute = async () => {
-    const res = await fetch("http://13.233.9.241:4001/post");
+    const res = await fetch("http://13.233.9.241:4001");
 
     console.log(res);
 
