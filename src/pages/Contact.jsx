@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 
 import image4 from "../assets/image/image4.png";
 import BASE_URL from "../apis/Config";
+import axios from "axios";
 
 const Contact = () => {
   const [userName, setUserName] = useState("");
@@ -15,10 +16,9 @@ const Contact = () => {
       try {
         const response = await fetch(`${BASE_URL}/send-email`, {
           method: "POST",
-          mode: "no-cors",
           headers: {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
+            // "Access-Control-Allow-Origin": "*",
           },
           body: JSON.stringify({
             recipient_email,
