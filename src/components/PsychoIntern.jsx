@@ -42,7 +42,7 @@ const PsychoIntern = () => {
     InternData.append("prevworkdet", prevworkdet);
 
     try {
-      const response = await fetch("http://localhost:4000/send-pIntern", {
+      const response = await fetch(`${BASE_URL}/send-pIntern`, {
         method: "POST",
 
         body: InternData,

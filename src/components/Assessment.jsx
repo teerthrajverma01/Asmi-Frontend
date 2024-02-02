@@ -141,7 +141,7 @@ const Assessment = () => {
     assesmentData.append("email", email);
 
     try {
-      const response = await fetch("http://localhost:4000/send-assesment", {
+      const response = await fetch(`${BASE_URL}/send-assesment`, {
         method: "POST",
 
         body: assesmentData,

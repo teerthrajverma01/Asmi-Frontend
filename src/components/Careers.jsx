@@ -56,7 +56,7 @@ const Careers = () => {
     console.log(careerData);
 
     try {
-      const response = await fetch("http://localhost:4000/send-career", {
+      const response = await fetch(`${BASE_URL}/send-career`, {
         method: "POST",
 
         body: careerData,

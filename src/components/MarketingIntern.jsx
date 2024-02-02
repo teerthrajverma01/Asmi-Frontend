@@ -48,7 +48,7 @@ const MarketingIntern = () => {
     InternData.append("dpw", dpw);
 
     try {
-      const response = await fetch("http://localhost:4000/send-mIntern", {
+      const response = await fetch(`${BASE_URL}/send-mIntern`, {
         method: "POST",
 
         body: InternData,
