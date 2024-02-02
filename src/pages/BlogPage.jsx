@@ -30,10 +30,7 @@ const BlogPage = () => {
   useEffect(() => {
     fetch(`http://13.233.9.241:4001/post`, {
       method: "GET",
-      mode: "cors",
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-      },
+      mode: "no-cors",
     })
       .then((response) => response.json())
       .then((posts) => {
