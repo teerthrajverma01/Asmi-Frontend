@@ -20,6 +20,11 @@ const BlogPage = () => {
   useEffect(() => {
     fetch(`${BASE_URL}/profile`, {
       credentials: "include",
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
     }).then((response) => {
       response.json().then((userInfo) => {
         dispatch(setUserName(userInfo.username));
@@ -30,7 +35,7 @@ const BlogPage = () => {
   useEffect(() => {
     fetch(`http://13.233.9.241:4001/post`, {
       method: "GET",
-      mode: "no-cors",
+      mode: "cors",
       headers: {
         "Access-Control-Allow-Origin": "*",
       },
