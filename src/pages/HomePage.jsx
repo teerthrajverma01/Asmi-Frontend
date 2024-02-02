@@ -31,7 +31,7 @@ const HomePage = () => {
   const text5 = " Still have questions?".split(" ");
   const text6 = "  Asmi App Key Features?".split(" ");
 
-  console.log("process.env in HomePage", process.env.VITE_APP_BASE_URL);
+  // console.log("process.env in HomePage", process.env.VITE_APP_BASE_URL);
 
   return (
     <div className="container px-[5%] mx-auto ">

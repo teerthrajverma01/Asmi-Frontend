@@ -17,8 +17,6 @@ const BlogPage = () => {
 
   const username = useSelector((state) => state.userInfo.username);
 
-  console.log(BASE_URL);
-
   useEffect(() => {
     fetch(`${BASE_URL}/profile`, {
       credentials: "include",
@@ -30,9 +28,8 @@ const BlogPage = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    fetch(`${BASE_URL}/post`).then((response) => {
+    fetch(`http://13.233.9.241:4001/post`).then((response) => {
       response.json().then((posts) => {
-        console.log(posts);
         setPosts(posts);
       });
     });
