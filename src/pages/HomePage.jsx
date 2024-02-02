@@ -300,7 +300,7 @@ const HomePage = () => {
                     <div className="flex mt-4 justify-center transition duration-300 ease-in-out  hover:translate-y-[-2px]">
                       <NavLink
                         className="p-3 font-semibold bg-white border border-solid rounded-md hover:bg-neutral-200 border-neutral-300 text-neutral-900 "
-                        to={"/contact-us"}
+                        to={"/yoga-form"}
                       >
                         Sign up
                       </NavLink>
