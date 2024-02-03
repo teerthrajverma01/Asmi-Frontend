@@ -18,7 +18,7 @@ COPY . .
 RUN npm run build
 
 # Serve with Nginx
-FROM nginx:1.23-alpine
+FROM nginx:stable-alpine
 WORKDIR /usr/share/nginx/html
 RUN rm -rf *
 COPY --from=build /app/dist .
