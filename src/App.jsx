@@ -16,6 +16,7 @@ import MarketingIntern from "./components/MarketingIntern";
 import Careers from "./components/Careers";
 import Test from "./components/Test";
 import YogaForm from "./components/YogaForm";
+import SingleBlogPage from "./pages/SingleBlogPage";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,7 @@ const router = createBrowserRouter([
       { path: "/careers", element: <Careers /> },
       { path: "/test", element: <Test /> },
       { path: "/yoga-form", element: <YogaForm /> },
+      { path: "/post/:id", element: <SingleBlogPage /> },
     ],
   },
 ]);
