@@ -1,4 +1,5 @@
 import React, { useState, Fragment } from "react";
+import BASE_URL from "../apis/Config";
 
 const YogaForm = () => {
   const [firstName, setFirstName] = useState("");
@@ -49,7 +50,7 @@ const YogaForm = () => {
     yogaData.append("spiritualGrowth", spiritualGrowth.toString());
 
     try {
-      const response = await fetch("http://13.233.9.241:4001/send-yoga", {
+      const response = await fetch(`${BASE_URL}/send-yoga`, {
         method: "POST",
 
         body: yogaData,

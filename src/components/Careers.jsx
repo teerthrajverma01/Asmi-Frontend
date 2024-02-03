@@ -1,4 +1,5 @@
 import { useState, Fragment } from "react";
+import BASE_URL from "../apis/Config";
 
 const Careers = () => {
   const [firstName, setFirstName] = useState("");

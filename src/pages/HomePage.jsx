@@ -29,7 +29,7 @@ const HomePage = () => {
   const text3 = "Be The Guardian Angel".split(" ");
   const text4 = " Get Free Yoga Sessions".split(" ");
   const text5 = " Still have questions?".split(" ");
-  const text6 = "  Asmi App Key Features?".split(" ");
+  const text6 = " Key Features".split(" ");
 
   // console.log("process.env in HomePage", process.env.VITE_APP_BASE_URL);
 
@@ -222,7 +222,10 @@ const HomePage = () => {
                       </p>
                     </li>
                     <li className="md:p-2">
-                      <p>Change Selfcare to Wellness Kits</p>
+                      <p>
+                        No subscriptions. You pay per session and yes, its
+                        affordable! Also, Wellness Kits are free!
+                      </p>
                     </li>
                   </ul>
                 </div>
@@ -338,7 +341,7 @@ const HomePage = () => {
               <h1 className="mx-auto text-center md:w-3/4">
                 Sometimes, our loved ones, keep on suffering in silence. They
                 are simply, unable to take the 'First Step' towards a happy
-                life. YOU can be their Guardian Angel! Recognise and accept your
+                life. You can be their Guardian Angel! Recognise and accept your
                 loved one's mental health issues and give them the gift of
                 happiness.
               </h1>
@@ -408,9 +411,9 @@ const HomePage = () => {
               </button>
             </section> */}
 
-            <button>
+            {/* <button>
               <NavLink to={"/test"}>Test</NavLink>
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

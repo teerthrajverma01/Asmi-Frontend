@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./Assessment.css";
 import { NavLink } from "react-router-dom";
+import BASE_URL from "../apis/Config";
 
 const Assessment = () => {
   const [name, setName] = useState("");

@@ -14,9 +14,9 @@ const MainNavigation = () => {
       <div className="px-5% flex w-full max-w-screen-xl mx-auto justify-between h-72px items-center">
         <Link to={"/"} className="flex items-center gap-1">
           <img className="h-16" src={logo} alt="Asmi life Logo" />
-          {/* <p className="text-3xl font-semibold font-poppins text-neutral-900">
-            asmi
-          </p> */}
+          <p className="text-3xl font-semibold font-poppins text-neutral-900">
+            Asmi
+          </p>
         </Link>
 
         <div className="hidden md:flex">

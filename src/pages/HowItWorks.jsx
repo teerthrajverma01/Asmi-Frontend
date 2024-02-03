@@ -140,7 +140,7 @@ const HowItWorks = () => {
                   You pay-per-session without any monthly comitments.
                 </div>
                 <div className="mb-2 font-semibold md:text-xl">
-                  Did we mention that the Selfcare packs are free?
+                  Did we mention that the Wellness Kits are free?
                 </div>
               </div>
               <div className="imgblock">
@@ -259,7 +259,7 @@ const HowItWorks = () => {
 
           <h1 className="mx-auto text-center md:w-3/4">
             Sometimes, our loved ones, keep on suffering in silence. They are
-            simply, unable to take the 'First Step' towards a happy life. YOU
+            simply, unable to take the 'First Step' towards a happy life. You
             can be their Guardian Angel! Recognise and accept your loved one's
             mental health issues and give them the gift of happiness.
           </h1>
