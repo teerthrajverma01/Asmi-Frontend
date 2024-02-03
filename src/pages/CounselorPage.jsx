@@ -1,6 +1,38 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+import AditiImage from "../assets/image/Counselor/Aditi.jpg";
+import AsthaImage from "../assets/image/Counselor/Astha.jpeg";
+import CharviImage from "../assets/image/Counselor/Charvi.jpg";
+import FeliciaImage from "../assets/image/Counselor/Felicia.jpg";
+import IshaImage from "../assets/image/Counselor/Isha.jpeg";
+import JanviImage from "../assets/image/Counselor/Janvi.jpg";
+import JasmineImage from "../assets/image/Counselor/Jasmine.jpeg";
+import KartikaImage from "../assets/image/Counselor/Kartika.jpeg";
+import KashishImage from "../assets/image/Counselor/Kashish.jpeg";
+import LakshaImage from "../assets/image/Counselor/Laksha.png";
+import LekshmyImage from "../assets/image/Counselor/Lekshmy.jpg";
+import ManjulaImage from "../assets/image/Counselor/Manjula.jpeg";
+import ManviSodhiImage from "../assets/image/Counselor/Manvi Sodhi.jpg";
+import MeghaImage from "../assets/image/Counselor/Megha.jpg";
+import MuskanTikooImage from "../assets/image/Counselor/Muskan Tikoo.jpeg";
+import NaincyImage from "../assets/image/Counselor/Naincy.jpeg";
+import NamrataImage from "../assets/image/Counselor/Namrata.jpg";
+import PrernaImage from "../assets/image/Counselor/Prerna.jpeg";
+import PriyankaSharmaImage from "../assets/image/Counselor/Priyanka Sharma.jpg";
+import RashiImage from "../assets/image/Counselor/Rashi.jpg";
+import RutvijImage from "../assets/image/Counselor/Rutvij.jpeg";
+import SaloniImage from "../assets/image/Counselor/Saloni.jpeg";
+import SanyaRanaImage from "../assets/image/Counselor/Sanya Rana.jpeg";
+import ShivangiImage from "../assets/image/Counselor/Shivangi.jpg";
+import ShraddhaSaxenaImage from "../assets/image/Counselor/Shraddha Saxena.jpg";
+import ShraddhaImage from "../assets/image/Counselor/Shraddha.jpg";
+import ShrinidhiImage from "../assets/image/Counselor/Shrinidhi.jpg";
+import ShrutiImage from "../assets/image/Counselor/Shruti.jpeg";
+import SonaliVermaImage from "../assets/image/Counselor/Sonali Verma.jpg";
+import UtkarshImage from "../assets/image/Counselor/Utkarsh.jpg";
+import VanithaImage from "../assets/image/Counselor/Vanitha.png";
+
 const CounselorCard = ({ image, name, qualification, specialization }) => {
   return (
     <motion.div
@@ -17,11 +49,11 @@ const CounselorCard = ({ image, name, qualification, specialization }) => {
         hidden: { opacity: 1, y: 50 },
       }}
     >
-      <div className="mx-auto my-6 overflow-hidden transition-transform duration-300 transform bg-white rounded-lg shadow-lg w-60 h-96 hover:scale-105">
+      <div className="mx-auto my-6 overflow-hidden transition-transform duration-300 transform rounded-lg shadow-lg bg-primary04 w-64 h-[27rem] hover:scale-105">
         {/* Counselor Image */}
 
         <img
-          className="object-cover w-48 h-48 mx-auto rounded-xl "
+          className="object-cover mx-auto mt-6 rounded-lg h-52 w-52 "
           src={image}
           alt={`${name}'s Image`}
         />
@@ -29,18 +61,18 @@ const CounselorCard = ({ image, name, qualification, specialization }) => {
         {/* Counselor Information */}
         <div className="px-6 py-4">
           {/* Counselor Name */}
-          <h2 className="text-2xl font-semibold text-gray-800">{name}</h2>
+          <h2 className="text-2xl font-semibold text-white">{name}</h2>
 
           {/* Counselor Qualification */}
-          <p className="mb-2 text-sm text-gray-600">{qualification}</p>
+          <p className="mb-2 text-sm text-primary01">{qualification}</p>
 
           {/* Counselor Specialization */}
 
-          <h3 className="mt-4 text-lg font-medium text-neutral-900">
+          <h3 className="mt-4 text-lg font-medium text-white">
             Specialization
           </h3>
 
-          <p className="text-sm text-gray-600">{specialization}</p>
+          <p className="text-sm text-primary01">{specialization}</p>
         </div>
       </div>
     </motion.div>
@@ -53,223 +85,191 @@ const CounselorPage = () => {
   const counselorData = [
     {
       name: "Rashi",
-      image:
-        "https://static.wixstatic.com/media/a75dd9_97156e5afde9424baffda7deeb1591ba~mv2.jpg",
+      image: RashiImage,
       qualification: "M.A. Applied Psychology",
       specialization: "General, Couples",
     },
     {
       name: "Naincy",
-      image:
-        "https://static.wixstatic.com/media/8876f7_f234d181bdf94202a492cbec66e875f9~mv2.jpeg",
+      image: NaincyImage,
       qualification: "M.A. Clinical Psychology",
       specialization: "Trauma, Substance Abuse",
     },
     {
       name: "Sonali",
-      image:
-        "https://static.wixstatic.com/media/754c6f_9387718b5593434d80fd39869c58c29e~mv2.jpg",
+      image: SonaliVermaImage,
       qualification:
         "Diploma in Guidance and Counseling - NCERT, MA Psychology",
       specialization: "Adolescent, Queer",
     },
-
     {
       name: "Muskan",
-      image:
-        "https://static.wixstatic.com/media/476584_49befeda825840079d240d548c3ad533~mv2.jpeg",
+      image: MuskanTikooImage,
       qualification: "M.A. Mental Health (TISS Mumbai)",
       specialization: "Adolescent, Anxiety and Eating disturbances",
     },
     {
       name: "Manvi",
-      image:
-        "https://static.wixstatic.com/media/2e0f7d_68b72d471d3c4dcb852149f01b92e374~mv2.jpg",
+      image: ManviSodhiImage,
       qualification: "M.A. Clinical Psychology",
       specialization: "Adolescent, Pediatrics",
     },
     {
       name: "Priyanka",
-      image:
-        "https://static.wixstatic.com/media/a03c30_86395bd592cd4e28994717a05901553c~mv2.jpg",
+      image: PriyankaSharmaImage,
       qualification: "M.A. Clinical Psychology",
       specialization: "Pediatrics, Adolescent",
     },
     {
       name: "Charvi",
-      image:
-        "https://static.wixstatic.com/media/4a1bf9_86539abf44a546bc9b1d3066172775d2~mv2.jpg",
+      image: CharviImage,
       qualification: "M.A. Clinical Psychology",
       specialization: "Couples, Trauma",
     },
     {
       name: "Rutvij",
-      image:
-        "https://static.wixstatic.com/media/590d84_275359005cce48abb679fccea49b86ee~mv2.jpeg",
+      image: RutvijImage,
       qualification: "M.A. Clinical Psychology",
       specialization: "Adolescent, Queer",
     },
     {
-      name: "SHIVANGI",
-      image:
-        "https://static.wixstatic.com/media/1d2989_2231906183394d1da708b61410955b01~mv2.jpg",
+      name: "Shivangi",
+      image: ShivangiImage,
       qualification: "M.A. Clinical Psychology",
       specialization: "Adolescent, Couples",
     },
     {
       name: "Megha",
-      image:
-        "https://static.wixstatic.com/media/dd4c18_85bf0cbda5a54c9dadc2c134a15fa222~mv2.jpg",
+      image: MeghaImage,
       qualification: "M.Phil. Psychiatric Social Work",
       specialization: "Adolescent, Family",
     },
     {
       name: "Sanya",
-      image:
-        "https://static.wixstatic.com/media/9edf3d_e6c514385bd94da19a8a3bbfde07749f~mv2.jpeg",
+      image: SanyaRanaImage,
       qualification: "M.Sc. Psychology",
       specialization: "Adolescent",
     },
     {
       name: "Kashish",
-      image:
-        "https://static.wixstatic.com/media/54cd85_34ce5d47aaa14695979359232a324a88~mv2.jpeg",
+      image: KashishImage,
       qualification: "M.A in Psychology",
       specialization: "Adolescent, Trauma",
     },
     {
       name: "Jasmine",
-      image:
-        "https://static.wixstatic.com/media/44a23e_7a489ab0342f47a781e16b8be7cb7c64~mv2.jpeg",
+      image: JasmineImage,
       qualification: "M.Sc. Counseling Psychology",
       specialization: "Substance Abuse, Adolescent",
     },
     {
       name: "Shruti",
-      image:
-        "https://static.wixstatic.com/media/762d71_d895b8875a4b4121802122e70866e7f5~mv2.jpeg",
+      image: ShrutiImage,
       qualification: "M.A. Psychology",
       specialization: "Couples, Queer",
     },
     {
       name: "Shraddha",
-      image:
-        "https://static.wixstatic.com/media/94e4bd_3a5438a1b3cc4e2a814f551a96198aed~mv2.jpg",
+      image: ShraddhaSaxenaImage,
       qualification: "M.A. Clinical Psychology",
       specialization: "Academics/Career, Workplace related issues",
     },
     {
       name: "Saloni",
-      image:
-        "https://static.wixstatic.com/media/be825b_ea59bdc9de434237b3f64b38f418959d~mv2.jpeg",
+      image: SaloniImage,
       qualification: "M.A. Clinical Psychology",
       specialization:
         "Work-related Stress, Crisis Intervention, Depression and Anxiety management",
     },
     {
       name: "Shrinidhi",
-      image:
-        "https://static.wixstatic.com/media/830f49_c0b45f4808c5447495650fbf55bfcd00~mv2.jpg",
+      image: ShrinidhiImage,
       qualification: "M.A Psychology (Counselling)",
       specialization: "Mental Wellness, Positive Psychotherapy",
     },
     {
       name: "Lekshmy",
-      image:
-        "https://static.wixstatic.com/media/79f18b_6cd23f87ac6842eb9794b674963a46e0~mv2.jpg",
+      image: LekshmyImage,
       qualification: "M.A. Pharmacy",
       specialization: "General",
     },
     {
       name: "Manjula",
-      image:
-        "https://static.wixstatic.com/media/846f11_0a3946fe64e04e7aadc111e95f5e5dd3~mv2.jpeg",
+      image: ManjulaImage,
       qualification: "M.A. Psychological Counseling",
       specialization: "Adolescent, Trauma",
     },
     {
       name: "Shraddha",
-      image:
-        "https://static.wixstatic.com/media/88b0bb_b555ddd51cb943d99f3c36a3e77ccfb5~mv2.jpg",
+      image: ShraddhaImage,
       qualification: "M.A Clinical Psychology",
       specialization: "Social adjustment, Personality Development",
     },
     {
       name: "Prerna",
-      image:
-        "https://static.wixstatic.com/media/196f58_db49e1e007fd42e7ad90161b91be8917~mv2.jpeg",
+      image: PrernaImage,
       qualification:
         "M.A. Counselling Psychology with a diploma in counseling and guidance.",
       specialization: "Adolescent, Couples",
     },
     {
       name: "Utkarsh",
-      image:
-        "https://static.wixstatic.com/media/828bcd_ee21450898d04e6abf27d3ea3a9d0ec5~mv2.jpg",
+      image: UtkarshImage,
       qualification: "M.A. Clinical Psychology",
       specialization: "Trauma, Occupational Concerns and Life Crisis",
     },
     {
       name: "Aditi",
-      image:
-        "https://static.wixstatic.com/media/cc026d_5fa31b28993946eba189bf899204e289~mv2.jpg",
+      image: AditiImage,
       qualification: "M.A. Clinical Psychology",
       specialization: "Emotional Dysregulation, Crisis Management",
     },
     {
       name: "Kratika",
-      image:
-        "https://static.wixstatic.com/media/b9cf87_a498a8a52d8b4f6194ef94ad5cf88d49~mv2.jpeg",
+      image: KartikaImage,
       qualification: "M.A Counseling Psychology",
       specialization: "General",
     },
     {
       name: "Felicia",
-      image:
-        "https://static.wixstatic.com/media/073bf3_55978df918284ba8926660e804b870a8~mv2.jpg",
+      image: FeliciaImage,
       qualification: "Master of Science in Counselling Psychology",
       specialization: "General",
     },
     {
       name: "Laksha",
-      image:
-        "https://static.wixstatic.com/media/e34c9f_f501b6f086a04d15a3fe079f02bd5fb0~mv2.png",
+      image: LakshaImage,
       qualification: "MA Clinical psychologist and REBT trained therapist",
       specialization: "Adolescent, General",
     },
     {
       name: "Isha",
-      image:
-        "https://static.wixstatic.com/media/6e5e1c_cf3d402f370d4d119492a4cf97bdcd32~mv2.jpeg",
+      image: IshaImage,
       qualification:
         "M.A. Psychology and PG Diploma in Counselling and Family Therapy",
       specialization: "Trauma, Adolescent",
     },
     {
       name: "Jaanvi",
-      image:
-        "https://static.wixstatic.com/media/83f7b0_6a3fd34ef6624c3b80b1837f65e653d5~mv2.jpg",
+      image: JanviImage,
       qualification: "M.A. Clinical Psychology",
       specialization: "Substance Abuse, Adolescent",
     },
     {
       name: "Vanitha",
-      image:
-        "https://static.wixstatic.com/media/202f49_2e9315812967430695bec591819be414~mv2.png",
+      image: VanithaImage,
       qualification: "M.A. Applied Psychology",
       specialization: "Pediatrics, Substance Abuse",
     },
     {
       name: "Aastha",
-      image:
-        "https://static.wixstatic.com/media/301072_1ff43699a71e433992a700799bc64b20~mv2.jpeg",
+      image: AsthaImage,
       qualification: "M.A. Psychology",
       specialization: "Pediatrics, Adolescent",
     },
     {
       name: "Namrata",
-      image:
-        "https://static.wixstatic.com/media/b4da20_b6a4696547064f8f960f686dbee0de42~mv2.jpg",
+      image: NamrataImage,
       qualification: "M.A. in Clinical Psychology",
       specialization: "Couples, Trauma",
     },

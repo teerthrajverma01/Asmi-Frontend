@@ -145,10 +145,10 @@ const AboutPage = () => {
 
       <section className="mb-40 text-white bg-primary04">
         <div className="px-[5%]">
-          <div className="w-full max-w-screen-md mx-auto">
+          <div className="w-full max-w-6xl mx-auto">
             <div className="py-40">
               <div className="text-center">
-                <div className="w-full max-w-screen-md mx-auto">
+                <div className="w-full mx-auto">
                   <div className="text-white bg-[rgba(255,255,255,0.08)] rounded px-2 py-1 text-sm font-semibold leading-[1.4] inline-block">
                     Meet the Team
                   </div>
@@ -176,7 +176,7 @@ const AboutPage = () => {
                     ))}
                   </div>
                   <div className="p-6 "></div>
-                  <p className=" text-white  mt-0 mb-2.5">
+                  <p className=" text-white  mt-0 mb-2.5 max-w-4xl mx-auto">
                     Fueled by an unwavering commitment to positive change,
                     Ujjwal assembled a dynamic team of passionate individuals in
                     2023, united by a shared enthusiasm to redefine online
@@ -187,7 +187,7 @@ const AboutPage = () => {
               </div>
               <div className="p-20"></div>
               <div>
-                <div className="grid md:grid-cols-2 gap-x-8 gap-y-8 auto-cols-auto justify-items-center ">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-x-8 gap-y-8 auto-cols-auto justify-items-center ">
                   <motion.div
                     initial="hidden"
                     whileInView={"visible"}
@@ -202,7 +202,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className="flex flex-col items-start p-8 rounded-lg h-[27rem] bg-darkSlateGrey">
+                    <div className="flex flex-col items-start p-8 rounded-lg max-w-[26rem] h-[30rem] bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
@@ -239,7 +239,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className=" h-[27rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
@@ -276,7 +276,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className=" h-[27rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
@@ -312,7 +312,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className=" h-[27rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
@@ -348,7 +348,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className=" h-[27rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
@@ -383,7 +383,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className="h-[27rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                    <div className="h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
@@ -418,7 +418,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className=" h-[27rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
@@ -455,7 +455,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className=" h-[27rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
@@ -492,7 +492,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className=" h-[27rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
@@ -533,7 +533,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className="h-[27rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                    <div className="h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
                       <div>
                         <div>
                           <img

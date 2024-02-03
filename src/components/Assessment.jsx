@@ -165,12 +165,12 @@ const Assessment = () => {
 
   return (
     <div className="assessmentsec">
-      <div className="assessmentblock indiblock">
+      <div className="md:w-[50rem] md:h-[30rem] assessmentblock indiblock">
         {!showform ? (
           <div>
             <form onSubmit={sendMail}>
               <div className="mt-4 mb-2 ">
-                <div className="piformelement formelement">
+                <div className="flex flex-col items-center piformelement formelement">
                   <div className="mt-3 mb-1">
                     <label className="block text-[white] pr-8 pb-1">
                       Name*
@@ -200,7 +200,7 @@ const Assessment = () => {
                     <input
                       className="mt-4 bg-[#f35637] hover:bg-primary05 text-white px-4 py-1 rounded-md"
                       type="submit"
-                      value="Let's Start"
+                      value="Start a Free Assesment"
                     />
                   </div>
                 </div>
@@ -223,7 +223,7 @@ const Assessment = () => {
               {Questionbank[currentQuestion].Answers.map((answer, i) => (
                 <button
                   key={i}
-                  className="btn"
+                  className="flex justify-center max-w-lg p-2 mx-auto transition hover:scale-95 btn"
                   onClick={() => handleAnswerResponse(answer.isCorrect)}
                 >
                   {answer.Answer}
