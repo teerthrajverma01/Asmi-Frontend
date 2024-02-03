@@ -4,8 +4,9 @@ import img1 from "../assets/image/img1.png";
 import { GrFormNextLink } from "react-icons/gr";
 
 import BASE_URL from "../apis/Config";
+import { Link } from "react-router-dom";
 
-const Blog = ({ title, summary, cover, content }) => {
+const Blog = ({ _id, title, summary, cover, content }) => {
   const truncateText = (text, limit) => {
     const words = text.split(" ");
     if (words.length > limit) {
@@ -14,14 +15,16 @@ const Blog = ({ title, summary, cover, content }) => {
     return text;
   };
 
+  // console.log(_id);
+
   return (
     <div
     // className="flex flex-col h-full border rounded-lg border-neutral-200"
 
     // className="overflow-hidden border border-gray-300 rounded-md indibp_wrapper"
     >
-      <a
-        href="#"
+      <Link
+        to={`/post/${_id}`}
         className="flex flex-col overflow-hidden hover:translate-y-[-3px] duration-300 transform transition-transform border rounded-lg h-[50vh] border-neutral-200 shadow-box"
       >
         <div className="w-full overflow-hidden h-[50%]">
@@ -51,7 +54,7 @@ const Blog = ({ title, summary, cover, content }) => {
             Read More <GrFormNextLink className="size-5" />
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 };
