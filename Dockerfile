@@ -20,6 +20,8 @@ RUN npm run build
 # Serve with Nginx
 FROM nginx:stable-alpine
 WORKDIR /usr/share/nginx/html
+# Copy nginx configuration
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 RUN rm -rf *
 COPY --from=build /app/dist .
 EXPOSE 80
