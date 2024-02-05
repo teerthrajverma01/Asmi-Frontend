@@ -509,11 +509,11 @@ const AboutPage = () => {
                         <div className="text-sm">Psychologist</div>
                         <div className="p-4 "></div>
                         <p className="mt-0 mb-0 text-sm text-white">
-                          Counselling psychologist with a Masters in Clinical
-                          Psychology and 2 years of experience in aiding
-                          management of Mood disorders, Personality disorders,
-                          Relationship/ Family Issues, Workplace/ Academic
-                          Stress Management and General Stress.
+                          As a counseling psychologist with 2 years of
+                          experience, I create a safe, nurturing space for
+                          clients to heal holistically. Using an eclectic
+                          approach, I guide decision-making, fostering
+                          self-dependence for optimal mental health.
                         </p>
                         <div className="p-4 "></div>
                       </div>
