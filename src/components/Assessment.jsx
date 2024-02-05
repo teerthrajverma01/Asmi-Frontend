@@ -236,7 +236,15 @@ const Assessment = () => {
             <div className="score-section">
               <div className="detailblock indiblock">
                 <div className="mx-auto">
-                  You have scored {score} out of {Questionbank.length}
+                  {score <= 8 && (
+                    <div>
+                      Asmi Team recommend you to considered professional help
+                      for additional support and guidance based on the results.
+                    </div>
+                  )}
+                  {score > 8 && (
+                    <div>You have Great Mental Health! Keep it up</div>
+                  )}
                 </div>
                 <hr />
 
