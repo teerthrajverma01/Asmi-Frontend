@@ -17,6 +17,10 @@ import Careers from "./components/Careers";
 import Test from "./components/Test";
 import YogaForm from "./components/YogaForm";
 import SingleBlogPage from "./pages/SingleBlogPage";
+import FAQs from "./components/FAQs";
+import Refunds from "./components/Refunds";
+import Privacy from "./components/Privacy";
+import TermOfUse from "./components/TermOfUse";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +42,10 @@ const router = createBrowserRouter([
       { path: "/careers", element: <Careers /> },
       { path: "/test", element: <Test /> },
       { path: "/yoga-form", element: <YogaForm /> },
+      { path: "/faq", element: <FAQs /> },
+      { path: "/refunds", element: <Refunds /> },
+      { path: "/privacypolicy", element: <Privacy /> },
+      { path: "/termsandconditions", element: <TermOfUse /> },
       { path: "/post/:id", element: <SingleBlogPage /> },
     ],
   },

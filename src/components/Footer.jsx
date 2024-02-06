@@ -78,44 +78,40 @@ const Footer = () => {
                     <div className="flex-col grid-rows-[auto] grid-cols-[100%] auto-cols-[100%] items-start justify-items-start flex">
                       <div className="my-4">
                         <div className=" text-lg text-[color:var(--white)] font-semibold">
-                          Pages
+                          Policy/FAQs
                         </div>
                       </div>
-                      <NavLink
-                        to={"/"}
-                        className=" text-[color:var(--white-64)] text-sm no-underline py-1.5"
-                      >
-                        Home
-                      </NavLink>
-                      <NavLink
-                        to={"/how-it-works"}
-                        className=" text-[color:var(--white-64)] text-sm no-underline py-1.5"
-                      >
-                        How It Works
-                      </NavLink>
                       <NavLink
                         to={"/about-us"}
                         className=" text-[color:var(--white-64)] text-sm no-underline py-1.5"
                       >
-                        Team
+                        About us
                       </NavLink>
+
                       <NavLink
-                        to={"/counselors"}
+                        to={"/termsandconditions"}
                         className=" text-[color:var(--white-64)] text-sm no-underline py-1.5"
                       >
-                        Counselors
+                        Terms of Use
                       </NavLink>
+
                       <NavLink
-                        to={"/blogs"}
+                        to={"/privacypolicy"}
                         className=" text-[color:var(--white-64)] text-sm no-underline py-1.5"
                       >
-                        Blogs
+                        Privacy Policy
                       </NavLink>
                       <NavLink
-                        to={"/contact-us"}
+                        to={"/refunds"}
                         className=" text-[color:var(--white-64)] text-sm no-underline py-1.5"
                       >
-                        Contact Us
+                        Refunds
+                      </NavLink>
+                      <NavLink
+                        to={"/faq"}
+                        className=" text-[color:var(--white-64)] text-sm no-underline py-1.5"
+                      >
+                        FAQs
                       </NavLink>
                     </div>
                   </div>
