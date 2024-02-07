@@ -49,7 +49,7 @@ const BlogPage = () => {
       {/* Your blog content goes here */}
 
       <div className="w-full mx-auto max-w-7xl">
-        <section className="container mt-16 md:pt-32">
+        <section className="container mt-16 md:pt-20">
           <div>
             <div className="w-full max-w-2xl">
               <div className="md:text-6xl text-4xl font-sans font-semibold text-neutral-900 leading-[1.1] md:mb-6">
@@ -70,11 +70,11 @@ const BlogPage = () => {
                   </motion.span>
                 ))}
               </div>
-              <p className="mb-8 md:mb-20 ">
+              {/* <p className="mb-8 md:mb-20 ">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo
                 enim magnam ut. Veritatis officiis quaerat, odit molestias
                 soluta sunt vero.
-              </p>
+              </p> */}
             </div>
             <section className="grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 px-[2%] pb-8">
               {posts.length > 0 &&
