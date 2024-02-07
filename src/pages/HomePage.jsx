@@ -40,7 +40,7 @@ const HomePage = () => {
       <div className="w-full mx-auto max-w-7xl">
         <div className="py-12 md:py-28">
           <div className="flex flex-col items-center ">
-            {/* start section */}
+            {/* start section test */}
             <motion.div
               animate={{ y: -40 }}
               transition={{ ease: "easeOut", duration: 2 }}
