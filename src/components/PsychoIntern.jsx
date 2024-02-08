@@ -283,19 +283,7 @@ const PsychoIntern = () => {
                     required
                   />
                 </div>
-                <div className="mt-3 mb-1">
-                  <label className="block text-[#374151] pr-8 pb-1">
-                    Are you a member of Societies in your College or Uni?
-                  </label>
-                  <textarea
-                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
-                    type="text"
-                    value={qnMember}
-                    onChange={(e) => setQnMember(e.target.value)}
-                    placeholder=""
-                    required
-                  />
-                </div>
+
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
                     Are you a member of Societies in your College or Uni?

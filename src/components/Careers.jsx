@@ -25,7 +25,7 @@ const Careers = () => {
   const [cv, setCv] = useState("");
 
   const sendMail = async (event) => {
-    event.preventDefault();
+    // event.preventDefault();
 
     const careerData = new FormData();
 
@@ -67,25 +67,25 @@ const Careers = () => {
         throw new Error("Network response was not ok.");
       }
 
-      setFirstName("");
-      setLastName("");
-      setEmail("");
-      setPhoneNumber("");
-      setAddress("");
-      setHighDegree("");
-      setUniversityName("");
-      setYog("");
-      setLanKnown("");
-      setDegree("");
-      setRci("");
-      setNoyPractice("");
-      setExpRes("");
-      setExpText("");
-      setshareSession("");
-      setNoh("");
-      setAvailable("");
-      setSpecialization("");
-      setCv("");
+      // setFirstName("");
+      // setLastName("");
+      // setEmail("");
+      // setPhoneNumber("");
+      // setAddress("");
+      // setHighDegree("");
+      // setUniversityName("");
+      // setYog("");
+      // setLanKnown("");
+      // setDegree("");
+      // setRci("");
+      // setNoyPractice("");
+      // setExpRes("");
+      // setExpText("");
+      // setshareSession("");
+      // setNoh("");
+      // setAvailable("");
+      // setSpecialization("");
+      // setCv("");
 
       // Reset input fields
     } catch (error) {

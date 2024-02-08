@@ -19,7 +19,7 @@ const MarketingIntern = () => {
   const [dpw, setDpw] = useState("");
 
   const sendMail = async (event) => {
-    event.preventDefault();
+    // event.preventDefault();
 
     const InternData = new FormData();
 

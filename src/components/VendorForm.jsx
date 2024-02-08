@@ -11,7 +11,6 @@ const VendorOnboardingForm = () => {
   const [companyName, setCompanyName] = useState("");
   const [orgType, setOrgType] = useState("");
   const [address, setAddress] = useState("");
-  const [companyAddress, setCompanyAddress] = useState("");
   const [state, setState] = useState("");
   const [pinCode, setPinCode] = useState("");
   const [gstin, setGstin] = useState("");
@@ -27,7 +26,7 @@ const VendorOnboardingForm = () => {
 
   // Function to handle form submission
   const sendFormData = async (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     // Creating form data object
     const formData = new FormData();
     formData.append("firstName", firstName);
@@ -38,7 +37,6 @@ const VendorOnboardingForm = () => {
     formData.append("companyName", companyName);
     formData.append("orgType", orgType);
     formData.append("address", address);
-    formData.append("companyAddress", companyAddress);
     formData.append("state", state);
     formData.append("pinCode", pinCode);
     formData.append("gstin", gstin);
@@ -72,7 +70,6 @@ const VendorOnboardingForm = () => {
       setCompanyName("");
       setOrgType("");
       setAddress("");
-      setCompanyAddress("");
       setState("");
       setPinCode("");
       setGstin("");
