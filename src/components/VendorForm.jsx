@@ -26,7 +26,7 @@ const VendorOnboardingForm = () => {
 
   // Function to handle form submission
   const sendFormData = async (event) => {
-    // event.preventDefault();
+    event.preventDefault();
     // Creating form data object
     const formData = new FormData();
     formData.append("firstName", firstName);

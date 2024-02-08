@@ -25,7 +25,7 @@ const Careers = () => {
   const [cv, setCv] = useState("");
 
   const sendMail = async (event) => {
-    // event.preventDefault();
+    event.preventDefault();
 
     const careerData = new FormData();
 

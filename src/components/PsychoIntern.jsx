@@ -18,6 +18,8 @@ const PsychoIntern = () => {
   const [prevworkdet, setPrevworkdetail] = useState("");
 
   const sendMail = async (event) => {
+    event.preventDefault();
+
     const InternData = new FormData();
 
     // Append personal information
