@@ -187,7 +187,7 @@ const PsychoIntern = () => {
                     FirstName*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={firstName}
                     required
@@ -199,7 +199,7 @@ const PsychoIntern = () => {
                     LastName*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={lastName}
                     required
@@ -211,7 +211,7 @@ const PsychoIntern = () => {
                     Email*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="email"
                     value={email}
                     required
@@ -223,7 +223,7 @@ const PsychoIntern = () => {
                     PhoneNo*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={phoneNumber}
                     placeholder="enter mobile-no with countrycode"
@@ -236,7 +236,7 @@ const PsychoIntern = () => {
                     Address
                   </label>
                   <textarea
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
@@ -249,7 +249,7 @@ const PsychoIntern = () => {
                     Name of University
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={universityName}
                     onChange={(e) => setUniversityName(e.target.value)}
@@ -262,7 +262,7 @@ const PsychoIntern = () => {
                     Name of College
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={collegeName}
                     onChange={(e) => setCollegeName(e.target.value)}
@@ -275,7 +275,7 @@ const PsychoIntern = () => {
                     Dept, Course & Semester
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={dcs}
                     onChange={(e) => setDcs(e.target.value)}
@@ -288,7 +288,7 @@ const PsychoIntern = () => {
                     Are you a member of Societies in your College or Uni?
                   </label>
                   <textarea
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={qnMember}
                     onChange={(e) => setQnMember(e.target.value)}
@@ -301,7 +301,7 @@ const PsychoIntern = () => {
                     Are you a member of Societies in your College or Uni?
                   </label>
                   <textarea
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={qnMember}
                     onChange={(e) => setQnMember(e.target.value)}
@@ -314,7 +314,7 @@ const PsychoIntern = () => {
                     Why did you choose Psychology as a Subject?
                   </label>
                   <textarea
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={whyPsycho}
                     onChange={(e) => setWhyPsycho(e.target.value)}
@@ -357,7 +357,7 @@ const PsychoIntern = () => {
                     What areas of Psychology interest you the most?
                   </label>
                   <textarea
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={aoi}
                     onChange={(e) => setAoi(e.target.value)}
@@ -398,7 +398,7 @@ const PsychoIntern = () => {
                     If so, please provide details
                   </label>
                   <textarea
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={prevworkdet}
                     onChange={(e) => setPrevworkdetail(e.target.value)}

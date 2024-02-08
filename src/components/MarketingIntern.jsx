@@ -203,7 +203,7 @@ const MarketingIntern = () => {
                     FirstName*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={firstName}
                     required
@@ -215,7 +215,7 @@ const MarketingIntern = () => {
                     LastName*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={lastName}
                     required
@@ -227,7 +227,7 @@ const MarketingIntern = () => {
                     Email*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="email"
                     value={email}
                     required
@@ -239,7 +239,7 @@ const MarketingIntern = () => {
                     PhoneNo*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={phoneNumber}
                     placeholder="enter mobile-no with countrycode"
@@ -252,7 +252,7 @@ const MarketingIntern = () => {
                     Address
                   </label>
                   <textarea
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
@@ -265,7 +265,7 @@ const MarketingIntern = () => {
                     Name of University
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={universityName}
                     onChange={(e) => setUniversityName(e.target.value)}
@@ -278,7 +278,7 @@ const MarketingIntern = () => {
                     Name of College
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={collegeName}
                     onChange={(e) => setCollegeName(e.target.value)}
@@ -291,7 +291,7 @@ const MarketingIntern = () => {
                     Dept, Course & Semester
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={dcs}
                     onChange={(e) => setDcs(e.target.value)}
@@ -359,7 +359,7 @@ const MarketingIntern = () => {
                     the Internship?
                   </label>
                   <textarea
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={noh}
                     onChange={(e) => setNoh(e.target.value)}
@@ -372,7 +372,7 @@ const MarketingIntern = () => {
                     Are you a member of Societies in your College or Uni?
                   </label>
                   <textarea
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={qnMember}
                     onChange={(e) => setQnMember(e.target.value)}
@@ -386,7 +386,7 @@ const MarketingIntern = () => {
                     and Branding*
                   </label>
                   <textarea
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={viewSm}
                     onChange={(e) => setViewSm(e.target.value)}
@@ -427,7 +427,7 @@ const MarketingIntern = () => {
                     If Yes, please provide links to some content*
                   </label>
                   <textarea
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={smcl}
                     onChange={(e) => setSmcl(e.target.value)}
@@ -441,7 +441,7 @@ const MarketingIntern = () => {
                     How many days per weel can you come to the office?
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:md:w-3/5 w-full  pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={dpw}
                     onChange={(e) => setDpw(e.target.value)}

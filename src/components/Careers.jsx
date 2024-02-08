@@ -104,7 +104,7 @@ const Careers = () => {
           On Play Store currently, application requires an Android device.
         </div>
         <div className="formblock">
-          <div className="text-2xl">Asmi - Psychology Internship Form</div>
+          {/* <div className="text-2xl">Asmi - Psychology Internship Form</div> */}
           <form onSubmit={sendMail}>
             <div className="mt-4 mb-2 ">
               <div className="text-xl">Personal Information</div>
@@ -114,7 +114,7 @@ const Careers = () => {
                     FirstName*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 p-2 rounded-sm border border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={firstName}
                     required
@@ -126,7 +126,7 @@ const Careers = () => {
                     LastName*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={lastName}
                     required
@@ -138,7 +138,7 @@ const Careers = () => {
                     Email*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="email"
                     value={email}
                     required
@@ -150,7 +150,7 @@ const Careers = () => {
                     PhoneNo*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={phoneNumber}
                     placeholder="Enter Mobile-No with CountryCode"
@@ -160,10 +160,10 @@ const Careers = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Address
+                    Address*
                   </label>
                   <textarea
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
@@ -182,7 +182,7 @@ const Careers = () => {
                     High Degree Earned*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={highDegree}
                     required
@@ -195,7 +195,7 @@ const Careers = () => {
                     Name of University*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={universityName}
                     required
@@ -208,7 +208,7 @@ const Careers = () => {
                     Year of Graduation*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={yog}
                     required
@@ -221,7 +221,7 @@ const Careers = () => {
                     Languages Known
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={lanKnown}
                     required
@@ -233,7 +233,7 @@ const Careers = () => {
                     Upload Degree/Provisional
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="file"
                     required
                     onChange={(e) => setDegree(e.target.files)}
@@ -250,7 +250,7 @@ const Careers = () => {
                     RCI Number
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={Rci}
                     onChange={(e) => setRci(e.target.value)}
@@ -262,7 +262,7 @@ const Careers = () => {
                     No. of years practising as a Psycholigst*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={noyPractice}
                     required
@@ -274,7 +274,7 @@ const Careers = () => {
                     Do you have experience in Online Counselling?
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={expRes}
                     required
@@ -287,7 +287,7 @@ const Careers = () => {
                     counselling
                   </label>
                   <textarea
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={expText}
                     onChange={(e) => setExpText(e.target.value)}
@@ -298,7 +298,7 @@ const Careers = () => {
                     Share a challenging counselling session*
                   </label>
                   <textarea
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={shareSession}
                     placeholder="without disclosing confidential information, describe a session that was challenging"
@@ -311,7 +311,7 @@ const Careers = () => {
                     How many hours a day can you dedicate to our App?*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={noh}
                     placeholder=""
@@ -324,7 +324,7 @@ const Careers = () => {
                     Are you available for online sessions during night hours?*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={available}
                     placeholder="Fee for night hour is more than day fee"
@@ -337,7 +337,7 @@ const Careers = () => {
                     Please list your specialisations*
                   </label>
                   <textarea
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={specialization}
                     placeholder="Queer, Couple, Adolence etc."
@@ -352,7 +352,7 @@ const Careers = () => {
                     Upload Degree/Provisional
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="file"
                     required
                     onChange={(e) => setCv(e.target.files)}

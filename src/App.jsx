@@ -21,6 +21,7 @@ import FAQs from "./components/FAQs";
 import Refunds from "./components/Refunds";
 import Privacy from "./components/Privacy";
 import TermOfUse from "./components/TermOfUse";
+import VendorForm from "./components/VendorForm";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,7 @@ const router = createBrowserRouter([
       { path: "/refunds", element: <Refunds /> },
       { path: "/privacypolicy", element: <Privacy /> },
       { path: "/termsandconditions", element: <TermOfUse /> },
+      { path: "/vendoronboarding", element: <VendorForm /> },
       { path: "/post/:id", element: <SingleBlogPage /> },
     ],
   },

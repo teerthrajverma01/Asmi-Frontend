@@ -94,7 +94,7 @@ const YogaForm = () => {
                     FirstName*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={firstName}
                     required
@@ -106,7 +106,7 @@ const YogaForm = () => {
                     LastName*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={lastName}
                     required
@@ -118,7 +118,7 @@ const YogaForm = () => {
                     Email*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="email"
                     value={email}
                     required
@@ -130,7 +130,7 @@ const YogaForm = () => {
                     PhoneNo*
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={phoneNumber}
                     placeholder="Enter Mobile-No with countrycode"
@@ -143,7 +143,7 @@ const YogaForm = () => {
                     Country
                   </label>
                   <input
-                    className="sm:w-[30rem] pr-2 border border-[#d1d5db] w-max-[20rem]"
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={country}
                     onChange={(e) => setCountry(e.target.value)}

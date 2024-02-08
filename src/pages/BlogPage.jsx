@@ -52,7 +52,7 @@ const BlogPage = () => {
         <section className="container mt-16 md:pt-20">
           <div>
             <div className="w-full max-w-2xl">
-              <div className="md:text-6xl text-4xl font-sans font-semibold text-neutral-900 leading-[1.1] md:mb-6">
+              <div className="md:text-6xl text-4xl font-sans font-semibold text-neutral-900 leading-[1.1] mb-10">
                 {text1.map((el, i) => (
                   <motion.span
                     initial={{ opacity: 0 }}
