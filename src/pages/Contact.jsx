@@ -5,12 +5,15 @@ import BASE_URL from "../apis/Config";
 import axios from "axios";
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+
   const [userName, setUserName] = useState("");
   const [recipient_email, setEmail] = useState("");
   const [message, setMessages] = useState("");
 
   const sendMail = async (event) => {
     event.preventDefault();
+    setLoading(true);
 
     if (recipient_email && message) {
       try {
@@ -22,6 +25,7 @@ const Contact = () => {
           body: JSON.stringify({
             recipient_email,
             message,
+            userName,
           }),
         });
 
@@ -36,6 +40,8 @@ const Contact = () => {
       } catch (error) {
         console.error("Error sending mail:", error);
         // Handle error (e.g., display error message to user)
+      } finally {
+        setLoading(false);
       }
     }
   };
@@ -82,9 +88,10 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="p-2 font-medium text-white transition ease-in-out rounded cursor-pointer bg-primary03 w-fit hover:bg-primary05"
+                  className="px-4 py-1 text-white rounded-md bg-primary03 hover:bg-primary05"
+                  disabled={loading} // Disable button when loading
                 >
-                  Send a Message
+                  {loading ? "Loading..." : "Send a Message"}
                 </button>
               </form>
             </div>

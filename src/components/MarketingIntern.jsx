@@ -2,6 +2,7 @@ import { useState, Fragment } from "react";
 import BASE_URL from "../apis/Config";
 
 const MarketingIntern = () => {
+  const [loading, setLoading] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -20,6 +21,7 @@ const MarketingIntern = () => {
 
   const sendMail = async (event) => {
     event.preventDefault();
+    setLoading(true);
 
     const InternData = new FormData();
 
@@ -79,6 +81,8 @@ const MarketingIntern = () => {
     } catch (error) {
       console.error("Error sending mail:", error);
       // Handle error (e.g., display error message to user)
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -470,7 +474,8 @@ const MarketingIntern = () => {
               <input
                 className="px-4 py-1 text-white rounded-md bg-primary03 hover:bg-primary05"
                 type="submit"
-                value="Submit"
+                value={loading ? "Loading..." : "Submit"} // Change button text based on loading state
+                disabled={loading} // Disable button when loading
               />
             </div>
           </form>

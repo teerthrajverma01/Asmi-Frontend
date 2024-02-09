@@ -177,6 +177,12 @@ const Footer = () => {
                       >
                         Careers
                       </NavLink>
+                      <NavLink
+                        to={"/vendoronboarding"}
+                        className=" text-[color:var(--white-64)] text-sm no-underline py-1.5"
+                      >
+                        Vendor-onboarding
+                      </NavLink>
                     </div>
                   </div>
                 </div>

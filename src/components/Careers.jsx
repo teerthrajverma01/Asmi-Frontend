@@ -2,6 +2,8 @@ import { useState, Fragment } from "react";
 import BASE_URL from "../apis/Config";
 
 const Careers = () => {
+  const [loading, setLoading] = useState(false);
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -26,6 +28,7 @@ const Careers = () => {
 
   const sendMail = async (event) => {
     event.preventDefault();
+    setLoading(true);
 
     const careerData = new FormData();
 
@@ -67,30 +70,32 @@ const Careers = () => {
         throw new Error("Network response was not ok.");
       }
 
-      // setFirstName("");
-      // setLastName("");
-      // setEmail("");
-      // setPhoneNumber("");
-      // setAddress("");
-      // setHighDegree("");
-      // setUniversityName("");
-      // setYog("");
-      // setLanKnown("");
-      // setDegree("");
-      // setRci("");
-      // setNoyPractice("");
-      // setExpRes("");
-      // setExpText("");
-      // setshareSession("");
-      // setNoh("");
-      // setAvailable("");
-      // setSpecialization("");
-      // setCv("");
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setPhoneNumber("");
+      setAddress("");
+      setHighDegree("");
+      setUniversityName("");
+      setYog("");
+      setLanKnown("");
+      setDegree("");
+      setRci("");
+      setNoyPractice("");
+      setExpRes("");
+      setExpText("");
+      setshareSession("");
+      setNoh("");
+      setAvailable("");
+      setSpecialization("");
+      setCv("");
 
       // Reset input fields
     } catch (error) {
       console.error("Error sending mail:", error);
       // Handle error (e.g., display error message to user)
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -379,7 +384,8 @@ const Careers = () => {
                 <input
                   className="px-4 py-1 text-white rounded-md bg-primary03 hover:bg-primary05"
                   type="submit"
-                  value="Submit"
+                  value={loading ? "Loading..." : "Submit"} // Change button text based on loading state
+                  disabled={loading} // Disable button when loading
                 />
               </div>
             </div>

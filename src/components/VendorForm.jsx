@@ -3,6 +3,8 @@ import BASE_URL from "../apis/Config";
 
 const VendorOnboardingForm = () => {
   // State variables for form fields
+  const [loading, setLoading] = useState(false);
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -27,6 +29,8 @@ const VendorOnboardingForm = () => {
   // Function to handle form submission
   const sendFormData = async (event) => {
     event.preventDefault();
+    setLoading(true);
+
     // Creating form data object
     const formData = new FormData();
     formData.append("firstName", firstName);
@@ -81,6 +85,8 @@ const VendorOnboardingForm = () => {
       setIfsc("");
     } catch (error) {
       console.error("Error submitting form:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -432,8 +438,9 @@ const VendorOnboardingForm = () => {
             <button
               type="submit"
               className="px-4 py-1 text-white rounded-md bg-primary03 hover:bg-primary05"
+              disabled={loading} // Disable button when loading
             >
-              Submit
+              {loading ? "Loading..." : "Submit"}
             </button>
           </div>
         </form>

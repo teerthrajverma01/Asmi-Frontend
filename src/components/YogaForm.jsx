@@ -2,6 +2,8 @@ import React, { useState, Fragment } from "react";
 import BASE_URL from "../apis/Config";
 
 const YogaForm = () => {
+  const [loading, setLoading] = useState(false);
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -34,6 +36,7 @@ const YogaForm = () => {
 
   const sendMail = async (event) => {
     event.preventDefault(); // Prevent default form submission behavior
+    setLoading(true);
 
     const yogaData = new FormData();
 
@@ -72,6 +75,8 @@ const YogaForm = () => {
     } catch (error) {
       console.error("Error sending mail:", error);
       // Handle error (e.g., display error message to user)
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -237,7 +242,8 @@ const YogaForm = () => {
               <input
                 className="px-4 py-1 text-white rounded-md bg-primary03 hover:bg-primary05"
                 type="submit"
-                value="Submit"
+                value={loading ? "Loading..." : "Submit"} // Change button text based on loading state
+                disabled={loading} // Disable button when loading
               />
             </div>
           </form>
