@@ -1,9 +1,14 @@
 import { useState, Fragment } from "react";
 import BASE_URL from "../apis/Config";
+import { useNavigate } from "react-router-dom";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const VendorOnboardingForm = () => {
   // State variables for form fields
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -64,6 +69,8 @@ const VendorOnboardingForm = () => {
       if (!response.ok) {
         throw new Error("Network response was not ok.");
       }
+
+      navigate("/submission-successful");
 
       // Resetting form fields on successful submission
       setFirstName("");
@@ -135,15 +142,15 @@ const VendorOnboardingForm = () => {
                   required
                 />
               </div>
+
               <div>
                 <label className="block text-[#374151] mt-4 pr-8 pb-1">
-                  Mobile*
+                  Mobile No*
                 </label>
-                <input
-                  className="md:w-3/5 w-full p-2 rounded-sm border border-[#d1d5db] w-max-[20rem]"
-                  type="text"
+                <PhoneInput
                   value={mobile}
-                  onChange={(e) => setMobile(e.target.value)}
+                  country="in"
+                  onChange={setMobile}
                   required
                 />
               </div>
@@ -202,7 +209,7 @@ const VendorOnboardingForm = () => {
                       className="mr-2"
                       type="radio"
                       name="answer"
-                      value="llp"
+                      value="LLP"
                       onChange={(e) => setOrgType(e.target.value)}
                     />
                     <label className=" text-[#374151] pr-8 pb-1">LLP</label>
@@ -213,7 +220,7 @@ const VendorOnboardingForm = () => {
                       className="mr-2"
                       type="radio"
                       name="answer"
-                      value="pvt"
+                      value="Pvt"
                       onChange={(e) => setOrgType(e.target.value)}
                     />
                     <label className="text-[#374151] pr-8 pb-1">Pvt Ltd</label>
@@ -235,7 +242,7 @@ const VendorOnboardingForm = () => {
                       className="mr-2"
                       type="radio"
                       name="answer"
-                      value="individual"
+                      value="Individual"
                       onChange={(e) => setOrgType(e.target.value)}
                     />
                     <label className="text-[#374151] pr-8 pb-1">
@@ -276,13 +283,13 @@ const VendorOnboardingForm = () => {
                   required
                 />
               </div>
-              <div>
+              <div className="money">
                 <label className="block text-[#374151] mt-4 pr-8 pb-1">
                   PIN Code*
                 </label>
                 <input
                   className="md:w-3/5 w-full p-2 rounded-sm border border-[#d1d5db] w-max-[20rem]"
-                  type="text"
+                  type="number"
                   value={pinCode}
                   onChange={(e) => setPinCode(e.target.value)}
                   required
@@ -351,13 +358,13 @@ const VendorOnboardingForm = () => {
                   required
                 />
               </div>
-              <div>
+              <div className="money">
                 <label className="block text-[#374151] mt-4 pr-8 pb-1">
                   Bank Account Number
                 </label>
                 <input
                   className="md:w-3/5 w-full p-2 rounded-sm border border-[#d1d5db] w-max-[20rem]"
-                  type="text"
+                  type="number"
                   value={bankAccountNumber}
                   onChange={(e) => setBankAccountNumber(e.target.value)}
                 />

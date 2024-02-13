@@ -1,8 +1,13 @@
 import { useState, Fragment } from "react";
 import BASE_URL from "../apis/Config";
+import { useNavigate } from "react-router-dom";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const Careers = () => {
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -69,6 +74,8 @@ const Careers = () => {
       if (!response.ok) {
         throw new Error("Network response was not ok.");
       }
+
+      navigate("/submission-successful");
 
       setFirstName("");
       setLastName("");
@@ -152,15 +159,14 @@ const Careers = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    PhoneNo*
+                    Mobile No*
                   </label>
-                  <input
-                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
+                  <PhoneInput
                     type="text"
                     value={phoneNumber}
-                    placeholder="Enter Mobile-No with CountryCode"
+                    country="in"
                     required
-                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    onChange={setPhoneNumber}
                   />
                 </div>
                 <div className="mt-3 mb-1">
@@ -207,14 +213,14 @@ const Careers = () => {
                     onChange={(e) => setUniversityName(e.target.value)}
                   />
                 </div>
-                <div className="mt-3 mb-1">
+                <div className="mt-3 mb-1 money">
                   <label className="block text-[#374151] pr-8 pb-1">
                     {" "}
                     Year of Graduation*
                   </label>
                   <input
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
-                    type="text"
+                    type="number"
                     value={yog}
                     required
                     onChange={(e) => setYog(e.target.value)}
@@ -235,7 +241,7 @@ const Careers = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Upload Degree/Provisional
+                    Upload Degree/Provisional*
                   </label>
                   <input
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
@@ -249,26 +255,25 @@ const Careers = () => {
             <div className="mt-4 mb-2">
               <div className="text-xl">Professional Credintials</div>
               <div className="pdformelement formelement">
-                <div className="mt-3 mb-1">
+                <div className="mt-3 mb-1 money">
                   <label className="block text-[#374151] pr-8 pb-1">
                     {" "}
                     RCI Number
                   </label>
                   <input
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
-                    type="text"
+                    type="number"
                     value={Rci}
                     onChange={(e) => setRci(e.target.value)}
                   />
                 </div>
-                <div className="mt-3 mb-1">
+                <div className="mt-3 mb-1 money">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    {" "}
                     No. of years practising as a Psycholigst*
                   </label>
                   <input
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
-                    type="text"
+                    type="number"
                     value={noyPractice}
                     required
                     onChange={(e) => setNoyPractice(e.target.value)}
@@ -311,13 +316,13 @@ const Careers = () => {
                     onChange={(e) => setshareSession(e.target.value)}
                   />
                 </div>
-                <div className="mt-3 mb-1">
+                <div className="mt-3 mb-1 money">
                   <label className="block text-[#374151] pr-8 pb-1">
                     How many hours a day can you dedicate to our App?*
                   </label>
                   <input
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
-                    type="text"
+                    type="number"
                     value={noh}
                     placeholder=""
                     required
@@ -354,7 +359,7 @@ const Careers = () => {
 
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Upload Degree/Provisional
+                    Upload Degree/Provisional*
                   </label>
                   <input
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"

@@ -1,8 +1,14 @@
 import { useState, Fragment } from "react";
 import BASE_URL from "../apis/Config";
+import { useNavigate } from "react-router-dom";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const MarketingIntern = () => {
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -60,6 +66,8 @@ const MarketingIntern = () => {
       if (!response.ok) {
         throw new Error("Network response was not ok.");
       }
+
+      navigate("/submission-successful");
 
       setFirstName("");
       setLastName("");
@@ -240,15 +248,13 @@ const MarketingIntern = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    PhoneNo*
+                    Mobile No*
                   </label>
-                  <input
-                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
-                    type="text"
+                  <PhoneInput
                     value={phoneNumber}
-                    placeholder="enter mobile-no with countrycode"
+                    country="in"
                     required
-                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    onChange={setPhoneNumber}
                   />
                 </div>
                 <div className="mt-3 mb-1">
