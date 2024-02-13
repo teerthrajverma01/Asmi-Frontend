@@ -42,6 +42,7 @@ const OnboardingForm = () => {
   const [consentDataUsage, setConsentDataUsage] = useState(false);
   const [consentNotifications, setConsentNotifications] = useState(false);
   const [consentAgreement, setConsentAgreement] = useState(false);
+  const [chequeFile, setChequeFile] = useState("");
 
   const handleCheckboxChange = (e) => {
     const { value, checked } = e.target;
@@ -94,9 +95,7 @@ const OnboardingForm = () => {
     formData.append("accountType", accountType);
     formData.append("preferredTimings", preferredTimings);
     formData.append("preferredLanguage", preferredLanguage);
-    formData.append("consentDataUsage", consentDataUsage);
-    formData.append("consentNotifications", consentNotifications);
-    formData.append("consentAgreement", consentAgreement);
+    formData.append("chequeFile", chequeFile);
 
     try {
       const response = await fetch(`${BASE_URL}/send-counselor-form`, {
