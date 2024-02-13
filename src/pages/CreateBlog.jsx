@@ -6,7 +6,10 @@ import "react-quill/dist/quill.snow.css";
 import BASE_URL from "../apis/Config";
 
 const CreateBlog = () => {
+  const [loading, setLoading] = useState(false);
+
   const [title, setTitle] = useState("");
+
   const [summary, setSummary] = useState("");
   const [content, setContent] = useState("");
   const [files, setFiles] = useState("");
@@ -16,6 +19,7 @@ const CreateBlog = () => {
 
   const createNewPost = async (event) => {
     event.preventDefault();
+    setLoading(true);
 
     const data = new FormData();
 
@@ -68,9 +72,10 @@ const CreateBlog = () => {
         />
         <button
           className="w-full py-2 text-white rounded-md bg-primary03 hover:bg-primary02 focus:outline-none"
+          disabled={loading}
           // onClick={createNewPost}
         >
-          Create a blog
+          {loading ? "Creating a new Blog..." : "Create a blog"}
         </button>
       </form>
     </div>

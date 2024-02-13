@@ -29,7 +29,7 @@ const Blog = ({ _id, title, summary, cover, content }) => {
       >
         <div className="w-full overflow-hidden h-[50%]">
           <img
-            src={`${BASE_URL}/` + cover}
+            src={cover}
             alt="image not found "
             className="object-cover w-full h-full"
           />
