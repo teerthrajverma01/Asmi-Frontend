@@ -4,6 +4,10 @@ import { useNavigate } from "react-router-dom";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
+import Axios from "axios";
+
+import FileDownload from "js-file-download";
+
 const OnboardingForm = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -43,6 +47,19 @@ const OnboardingForm = () => {
   const [consentNotifications, setConsentNotifications] = useState(false);
   const [consentAgreement, setConsentAgreement] = useState(false);
   const [chequeFile, setChequeFile] = useState("");
+
+  const downloadDoc = (e) => {
+    e.preventDefault();
+
+    Axios({
+      url: `${BASE_URL}/agreement`,
+      method: "GET",
+      responseType: "blob",
+    }).then((res) => {
+      console.log(res);
+      FileDownload(res.data, "INDEPENDENT_CONTRACTOR_AGREEMENT.docx");
+    });
+  };
 
   const handleCheckboxChange = (e) => {
     const { value, checked } = e.target;
@@ -679,9 +696,15 @@ const OnboardingForm = () => {
               <div className="mt-3 mb-1">
                 <input className="mr-2" type="checkbox" required />
                 <label>
-                  I have read the Independent Contractors Agreement between the
-                  Company and myself and expressly agree to the terms of the
-                  agreement.
+                  I have read the{" "}
+                  <a
+                    onClick={(e) => downloadDoc(e)}
+                    className="text-blue-600 underline cursor-pointer"
+                  >
+                    Independent Contractors Agreement
+                  </a>{" "}
+                  between the Company and myself and expressly agree to the
+                  terms of the agreement.
                 </label>
               </div>
               <div className="mt-3 mb-1">
