@@ -85,11 +85,7 @@ const SingleBlogPage = () => {
             ))}
           </h1>
 
-          <img
-            className="w-3/4 mx-auto my-6"
-            src={`${BASE_URL}/${postInfo.cover}`}
-            alt="img"
-          />
+          <img className="w-3/4 mx-auto my-6" src={postInfo.cover} alt="img" />
 
           <p className="mb-20 md:mt-20 md:mb-32">
             <div dangerouslySetInnerHTML={{ __html: postInfo.content }}></div>
