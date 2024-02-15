@@ -57,7 +57,7 @@ const OnboardingForm = () => {
       responseType: "blob",
     }).then((res) => {
       console.log(res);
-      FileDownload(res.data, "INDEPENDENT_CONTRACTOR_AGREEMENT.docx");
+      FileDownload(res.data, "INDEPENDENT_CONTRACTOR_AGREEMENT.pdf");
     });
   };
 
