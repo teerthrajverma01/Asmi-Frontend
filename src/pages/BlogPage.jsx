@@ -31,7 +31,7 @@ const BlogPage = () => {
     fetch(`${BASE_URL}/post`).then((response) => {
       response.json().then((posts) => {
         // console.log(posts);
-        setPosts(posts);
+        setPosts(posts.reverse());
       });
     });
   }, []);

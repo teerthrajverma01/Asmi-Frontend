@@ -47,7 +47,7 @@ const Blog = ({ _id, title, summary, cover, content }) => {
             </div>
             <div
               className="mb-2 text-xs"
-              dangerouslySetInnerHTML={{ __html: truncateText(content, 15) }}
+              dangerouslySetInnerHTML={{ __html: truncateText(content, 10) }}
             ></div>
           </div>
           <div className="flex items-center tex-sm">

@@ -116,7 +116,7 @@ const PsychoIntern = () => {
           <p className="mb-3">
             We expect you to bring your energy and enthusiasm to the workspace.
             We also expect you to come with an open mind enabling you to adapt
-            to ral world Counselling sessions and combine them with the
+            to real world Counselling sessions and combine them with the
             theoretical knowledge you are gaining or have gained in your
             University.
           </p>
