@@ -122,14 +122,14 @@ const PsychoIntern = () => {
           </p>
           <div className="text-2xl font-normal">What do you gain?</div>
           <p className="mb-3">
-            As an intern in our Psychology Internship program, you'll gain
+            As an intern in our Psychology Internship program, you willgain
             invaluable hands-on experience in the ever-evolving Mental Health
-            landscape. You'll work closely with experienced professionals,
+            landscape. You will work closely with experienced professionals,
             gaining insights into industry best practices and developing your
             own skills in Counselling Psychology. You will also gain the
             experience to learn how to structure your own independent practise,
             should you choose to start one. Upon successful completion of the
-            program, you'll receive a certificate of completion, further
+            program, you will receive a certificate of completion, further
             enhancing your credentials and demonstrating your expertise to
             potential employers.
           </p>
@@ -159,9 +159,9 @@ const PsychoIntern = () => {
           </p>
           <div className="text-2xl font-normal">Your Growth, Our Success</div>
           <p className="mb-3">
-            This internship isn't just about what you'll contribute to us; it's
-            about what we'll offer you in return. The experience gained here
-            will be a stepping stone towards your future success.
+            This internship isn't just about what you will contribute to us;
+            it's about what we'll offer you in return. The experience gained
+            here will be a stepping stone towards your future success.
           </p>
           <div className="text-2xl font-normal">Eligibility:</div>
           <p className="mb-3">
@@ -234,7 +234,7 @@ const PsychoIntern = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    PhoneNo*
+                    Mobile No*
                   </label>
                   <PhoneInput
                     type="text"
@@ -246,7 +246,7 @@ const PsychoIntern = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Address
+                    Address*
                   </label>
                   <textarea
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
@@ -259,7 +259,7 @@ const PsychoIntern = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Name of University
+                    Name of University*
                   </label>
                   <input
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
@@ -272,7 +272,7 @@ const PsychoIntern = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Name of College
+                    Name of College*
                   </label>
                   <input
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
@@ -285,41 +285,42 @@ const PsychoIntern = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Dept, Course & Semester
+                    Dept, Course & Semester*
                   </label>
                   <input
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={dcs}
                     onChange={(e) => setDcs(e.target.value)}
-                    placeholder="plz ener all 3 ie dept,course, sem"
+                    placeholder="Please enter all 3 (Dept, Course, Semester)"
                     required
                   />
                 </div>
 
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Are you a member of Societies in your College or Uni?
+                    Are you a member of Societies in your College or
+                    University?*
                   </label>
                   <textarea
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={qnMember}
                     onChange={(e) => setQnMember(e.target.value)}
-                    placeholder="Plz write name of society , reason for joining and experience so far"
+                    placeholder="Please write name of society, reason for joining and experience so far"
                     required
                   />
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Why did you choose Psychology as a Subject?
+                    Why did you choose Psychology as a Subject?*
                   </label>
                   <textarea
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={whyPsycho}
                     onChange={(e) => setWhyPsycho(e.target.value)}
-                    placeholder="Give detail answer"
+                    placeholder="Give detailed answer"
                     required
                   />
                 </div>
@@ -328,7 +329,7 @@ const PsychoIntern = () => {
                   <fieldset>
                     <legend>
                       Are you ready to dedicate 20 hours a week for your
-                      internship?
+                      internship?*
                     </legend>
                     <div>
                       <input
@@ -355,21 +356,21 @@ const PsychoIntern = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    What areas of Psychology interest you the most?
+                    What areas of Psychology interest you the most?*
                   </label>
                   <textarea
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={aoi}
                     onChange={(e) => setAoi(e.target.value)}
-                    placeholder="Give detail answer"
+                    placeholder="Give detailed answer"
                     required
                   />
                 </div>
                 <div className="mt-3 mb-1">
                   <fieldset>
                     <legend>
-                      Have you previously worked/interned in a similar program?
+                      Have you previously worked/interned in a similar program?*
                     </legend>
                     <div>
                       <input
@@ -396,14 +397,14 @@ const PsychoIntern = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    If so, please provide details
+                    If so, please provide details*
                   </label>
                   <textarea
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={prevworkdet}
                     onChange={(e) => setPrevworkdetail(e.target.value)}
-                    placeholder="Give detail of Employer, contact detail and Reference"
+                    placeholder="Give details of employer, contact detail and references"
                     required
                   />
                 </div>
@@ -422,7 +423,7 @@ const PsychoIntern = () => {
                 <input className="mr-2" type="checkbox" required />
                 <label>
                   I give my consent for the Company and its employees to contact
-                  me regarding this intership opporunity.
+                  me regarding this intership opportunity.
                 </label>
               </div>
               <div className="mt-3 mb-1">

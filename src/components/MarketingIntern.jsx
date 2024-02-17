@@ -164,9 +164,9 @@ const MarketingIntern = () => {
           </p>
           <div className="text-2xl font-normal">Your Growth, Our Success</div>
           <p className="mb-3">
-            This internship isn't just about what you'll contribute to us; it's
-            about what we'll offer you in return. The experience gained here
-            will be a stepping stone towards your future success.
+            This internship isn't just about what you will contribute to us;
+            it's about what we'll offer you in return. The experience gained
+            here will be a stepping stone towards your future success.
           </p>
           <div className="text-2xl font-normal">Eligibility:</div>
           <p className="mb-3">
@@ -259,7 +259,7 @@ const MarketingIntern = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Address
+                    Address*
                   </label>
                   <textarea
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
@@ -272,7 +272,7 @@ const MarketingIntern = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Name of University
+                    Name of University*
                   </label>
                   <input
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
@@ -285,7 +285,7 @@ const MarketingIntern = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Name of College
+                    Name of College*
                   </label>
                   <input
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
@@ -298,14 +298,14 @@ const MarketingIntern = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Dept, Course & Semester
+                    Dept, Course & Semester*
                   </label>
                   <input
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={dcs}
                     onChange={(e) => setDcs(e.target.value)}
-                    placeholder="plz ener all 3 ie dept,course, sem"
+                    placeholder="Please enter all 3 (Dept, Course, Semester)"
                     required
                   />
                 </div>
@@ -366,7 +366,7 @@ const MarketingIntern = () => {
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
                     In case of Part Time, how many hours/day can you devote to
-                    the Internship?
+                    the Internship?*
                   </label>
                   <textarea
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
@@ -379,7 +379,8 @@ const MarketingIntern = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Are you a member of Societies in your College or Uni?
+                    Are you a member of Societies in your College or
+                    University?*
                   </label>
                   <textarea
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
@@ -400,14 +401,14 @@ const MarketingIntern = () => {
                     type="text"
                     value={viewSm}
                     onChange={(e) => setViewSm(e.target.value)}
-                    placeholder="Give Detail Answer"
+                    placeholder="Give detailed Answer"
                     required
                   />
                 </div>
                 <div className="mt-3 mb-1">
                   <fieldset>
                     <legend>
-                      Have you created any Social Media Video Content?
+                      Have you created any Social Media Video Content?*
                     </legend>
                     <div>
                       <input
@@ -441,21 +442,22 @@ const MarketingIntern = () => {
                     type="text"
                     value={smcl}
                     onChange={(e) => setSmcl(e.target.value)}
-                    placeholder="Give detail answer"
+                    placeholder="Give detailed answer"
                     required
                   />
                 </div>
 
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    How many days per weel can you come to the office?
+                    How many days per weel can you come to the office?*
                   </label>
                   <input
                     className="md:md:w-3/5 w-full  pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={dpw}
+                    required
                     onChange={(e) => setDpw(e.target.value)}
-                    placeholder="Give detail of Employer, contact detail and Reference"
+                    placeholder="Give details of employer, contact detail and references"
                   />
                 </div>
               </div>
@@ -473,7 +475,7 @@ const MarketingIntern = () => {
                 <input className="mr-2" type="checkbox" required />
                 <label>
                   I give my consent for the Company and its employees to contact
-                  me regarding this intership opporunity.
+                  me regarding this intership opportunity.
                 </label>
               </div>
 

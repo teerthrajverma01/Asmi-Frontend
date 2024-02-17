@@ -311,7 +311,7 @@ const Careers = () => {
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={shareSession}
-                    placeholder="without disclosing confidential information, describe a session that was challenging"
+                    placeholder="Without disclosing confidential information, describe a session that was challenging"
                     required
                     onChange={(e) => setshareSession(e.target.value)}
                   />

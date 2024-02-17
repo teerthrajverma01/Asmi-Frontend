@@ -88,7 +88,7 @@ const Privacy = () => {
             We deeply care about the privacy of Our Users. You understand that
             by using the Services You consent to the collection, use and
             disclosure of Your Personal data and aggregate data as set forth in
-            our Privacy Policy , and to have Your data collected, used,
+            our Privacy Policy, and to have Your data collected, used,
             transferred to and processed by Us in accordance with Our Privacy
             Policy.
           </p>
