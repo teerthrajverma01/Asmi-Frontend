@@ -20,6 +20,7 @@ const PsychoIntern = () => {
   const [qnMember, setQnMember] = useState("");
   const [whyPsycho, setWhyPsycho] = useState("");
   const [dedtime, setDedtime] = useState("");
+  const [isHybrid, setIsHybrid] = useState("");
   const [aoi, setAoi] = useState("");
   const [prevworked, setPrevworked] = useState("");
   const [prevworkdet, setPrevworkdetail] = useState("");
@@ -48,6 +49,7 @@ const PsychoIntern = () => {
     // Append additional information
     InternData.append("whyPsycho", whyPsycho);
     InternData.append("dedtime", dedtime);
+    InternData.append("isHybrid", isHybrid);
     InternData.append("aoi", aoi);
     InternData.append("prevworked", prevworked);
     InternData.append("prevworkdet", prevworkdet);
@@ -95,20 +97,19 @@ const PsychoIntern = () => {
         <div className="programdetail-block">
           <div className="mb-4 text-4xl font-medium">About Us</div>
           <p className="mb-3">
-            Asmi™, a product in development, is India’s first mobile application
-            that will provide Mental Health Counselling Instantly, enabling a
-            User to connect to a qualified counsellor within a matter of
-            seconds. Asmi™ will also provide User Experience & Counselling in
-            regional & international languages while keeping the cost per
-            session low and affordable. Asmi™ is a brand of Anjanajyoti
-            Healthtech Private Limited.
+            Asmi™ is India’s first mobile application that provides Mental
+            Health Counselling Instantly, enabling a User to connect to a
+            qualified counsellor within a matter of seconds. Asmi™ also provides
+            User Experience & Counselling in regional & international languages
+            while keeping the cost per session low and affordable. Asmi™ is a
+            brand of Anjanajyoti Healthtech Private Limited.
           </p>
           <div className="text-2xl font-normal">Internship Overview</div>
           <p className="mb-3">
-            Gain hands-on experience in social media, working alongside our
-            in-house Psychologists and learn how to create SOPs, conduct
-            training and workshops, observe online realtime counselling sessions
-            and understand how to handle escalated cases.
+            Gain hands-on experience in social media, work alongside and get
+            trained by our in-house Psychologists and learn how to create case
+            histories, conduct training and workshops, indulge in roleplays and
+            understand how to handle escalated cases.
           </p>
           <div className="text-2xl font-normal">
             What do we expect from you?
@@ -122,12 +123,12 @@ const PsychoIntern = () => {
           </p>
           <div className="text-2xl font-normal">What do you gain?</div>
           <p className="mb-3">
-            As an intern in our Psychology Internship program, you willgain
+            As an intern in our Psychology Internship program, you will gain
             invaluable hands-on experience in the ever-evolving Mental Health
             landscape. You will work closely with experienced professionals,
             gaining insights into industry best practices and developing your
             own skills in Counselling Psychology. You will also gain the
-            experience to learn how to structure your own independent practise,
+            experience to learn how to structure your own independent practice,
             should you choose to start one. Upon successful completion of the
             program, you will receive a certificate of completion, further
             enhancing your credentials and demonstrating your expertise to
@@ -143,12 +144,12 @@ const PsychoIntern = () => {
             Work Schedule and Expectations
           </div>
           <p className="mb-3">
-            We prioritize flexibility and empower our interns to manage their
-            time effectively. You will primarily work part-time hours on-site.
-            This arrangement will allow you to balance your internship
-            responsibilities with other commitments. Throughout the program,
-            clear guidelines and expectations will be provided to ensure the
-            program's smooth and productive execution.
+            We prioritise flexibility and empower our interns to manage their
+            time effectively. You will primarily learn online with the option
+            for on site. This arrangement will allow you to balance your
+            internship responsibilities with other commitments. Throughout the
+            program, clear guidelines and expectations will be provided to
+            ensure the program's smooth and productive execution.
           </p>
           <div className="text-2xl font-normal">Orientation and Support</div>
           <p className="mb-3">
@@ -165,29 +166,36 @@ const PsychoIntern = () => {
           </p>
           <div className="text-2xl font-normal">Eligibility:</div>
           <p className="mb-3">
-            Must be studying "Full Time" in a recognised college. Preferred
+            ● Must be studying "Full Time" in a recognised college.
             <br />
-            Courses: Psychology Batch/Years: All batches/years, that is, 1st,
-            2nd and 3rd year students.
-            <br /> Strong communication skills and a good command of the English
-            language is an essential requirement.
+            ● Preferred Courses: Psychology & allied sciences
+            <br />● Batch/Years: Graduation & Post graduation students from all
+            years.
+            <br /> ● Strong communication skills and a good command of the
+            English language is an essential requirement.
           </p>
           <div className="text-2xl font-normal">
             Time Commitments (Per Week):
           </div>
           <p className="mb-3">
-            Part Time On-site 20 hours week, Complete flexibility prior and
-            during exams.
+            Hybrid/Online 3-5 hours week, Complete flexibility prior and during
+            exams.
           </p>
-          <div>Upon Completion:</div>
+          <div className="text-2xl font-normal">Upon Completion:</div>
           <p className="mb-3">
-            An opportunity to convert the internship to a full time job.
-            Completion Certificate Letter of Recommendation
+            ● An opportunity to convert the internship to a full time job
+            <br />
+            ● Certificate
+            <br />● Letter of Recommendation
           </p>
           <div className="text-2xl font-normal">Duration:</div>
-          <p className="mb-3">3 months (Option to convert into Full Time)</p>
+          <p className="mb-3">
+            1-1.5 months (Opportunity to convert into Full Time)
+          </p>
           <div className="text-2xl font-normal">Application Deadline:</div>
           <p className="mb-3">No deadline. It's an ongoing open opportunity.</p>
+          <div className="text-2xl font-normal">Remuneration </div>
+          <p className="mb-3">This is an unpaid internship</p>
         </div>
 
         <div className="mt-[5rem]">
@@ -285,14 +293,14 @@ const PsychoIntern = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Dept, Course & Semester*
+                    Course, Year and Semester*
                   </label>
                   <input
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
                     type="text"
                     value={dcs}
                     onChange={(e) => setDcs(e.target.value)}
-                    placeholder="Please enter all 3 (Dept, Course, Semester)"
+                    placeholder="Please enter all 3 (Course, Year and Semester)"
                     required
                   />
                 </div>
@@ -328,7 +336,7 @@ const PsychoIntern = () => {
                 <div className="mt-3 mb-1">
                   <fieldset>
                     <legend>
-                      Are you ready to dedicate 20 hours a week for your
+                      Are you ready to dedicate 3-5 hours per week for the
                       internship?*
                     </legend>
                     <div>
@@ -354,6 +362,38 @@ const PsychoIntern = () => {
                     </div>
                   </fieldset>
                 </div>
+
+                <div className="mt-3 mb-1">
+                  <fieldset>
+                    <legend>What mode would you like to opt for?</legend>
+                    <div>
+                      <input
+                        className="mr-2"
+                        type="radio"
+                        name="mode"
+                        value="HYBRID"
+                        onChange={(e) => setIsHybrid(e.target.value)}
+                      />
+                      <label className=" text-[#374151] pr-8 pb-1">
+                        HYBRID
+                      </label>
+                    </div>
+
+                    <div>
+                      <input
+                        className="mr-2"
+                        type="radio"
+                        name="mode"
+                        value="ONLINE"
+                        onChange={(e) => setIsHybrid(e.target.value)}
+                      />
+                      <label className=" text-[#374151] pr-8 pb-1">
+                        ONLINE
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
                     What areas of Psychology interest you the most?*
@@ -429,9 +469,8 @@ const PsychoIntern = () => {
               <div className="mt-3 mb-1">
                 <input className="mr-2" type="checkbox" required />
                 <label>
-                  I understand that this is a Part-Time On-Site internship that
-                  requires my physical presence in the office/workspace 20 hours
-                  a week
+                  I understand that this is a Part-Time Hybrid/Online internship
+                  demanding 3-5 hours a week.
                 </label>
               </div>
               <input
@@ -444,7 +483,7 @@ const PsychoIntern = () => {
           </form>
         </div>
 
-        <div className="mt-[5rem]">
+        {/* <div className="mt-[5rem]">
           <div className="text-3xl mb-[1rem]">General Information</div>
           <div className="text-2xl font-normal">Eligibility:</div>
           <p className="mb-3">
@@ -456,8 +495,7 @@ const PsychoIntern = () => {
             Strong communication skills and a good command of the English
             language is an essential requirement.
           </p>
-          <div className="text-2xl font-normal">Remuneration (Per Month):</div>
-          <p className="mb-3">This is an unpaid internship</p>
+
           <div>Upon Completion:</div>
           <p className="mb-3">
             An opportunity to convert the internship to a full/part time job.
@@ -472,7 +510,7 @@ const PsychoIntern = () => {
           <p className="mb-3">
             No deadline. It&apos;s an ongoing open opportunity.
           </p>
-        </div>
+        </div> */}
       </div>
     </Fragment>
   );

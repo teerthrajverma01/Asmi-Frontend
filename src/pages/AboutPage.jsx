@@ -225,185 +225,7 @@ const AboutPage = () => {
                       </div>
                     </div>
                   </motion.div>
-                  <motion.div
-                    initial="hidden"
-                    whileInView={"visible"}
-                    variants={{
-                      visible: {
-                        y: 0,
-                        opacity: 1,
-                        transition: {
-                          type: "spring",
-                        },
-                      },
-                      hidden: { opacity: 1, y: 50 },
-                    }}
-                  >
-                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
-                      <div>
-                        <div>
-                          <img
-                            className=" w-36 h-36 min-h-[5rem] min-w-[5rem] object-cover rounded-[100%] max-w-full inline-block"
-                            src={aboutusimg2}
-                            alt=""
-                          />
-                        </div>
-                        <div className="p-4 "></div>
-                        <div className="text-xl font-semibold">
-                          Arvinder Kaur
-                        </div>
-                        <div className="text-sm">Marketing</div>
-                        <div className="p-4 "></div>
-                        <p className="mt-0 mb-0 text-sm text-white">
-                          I specialize in driving online presence and brand
-                          visibility to new heights.
-                        </p>
-                        <div className="p-4 "></div>
-                      </div>
-                    </div>
-                  </motion.div>
-                  <motion.div
-                    initial="hidden"
-                    whileInView={"visible"}
-                    variants={{
-                      visible: {
-                        y: 0,
-                        opacity: 1,
-                        transition: {
-                          type: "spring",
-                        },
-                      },
-                      hidden: { opacity: 1, y: 50 },
-                    }}
-                  >
-                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
-                      <div>
-                        <div>
-                          <img
-                            className=" w-36 h-36 min-h-[5rem] min-w-[5rem] object-cover rounded-[100%] max-w-full inline-block"
-                            src={aboutusimg3}
-                            alt=""
-                          />
-                        </div>
-                        <div className="p-4 "></div>
-                        <div className="text-xl font-semibold">Md. Riswan</div>
-                        <div className="text-sm">Product Development</div>
-                        <div className="p-4 "></div>
-                        <p className="mt-0 mb-0 text-sm text-white">
-                          As a skilled Front-end Flutter Developer, I specialize
-                          in creating visually appealing and responsive user
-                          interfaces for mobile applications.
-                        </p>
-                        <div className="p-4 "></div>
-                      </div>
-                    </div>
-                  </motion.div>
-                  <motion.div
-                    initial="hidden"
-                    whileInView={"visible"}
-                    variants={{
-                      visible: {
-                        y: 0,
-                        opacity: 1,
-                        transition: {
-                          type: "spring",
-                        },
-                      },
-                      hidden: { opacity: 1, y: 50 },
-                    }}
-                  >
-                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
-                      <div>
-                        <div>
-                          <img
-                            className=" w-36 h-36 min-h-[5rem] min-w-[5rem] object-cover rounded-[100%] max-w-full inline-block"
-                            src={aboutusimg4}
-                            alt=""
-                          />
-                        </div>
-                        <div className="p-4 "></div>
-                        <div className="text-xl font-semibold">Md. Safvan</div>
-                        <div className="text-sm">Product Development</div>
-                        <div className="p-4 "></div>
-                        <p className="mt-0 mb-0 text-sm text-white">
-                          As an adept Python Django Developer, I specialize in
-                          crafting robust and scalable web applications.
-                        </p>
-                        <div className="p-4 "></div>
-                      </div>
-                    </div>
-                  </motion.div>
-                  <motion.div
-                    viewport={{ once: true }}
-                    initial="hidden"
-                    whileInView={"visible"}
-                    variants={{
-                      visible: {
-                        y: 0,
-                        opacity: 1,
-                        transition: {
-                          type: "spring",
-                        },
-                      },
-                      hidden: { opacity: 1, y: 50 },
-                    }}
-                  >
-                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
-                      <div>
-                        <div>
-                          <img
-                            className=" w-36 h-36 min-h-[5rem] min-w-[5rem] object-cover rounded-[100%] max-w-full inline-block"
-                            src={aboutusimg5}
-                            alt=""
-                          />
-                        </div>
-                        <div className="p-4 "></div>
-                        <div className="text-xl font-semibold">Ayushi Rana</div>
-                        <div className="text-sm">Finance</div>
-                        <div className="p-4 "></div>
-                        <p className="mt-0 mb-0 text-sm text-white">
-                          I specialize in ensuring financial excellence and
-                          stability within organizations.
-                        </p>
-                        <div className="p-4 "></div>
-                      </div>
-                    </div>
-                  </motion.div>
-                  <motion.div
-                    initial="hidden"
-                    whileInView={"visible"}
-                    variants={{
-                      visible: {
-                        y: 0,
-                        opacity: 1,
-                        transition: {
-                          type: "spring",
-                        },
-                      },
-                      hidden: { opacity: 1, y: 50 },
-                    }}
-                  >
-                    <div className="h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
-                      <div>
-                        <div>
-                          <img
-                            className=" w-36 h-36 min-h-[5rem] min-w-[5rem] object-cover rounded-[100%] max-w-full inline-block"
-                            src={aboutusimg6}
-                            alt=""
-                          />
-                        </div>
-                        <div className="p-4 "></div>
-                        <div className="text-xl font-semibold">Tanvi Gupta</div>
-                        <div className="text-sm">Human Rescource</div>
-                        <div className="p-4 "></div>
-                        <p className="mt-0 mb-0 text-sm text-white">
-                          I specialize in identifying and nurturing exceptional
-                          talent to create vibrant workplace environments.
-                        </p>
-                        <div className="p-4 "></div>
-                      </div>
-                    </div>
-                  </motion.div>
+
                   <motion.div
                     initial="hidden"
                     whileInView={"visible"}
@@ -552,6 +374,189 @@ const AboutPage = () => {
                           I am a dedicated Counselling Psychologist committed to
                           supporting individuals on their journey towards
                           emotional well-being and personal growth.
+                        </p>
+                        <div className="p-4 "></div>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial="hidden"
+                    whileInView={"visible"}
+                    variants={{
+                      visible: {
+                        y: 0,
+                        opacity: 1,
+                        transition: {
+                          type: "spring",
+                        },
+                      },
+                      hidden: { opacity: 1, y: 50 },
+                    }}
+                  >
+                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                      <div>
+                        <div>
+                          <img
+                            className=" w-36 h-36 min-h-[5rem] min-w-[5rem] object-cover rounded-[100%] max-w-full inline-block"
+                            src={aboutusimg2}
+                            alt=""
+                          />
+                        </div>
+                        <div className="p-4 "></div>
+                        <div className="text-xl font-semibold">
+                          Arvinder Kaur
+                        </div>
+                        <div className="text-sm">Marketing</div>
+                        <div className="p-4 "></div>
+                        <p className="mt-0 mb-0 text-sm text-white">
+                          I specialize in driving online presence and brand
+                          visibility to new heights.
+                        </p>
+                        <div className="p-4 "></div>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial="hidden"
+                    whileInView={"visible"}
+                    variants={{
+                      visible: {
+                        y: 0,
+                        opacity: 1,
+                        transition: {
+                          type: "spring",
+                        },
+                      },
+                      hidden: { opacity: 1, y: 50 },
+                    }}
+                  >
+                    <div className="h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                      <div>
+                        <div>
+                          <img
+                            className=" w-36 h-36 min-h-[5rem] min-w-[5rem] object-cover rounded-[100%] max-w-full inline-block"
+                            src={aboutusimg6}
+                            alt=""
+                          />
+                        </div>
+                        <div className="p-4 "></div>
+                        <div className="text-xl font-semibold">Tanvi Gupta</div>
+                        <div className="text-sm">Human Rescource</div>
+                        <div className="p-4 "></div>
+                        <p className="mt-0 mb-0 text-sm text-white">
+                          I specialize in identifying and nurturing exceptional
+                          talent to create vibrant workplace environments.
+                        </p>
+                        <div className="p-4 "></div>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    viewport={{ once: true }}
+                    initial="hidden"
+                    whileInView={"visible"}
+                    variants={{
+                      visible: {
+                        y: 0,
+                        opacity: 1,
+                        transition: {
+                          type: "spring",
+                        },
+                      },
+                      hidden: { opacity: 1, y: 50 },
+                    }}
+                  >
+                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                      <div>
+                        <div>
+                          <img
+                            className=" w-36 h-36 min-h-[5rem] min-w-[5rem] object-cover rounded-[100%] max-w-full inline-block"
+                            src={aboutusimg5}
+                            alt=""
+                          />
+                        </div>
+                        <div className="p-4 "></div>
+                        <div className="text-xl font-semibold">Ayushi Rana</div>
+                        <div className="text-sm">Finance</div>
+                        <div className="p-4 "></div>
+                        <p className="mt-0 mb-0 text-sm text-white">
+                          I specialize in ensuring financial excellence and
+                          stability within organizations.
+                        </p>
+                        <div className="p-4 "></div>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial="hidden"
+                    whileInView={"visible"}
+                    variants={{
+                      visible: {
+                        y: 0,
+                        opacity: 1,
+                        transition: {
+                          type: "spring",
+                        },
+                      },
+                      hidden: { opacity: 1, y: 50 },
+                    }}
+                  >
+                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                      <div>
+                        <div>
+                          <img
+                            className=" w-36 h-36 min-h-[5rem] min-w-[5rem] object-cover rounded-[100%] max-w-full inline-block"
+                            src={aboutusimg3}
+                            alt=""
+                          />
+                        </div>
+                        <div className="p-4 "></div>
+                        <div className="text-xl font-semibold">Md. Riswan</div>
+                        <div className="text-sm">Product Development</div>
+                        <div className="p-4 "></div>
+                        <p className="mt-0 mb-0 text-sm text-white">
+                          As a skilled Front-end Flutter Developer, I specialize
+                          in creating visually appealing and responsive user
+                          interfaces for mobile applications.
+                        </p>
+                        <div className="p-4 "></div>
+                      </div>
+                    </div>
+                  </motion.div>
+                  <motion.div
+                    initial="hidden"
+                    whileInView={"visible"}
+                    variants={{
+                      visible: {
+                        y: 0,
+                        opacity: 1,
+                        transition: {
+                          type: "spring",
+                        },
+                      },
+                      hidden: { opacity: 1, y: 50 },
+                    }}
+                  >
+                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                      <div>
+                        <div>
+                          <img
+                            className=" w-36 h-36 min-h-[5rem] min-w-[5rem] object-cover rounded-[100%] max-w-full inline-block"
+                            src={aboutusimg4}
+                            alt=""
+                          />
+                        </div>
+                        <div className="p-4 "></div>
+                        <div className="text-xl font-semibold">Md. Safvan</div>
+                        <div className="text-sm">Product Development</div>
+                        <div className="p-4 "></div>
+                        <p className="mt-0 mb-0 text-sm text-white">
+                          As an adept Python Django Developer, I specialize in
+                          crafting robust and scalable web applications.
                         </p>
                         <div className="p-4 "></div>
                       </div>
