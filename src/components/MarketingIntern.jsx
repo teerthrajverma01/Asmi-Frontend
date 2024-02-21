@@ -316,6 +316,7 @@ const MarketingIntern = () => {
                       <input
                         className="mr-2"
                         type="radio"
+                        required
                         name="answer"
                         value="FullTimeOnsite"
                         onChange={(e) => setInternpref(e.target.value)}
@@ -414,8 +415,9 @@ const MarketingIntern = () => {
                       <input
                         className="mr-2"
                         type="radio"
-                        name="answer"
+                        name="social"
                         value="No"
+                        required
                         onChange={(e) => setSmc(e.target.value)}
                       />
                       <label className=" text-[#374151] pr-8 pb-1">Yes</label>
@@ -425,7 +427,7 @@ const MarketingIntern = () => {
                       <input
                         className="mr-2"
                         type="radio"
-                        name="answer"
+                        name="social"
                         value="Yes"
                         onChange={(e) => setSmc(e.target.value)}
                       />

@@ -184,6 +184,7 @@ const VendorOnboardingForm = () => {
                     <input
                       className="mr-2"
                       type="radio"
+                      required
                       name="answer"
                       value="Proprietorship"
                       onChange={(e) => setOrgType(e.target.value)}

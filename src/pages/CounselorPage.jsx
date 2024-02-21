@@ -92,12 +92,12 @@ const CounselorPage = () => {
   const text1 = " Meet Our Counselors".split(" ");
 
   const counselorData = [
-    {
-      name: "Rashi",
-      image: RashiImage,
-      qualification: "M.A. Applied Psychology",
-      specializations: ["General", "Couples"],
-    },
+    // {
+    //   name: "Rashi",
+    //   image: RashiImage,
+    //   qualification: "M.A. Applied Psychology",
+    //   specializations: ["General", "Couples"],
+    // },
     {
       name: "Naincy",
       image: NaincyImage,
@@ -129,12 +129,12 @@ const CounselorPage = () => {
       qualification: "M.A. Clinical Psychology",
       specializations: ["Pediatrics", "Adolescent"],
     },
-    {
-      name: "Charvi",
-      image: CharviImage,
-      qualification: "M.A. Clinical Psychology",
-      specializations: ["Couples", "Trauma"],
-    },
+    // {
+    //   name: "Charvi",
+    //   image: CharviImage,
+    //   qualification: "M.A. Clinical Psychology",
+    //   specializations: ["Couples", "Trauma"],
+    // },
     {
       name: "Rutvij",
       image: RutvijImage,

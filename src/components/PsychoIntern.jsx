@@ -345,6 +345,7 @@ const PsychoIntern = () => {
                         type="radio"
                         name="answer"
                         value="No"
+                        required
                         onChange={(e) => setDedtime(e.target.value)}
                       />
                       <label className=" text-[#374151] pr-8 pb-1">Yes</label>
@@ -365,13 +366,14 @@ const PsychoIntern = () => {
 
                 <div className="mt-3 mb-1">
                   <fieldset>
-                    <legend>What mode would you like to opt for?</legend>
+                    <legend>What mode would you like to opt for?*</legend>
                     <div>
                       <input
                         className="mr-2"
                         type="radio"
                         name="mode"
                         value="HYBRID"
+                        required
                         onChange={(e) => setIsHybrid(e.target.value)}
                       />
                       <label className=" text-[#374151] pr-8 pb-1">
@@ -416,9 +418,10 @@ const PsychoIntern = () => {
                       <input
                         className="mr-2"
                         type="radio"
-                        name="answer"
-                        value="No"
+                        name="intern"
+                        value="Yes"
                         onChange={(e) => setPrevworked(e.target.value)}
+                        required
                       />
                       <label className=" text-[#374151] pr-8 pb-1">Yes</label>
                     </div>
@@ -427,14 +430,15 @@ const PsychoIntern = () => {
                       <input
                         className="mr-2"
                         type="radio"
-                        name="answer"
-                        value="Yes"
+                        name="intern"
+                        value="No"
                         onChange={(e) => setPrevworked(e.target.value)}
                       />
                       <label className=" text-[#374151] pr-8 pb-1">No</label>
                     </div>
                   </fieldset>
                 </div>
+
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
                     If so, please provide details*
