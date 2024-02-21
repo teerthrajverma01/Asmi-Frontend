@@ -108,7 +108,7 @@ const HomePage = () => {
                 </div>
               </section>
 
-              <div>
+              <div className="flex justify-center">
                 <h1 className="max-w-4xl mt-4 font-sans text-center md:mt-12 md:text-2xl">
                   Asmi provides the best Online Counseling in India and around
                   the globe.Connect within 60 seconds with qualified,

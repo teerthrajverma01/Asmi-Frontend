@@ -166,8 +166,6 @@ const PsychoIntern = () => {
           </p>
           <div className="text-2xl font-normal">Eligibility:</div>
           <p className="mb-3">
-            ● Must be studying "Full Time" in a recognised college.
-            <br />
             ● Preferred Courses: Psychology & allied sciences
             <br />● Batch/Years: Graduation & Post graduation students from all
             years.
