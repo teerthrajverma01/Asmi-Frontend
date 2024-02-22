@@ -26,6 +26,8 @@ const Careers = () => {
   const [expRes, setExpRes] = useState("");
   const [expText, setExpText] = useState("");
   const [shareSession, setshareSession] = useState("");
+  const [accomplishments, setAccomplishments] = useState("");
+  const [dailyPractice, setDailyPractice] = useState("");
   const [noh, setNoh] = useState("");
   const [available, setAvailable] = useState("");
   const [specialization, setSpecialization] = useState("");
@@ -57,6 +59,8 @@ const Careers = () => {
     careerData.set("expRes", expRes);
     careerData.set("expText", expText);
     careerData.set("shareSession", shareSession);
+    careerData.set("accomplishments", accomplishments);
+    careerData.set("dailyPractice", dailyPractice);
     careerData.set("noh", noh);
     careerData.set("available", available);
     careerData.set("specialization", specialization);
@@ -190,7 +194,7 @@ const Careers = () => {
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
                     {" "}
-                    High Degree Earned*
+                    Highest Educational Qualification*
                   </label>
                   <input
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
@@ -241,7 +245,7 @@ const Careers = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Upload Degree/Provisional*
+                    Upload All Certifications/Degrees*
                   </label>
                   <input
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
@@ -269,7 +273,7 @@ const Careers = () => {
                 </div>
                 <div className="mt-3 mb-1 money">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    No. of years practising as a Psycholigst*
+                    Years of Experience as a Practising Psycholigst*
                   </label>
                   <input
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
@@ -305,7 +309,8 @@ const Careers = () => {
                 </div>
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Share a challenging counselling session*
+                    Describe how your education has prepared you for your
+                    practice.*
                   </label>
                   <textarea
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
@@ -314,6 +319,33 @@ const Careers = () => {
                     placeholder="Without disclosing confidential information, describe a session that was challenging"
                     required
                     onChange={(e) => setshareSession(e.target.value)}
+                  />
+                </div>
+                <div className="mt-3 mb-1">
+                  <label className="block text-[#374151] pr-8 pb-1">
+                    Briefly describe your major accomplishments in your ongoing
+                    activities or events which you have participated.*
+                  </label>
+                  <textarea
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
+                    type="text"
+                    value={accomplishments}
+                    required
+                    onChange={(e) => setAccomplishments(e.target.value)}
+                  />
+                </div>
+                <div className="mt-3 mb-1">
+                  <label className="block text-[#374151] pr-8 pb-1">
+                    With respect to your specialisation, explain how and what
+                    kind of people and issues you deal with in your daily
+                    practice.*
+                  </label>
+                  <textarea
+                    className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
+                    type="text"
+                    value={dailyPractice}
+                    required
+                    onChange={(e) => setDailyPractice(e.target.value)}
                   />
                 </div>
                 <div className="mt-3 mb-1 money">
@@ -359,7 +391,7 @@ const Careers = () => {
 
                 <div className="mt-3 mb-1">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Upload Degree/Provisional*
+                    Upload Resume*
                   </label>
                   <input
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"

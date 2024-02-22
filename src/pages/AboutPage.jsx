@@ -256,8 +256,15 @@ const AboutPage = () => {
                         <div className="text-sm">Psychologist</div>
                         <div className="p-4 "></div>
                         <p className="mt-0 mb-0 text-sm text-white">
-                          My personal way to healing others is very holistic,
-                          warm and flexible.
+                          I tend to take an eclectic approach to best fit the
+                          needs of my clients and try to make them as
+                          comfortable as possible in sharing whatever is
+                          bothersome without any hesitations. I try to help my
+                          clients achieve all their personal goals while taking
+                          the best care of their mental health. With catering
+                          easily over a hundred clients in the span of 3 years I
+                          can vouch for myself on giving my best to each and
+                          every person who seeks help.
                         </p>
                         <div className="p-4 "></div>
                       </div>
