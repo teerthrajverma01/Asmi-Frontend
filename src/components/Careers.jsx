@@ -273,7 +273,7 @@ const Careers = () => {
                 </div>
                 <div className="mt-3 mb-1 money">
                   <label className="block text-[#374151] pr-8 pb-1">
-                    Years of Experience as a Practising Psycholigst*
+                    Years of Experience as a Practising Psycholigist*
                   </label>
                   <input
                     className="md:w-3/5 w-full pr-2 border p-2 rounded-sm border-[#d1d5db] w-max-[20rem]"
