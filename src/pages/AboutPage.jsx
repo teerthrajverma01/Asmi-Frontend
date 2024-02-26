@@ -202,7 +202,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className="flex flex-col items-start p-8 rounded-lg max-w-[26rem] h-[30rem] bg-darkSlateGrey">
+                    <div className="flex flex-col items-start p-8 rounded-lg max-w-[26rem] h-[33rem] bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
@@ -240,7 +240,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                    <div className=" h-[33rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
@@ -284,7 +284,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                    <div className=" h-[33rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
@@ -321,7 +321,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                    <div className=" h-[33rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
@@ -362,7 +362,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className="h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                    <div className="h-[33rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
@@ -401,7 +401,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                    <div className=" h-[33rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
@@ -439,7 +439,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className="h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                    <div className="h-[33rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
@@ -476,7 +476,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                    <div className=" h-[33rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
@@ -512,7 +512,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                    <div className=" h-[33rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
@@ -548,7 +548,7 @@ const AboutPage = () => {
                       hidden: { opacity: 1, y: 50 },
                     }}
                   >
-                    <div className=" h-[30rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
+                    <div className=" h-[33rem] max-w-[26rem] flex flex-col items-start p-8 rounded-lg bg-darkSlateGrey">
                       <div>
                         <div>
                           <img
