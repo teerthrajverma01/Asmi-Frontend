@@ -307,7 +307,7 @@ const AboutPage = () => {
                       </div>
                     </div>
                   </motion.div>
-                  <motion.div
+                  {/* <motion.div
                     initial="hidden"
                     whileInView={"visible"}
                     variants={{
@@ -347,7 +347,7 @@ const AboutPage = () => {
                         <div className="p-4 "></div>
                       </div>
                     </div>
-                  </motion.div>
+                  </motion.div> */}
                   {/* <motion.div
                     initial="hidden"
                     whileInView={"visible"}
