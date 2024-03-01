@@ -141,12 +141,12 @@ const CounselorPage = () => {
       qualification: "M.A. Clinical Psychology",
       specializations: ["Adolescent", "Queer"],
     },
-    {
-      name: "Shivangi",
-      image: ShivangiImage,
-      qualification: "M.A. Clinical Psychology",
-      specializations: ["Adolescent", "Couples"],
-    },
+    // {
+    //   name: "Shivangi",
+    //   image: ShivangiImage,
+    //   qualification: "M.A. Clinical Psychology",
+    //   specializations: ["Adolescent", "Couples"],
+    // },
     {
       name: "Megha",
       image: MeghaImage,
