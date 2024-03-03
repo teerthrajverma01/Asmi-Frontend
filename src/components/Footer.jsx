@@ -83,6 +83,7 @@ const Footer = () => {
                       </div>
                       <NavLink
                         to={"/about-us"}
+                        onClick={() => window.scrollTo(0, 0)}
                         className=" text-[color:var(--white-64)] text-sm no-underline py-1.5"
                       >
                         About us
@@ -90,6 +91,7 @@ const Footer = () => {
 
                       <NavLink
                         to={"/termsandconditions"}
+                        onClick={() => window.scrollTo(0, 0)}
                         className=" text-[color:var(--white-64)] text-sm no-underline py-1.5"
                       >
                         Terms of Use
@@ -97,12 +99,14 @@ const Footer = () => {
 
                       <NavLink
                         to={"/privacypolicy"}
+                        onClick={() => window.scrollTo(0, 0)}
                         className=" text-[color:var(--white-64)] text-sm no-underline py-1.5"
                       >
                         Privacy Policy
                       </NavLink>
                       <NavLink
                         to={"/refunds"}
+                        onClick={() => window.scrollTo(0, 0)}
                         className=" text-[color:var(--white-64)] text-sm no-underline py-1.5"
                       >
                         Refunds
@@ -110,6 +114,7 @@ const Footer = () => {
                       <NavLink
                         to={"/faq"}
                         className=" text-[color:var(--white-64)] text-sm no-underline py-1.5"
+                        onClick={() => window.scrollTo(0, 0)}
                       >
                         FAQs
                       </NavLink>
@@ -161,24 +166,28 @@ const Footer = () => {
                       </div>
                       <NavLink
                         to={"/psychologyinternship"}
+                        onClick={() => window.scrollTo(0, 0)}
                         className=" text-[color:var(--white-64)] text-sm no-underline py-1.5"
                       >
                         Psychology-Internship
                       </NavLink>
                       <NavLink
                         to={"/marketinginternship"}
+                        onClick={() => window.scrollTo(0, 0)}
                         className=" text-[color:var(--white-64)] text-sm no-underline py-1.5"
                       >
                         Marketing-Internship
                       </NavLink>
                       <NavLink
                         to={"/careers"}
-                        className=" text-[color:var(--white-64)] text-sm no-underline py-1.5"
+                        onClick={() => window.scrollTo(0, 0)} // Scrolls to the top when Career link is clicked
+                        className="text-[color:var(--white-64)] text-sm no-underline py-1.5"
                       >
                         Careers
                       </NavLink>
                       <NavLink
                         to={"/vendoronboarding"}
+                        onClick={() => window.scrollTo(0, 0)}
                         className=" text-[color:var(--white-64)] text-sm no-underline py-1.5"
                       >
                         Vendor-onboarding
