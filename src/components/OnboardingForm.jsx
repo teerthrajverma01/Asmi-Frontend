@@ -25,7 +25,6 @@ const OnboardingForm = () => {
   const [qualification, setQualification] = useState("");
   const [certificates, setCertificates] = useState(null); // Store certificates file
   const [workExperience, setWorkExperience] = useState("");
-  const [psychologistExperience, setPsychologistExperience] = useState("");
 
   const [selectedSpecializations, setSelectedSpecializations] = useState([]);
 
@@ -92,7 +91,6 @@ const OnboardingForm = () => {
     formData.append("qualification", qualification);
     formData.append("certificates", certificates);
     formData.append("workExperience", workExperience);
-    formData.append("psychologistExperience", psychologistExperience);
 
     selectedSpecializations.forEach((spec) => {
       formData.append("specializations[]", spec);
@@ -139,7 +137,6 @@ const OnboardingForm = () => {
       setQualification("");
       setCertificates(null);
       setWorkExperience("");
-      setPsychologistExperience("");
       setReference("");
       setReferenceContact("");
       setPan("");
