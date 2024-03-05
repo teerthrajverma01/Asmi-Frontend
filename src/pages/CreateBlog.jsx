@@ -46,29 +46,33 @@ const CreateBlog = () => {
         className="max-w-md p-6 mx-auto bg-white rounded-md shadow-md"
       >
         <input
-          type="title"
+          type="text"
           placeholder="Title"
           className="w-full p-2 mb-4 border rounded-md border-neutral300 focus:outline-none focus:border-primary03"
           value={title}
           onChange={(ev) => setTitle(ev.target.value)}
+          required
         />
         <input
-          type="summary"
+          type="text"
           placeholder="Summary"
           className="w-full p-2 mb-4 border rounded-md border-neutral300 focus:outline-none focus:border-primary03"
           value={summary}
           onChange={(ev) => setSummary(ev.target.value)}
+          required
         />
         <input
           type="file"
           className="w-full p-2 mb-4 border rounded-md border-neutral300 focus:outline-none focus:border-primary03"
           onChange={(ev) => setFiles(ev.target.files)}
+          required
         />
         <ReactQuill
           theme="snow"
           className="mb-4 border rounded-md border-neutral300"
           value={content}
           onChange={(newValue) => setContent(newValue)}
+          required
         />
         <button
           className="w-full py-2 text-white rounded-md bg-primary03 hover:bg-primary02 focus:outline-none"
