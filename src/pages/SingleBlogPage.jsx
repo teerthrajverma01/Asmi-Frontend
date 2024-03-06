@@ -12,16 +12,24 @@ const SingleBlogPage = () => {
 
   const username = useSelector((state) => state.userInfo.username);
 
-  console.log(username);
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`${BASE_URL}/post/${id}`).then((response) => {
-      response.json().then((postInfo) => {
-        setPostInfo(postInfo);
+    fetch(`${BASE_URL}/post/${id}`)
+      .then((response) => {
+        if (response.ok) {
+          response.json().then((postInfo) => {
+            setPostInfo(postInfo);
+          });
+        } else {
+          navigate("/blogs");
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching post", error);
+        navigate("/blogs");
       });
-    });
-  }, []);
+  }, [id, navigate]);
 
   // console.log(heading);
 
