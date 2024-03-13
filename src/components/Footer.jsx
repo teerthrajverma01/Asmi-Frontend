@@ -207,7 +207,7 @@ const Footer = () => {
                 Recognised By DPIIT as a Healthtech Startup - DIPP150637
               </div>
               <div className="text-[color:var(--white-64)] text-sm mt-0">
-                ©ASMI&nbsp;by Anjanajyoti Systems Private Limited.
+                ©ASMI&nbsp;by Anjanajyoti Healthtech Pvt. Ltd.
               </div>
             </div>
           </div>
