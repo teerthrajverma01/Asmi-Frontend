@@ -24,7 +24,7 @@ const AdminLoginPage = () => {
 
     if (res.ok) {
       setRedirect(true);
-      navigate("/blogs");
+      navigate("/admin");
     } else {
       alert("wrong credentials");
     }

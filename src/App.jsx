@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./pages/RootLayout";
 import HomePage from "./pages/HomePage";
@@ -24,6 +24,10 @@ import TermOfUse from "./components/TermOfUse";
 import VendorForm from "./components/VendorForm";
 import SubmissionSuccesful from "./components/SubmissionSuccesful";
 import OnboardingForm from "./components/OnboardingForm";
+import NewsRoomPage from "./pages/NewsRoomPage";
+import SingleNewsPage from "./pages/SingleNewsPage";
+import CreateNews from "./pages/CreateNews";
+import AdminPage from "./pages/AdminPage";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +41,11 @@ const router = createBrowserRouter([
       { path: "/contact-us", element: <Contact /> },
       { path: "/how-it-works", element: <HowItWorks /> },
       { path: "/admin-login", element: <AdminLoginPage /> },
-      { path: "/create-blog", element: <CreateBlog /> },
+      {
+        path: "/create-blog",
+        element: <CreateBlog />,
+      },
+      { path: "/create-newsitem", element: <CreateNews /> },
       { path: "/gift-card", element: <GiftCard /> },
       { path: "/assessment", element: <Assessment /> },
       { path: "/psychologyinternship", element: <PsychoIntern /> },
@@ -54,6 +62,9 @@ const router = createBrowserRouter([
       { path: "/onboarding", element: <OnboardingForm /> },
       { path: "/submission-successful", element: <SubmissionSuccesful /> },
       { path: "/post/:id", element: <SingleBlogPage /> },
+      { path: "/news", element: <NewsRoomPage /> },
+      { path: "/news/:id", element: <SingleNewsPage /> },
+      { path: "/admin", element: <AdminPage /> },
     ],
   },
 ]);
