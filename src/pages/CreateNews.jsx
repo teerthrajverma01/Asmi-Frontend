@@ -8,11 +8,14 @@ import BASE_URL from "../apis/Config";
 const CreateNews = () => {
   const [loading, setLoading] = useState(false);
 
+  const [category, setCategory] = useState("");
+
   const [tag, setTag] = useState("");
   const [date, setDate] = useState("");
   const [headline, setHeadline] = useState("");
   const [subheadline, setSubheadline] = useState("");
   const [content, setContent] = useState("");
+  const [socialmedialink, setSocialmedialink] = useState("");
   const [coverImage, setCoverImage] = useState("");
   const [redirect, setRedirect] = useState(false);
 
@@ -24,11 +27,14 @@ const CreateNews = () => {
 
     const data = new FormData();
 
+    data.set("category", category);
     data.set("tag", tag);
     data.set("date", date);
     data.set("headline", headline);
     data.set("subheadline", subheadline);
     data.set("content", content);
+    data.set("socialmedialink", socialmedialink);
+
     data.set("coverImage", coverImage[0]);
 
     const response = await fetch(`${BASE_URL}/news/postnews`, {
@@ -48,6 +54,14 @@ const CreateNews = () => {
         onSubmit={createNewsItem}
         className="max-w-md p-6 mx-auto bg-white rounded-md shadow-md"
       >
+        <input
+          type="text"
+          placeholder="Category"
+          className="w-full p-2 mb-4 border rounded-md border-neutral300 focus:outline-none focus:border-primary03"
+          value={category}
+          onChange={(ev) => setCategory(ev.target.value)}
+          required
+        />
         <input
           type="tag"
           placeholder="Tag: 1-2word"
@@ -80,6 +94,13 @@ const CreateNews = () => {
           onChange={(ev) => setSubheadline(ev.target.value)}
           required
         />
+        <input
+          type="SocialMedialink"
+          placeholder="socialMedia Link"
+          className="w-full p-2 mb-4 border rounded-md border-neutral300 focus:outline-none focus:border-primary03"
+          value={socialmedialink}
+          onChange={(ev) => setSocialmedialink(ev.target.value)}
+        />
 
         <input
           type="file"
@@ -99,7 +120,7 @@ const CreateNews = () => {
           disabled={loading}
           // onClick={createNewPost}
         >
-          {loading ? "Creating a new NewsItem ..." : "Created a newsItem"}
+          {loading ? "Creating a new NewsItem ..." : "Create new   newsItem"}
         </button>
       </form>
     </div>
