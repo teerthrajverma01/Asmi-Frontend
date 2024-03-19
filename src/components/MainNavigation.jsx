@@ -51,6 +51,20 @@ const MainNavigation = () => {
               <NavLink
                 className={({ isActive }) => {
                   return (
+                    " hover:bg-neutral-200 flex transition duration-300 py-1 px-2 rounded ease-in-out " +
+                    (isActive ? "text-primary03" : "")
+                  );
+                }}
+                to={"/assessyourself"}
+              >
+                Assess Yourself
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                className={({ isActive }) => {
+                  return (
                     " hover:bg-neutral-200 transition flex duration-300 py-1 px-2 rounded ease-in-out " +
                     (isActive ? "text-primary03" : "")
                   );
@@ -84,6 +98,19 @@ const MainNavigation = () => {
                 to={"/blogs"}
               >
                 Blogs
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) => {
+                  return (
+                    " hover:bg-neutral-200 transition flex duration-300 py-1 px-2 rounded ease-in-out " +
+                    (isActive ? "text-primary03" : "")
+                  );
+                }}
+                to={"/news"}
+              >
+                NewsRoom
               </NavLink>
             </li>
             <li>
@@ -160,6 +187,19 @@ const MainNavigation = () => {
                     (isActive ? "text-primary03" : "")
                   );
                 }}
+                to={"/assessyourself"}
+              >
+                Assess Yourself
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) => {
+                  return (
+                    " hover:bg-neutral-200 transition duration-300 py-1 px-2 rounded ease-in-out " +
+                    (isActive ? "text-primary03" : "")
+                  );
+                }}
                 to={"/how-it-works"}
               >
                 How It Works
@@ -202,6 +242,19 @@ const MainNavigation = () => {
                 to={"/blogs"}
               >
                 Blogs
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) => {
+                  return (
+                    " hover:bg-neutral-200 transition duration-300 py-1 px-2 rounded ease-in-out " +
+                    (isActive ? "text-primary03" : "")
+                  );
+                }}
+                to={"/news"}
+              >
+                NewsRoom
               </NavLink>
             </li>
             <li>

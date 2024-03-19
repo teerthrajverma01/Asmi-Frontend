@@ -28,6 +28,10 @@ import NewsRoomPage from "./pages/NewsRoomPage";
 import SingleNewsPage from "./pages/SingleNewsPage";
 import CreateNews from "./pages/CreateNews";
 import AdminPage from "./pages/AdminPage";
+import AssessYourself from "./pages/AssessYourself";
+import AssessmentLink from "./pages/AssessmentLink";
+import RegisterUserForm from "./pages/RegisterUserForm";
+import FormSubmitRedirect from "./pages/FormSubmitRedirect";
 
 const router = createBrowserRouter([
   {
@@ -37,22 +41,16 @@ const router = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "/about-us", element: <AboutPage /> },
       { path: "/counselors", element: <CounselorPage /> },
-      { path: "/blogs", element: <BlogPage /> },
       { path: "/contact-us", element: <Contact /> },
       { path: "/how-it-works", element: <HowItWorks /> },
-      { path: "/admin-login", element: <AdminLoginPage /> },
-      {
-        path: "/create-blog",
-        element: <CreateBlog />,
-      },
-      { path: "/create-newsitem", element: <CreateNews /> },
+
       { path: "/gift-card", element: <GiftCard /> },
       { path: "/assessment", element: <Assessment /> },
       { path: "/psychologyinternship", element: <PsychoIntern /> },
       { path: "/marketinginternship", element: <MarketingIntern /> },
       { path: "/careers", element: <Careers /> },
-      { path: "/test", element: <Test /> },
       { path: "/yoga-form", element: <YogaForm /> },
+      { path: "/test", element: <Test /> },
       { path: "/faq", element: <FAQs /> },
       { path: "/refunds", element: <Refunds /> },
       { path: "/privacypolicy", element: <Privacy /> },
@@ -61,10 +59,22 @@ const router = createBrowserRouter([
       { path: "/vendoronboarding", element: <VendorForm /> },
       { path: "/onboarding", element: <OnboardingForm /> },
       { path: "/submission-successful", element: <SubmissionSuccesful /> },
+
+      { path: "/admin", element: <AdminPage /> },
+      { path: "/admin-login", element: <AdminLoginPage /> },
+      { path: "/create-blog", element: <CreateBlog /> },
+      { path: "/create-newsitem", element: <CreateNews /> },
+
+      { path: "/blogs", element: <BlogPage /> },
       { path: "/post/:id", element: <SingleBlogPage /> },
+
       { path: "/news", element: <NewsRoomPage /> },
       { path: "/news/:id", element: <SingleNewsPage /> },
-      { path: "/admin", element: <AdminPage /> },
+
+      { path: "/assessyourself", element: <AssessYourself /> },
+      { path: "/registeruser/:assessmenttype", element: <RegisterUserForm /> },
+      { path: "/assessmentURL/:id", element: <AssessmentLink /> },
+      { path: "/submitassessment/:result", element: <FormSubmitRedirect /> },
     ],
   },
 ]);

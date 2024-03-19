@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 
 import { MdDelete } from "react-icons/md";
 import { AiFillCaretRight } from "react-icons/ai";
-import { motion } from "framer-motion";
 
 const SingleNewsPage = () => {
   const [postInfo, setPostInfo] = useState();
@@ -35,8 +34,6 @@ const SingleNewsPage = () => {
       });
   }, [id, navigate]);
 
-  // console.log(heading);
-
   const handleDelete = async () => {
     try {
       const response = await fetch(`${BASE_URL}/news/deletenews/${id}`, {
@@ -57,8 +54,6 @@ const SingleNewsPage = () => {
   };
 
   if (!postInfo) return "";
-
-  const heading = `${postInfo.headline}`.split(" ");
 
   return (
     <div className="container px-[5%] mx-auto">
