@@ -54,30 +54,44 @@ const CreateNews = () => {
         onSubmit={createNewsItem}
         className="max-w-md p-6 mx-auto bg-white rounded-md shadow-md"
       >
-        <input
+        {/* <input
           type="text"
           placeholder="Category"
           className="w-full p-2 mb-4 border rounded-md border-neutral300 focus:outline-none focus:border-primary03"
           value={category}
           onChange={(ev) => setCategory(ev.target.value)}
           required
-        />
+        /> */}
+        <p>Select Category*</p>
+        <select
+          className=" mb-6 md:w-3/5 bg-white w-full p-2 rounded-sm border border-[#d1d5db] w-max-[20rem]"
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          required
+        >
+          <option value="NEWS">NEWS</option>
+          <option value="STORIES">STORIES</option>
+          <option value="OTHER">OTHER</option>
+        </select>
+        <p>Enter Tag* </p>
         <input
           type="tag"
           placeholder="Tag: 1-2word"
-          className="w-full p-2 mb-4 border rounded-md border-neutral300 focus:outline-none focus:border-primary03"
+          className="w-full p-2 mb-6 border rounded-md border-neutral300 focus:outline-none focus:border-primary03"
           value={tag}
           onChange={(ev) => setTag(ev.target.value)}
           required
         />
+        <p> Event Date*</p>
         <input
           type="string"
           placeholder="EventDate egformat: 12-March-2019"
-          className="w-full p-2 mb-4 border rounded-md border-neutral300 focus:outline-none focus:border-primary03"
+          className="w-full p-2 mb-6 border rounded-md border-neutral300 focus:outline-none focus:border-primary03"
           value={date}
           onChange={(ev) => setDate(ev.target.value)}
           required
         />
+        <p>Headline*</p>
         <input
           type="headline"
           placeholder="Headline: 4-6 words"
@@ -86,6 +100,7 @@ const CreateNews = () => {
           onChange={(ev) => setHeadline(ev.target.value)}
           required
         />
+        <p>SubHeadline*</p>
         <input
           type="subheadline"
           placeholder="Subheadline: 1-sentence"
@@ -94,6 +109,7 @@ const CreateNews = () => {
           onChange={(ev) => setSubheadline(ev.target.value)}
           required
         />
+        <p>Social Media link </p>
         <input
           type="SocialMedialink"
           placeholder="socialMedia Link"
@@ -108,6 +124,7 @@ const CreateNews = () => {
           onChange={(ev) => setCoverImage(ev.target.files)}
           required
         />
+        <p>Content*</p>
         <ReactQuill
           theme="snow"
           className="mb-4 border rounded-md border-neutral300"
