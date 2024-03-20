@@ -47,7 +47,7 @@ const MainNavigation = () => {
                 How It Works
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink
                 className={({ isActive }) => {
                   return (
@@ -59,7 +59,7 @@ const MainNavigation = () => {
               >
                 Assess Yourself
               </NavLink>
-            </li>
+            </li> */}
 
             <li>
               <NavLink
@@ -179,7 +179,7 @@ const MainNavigation = () => {
                 Home
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink
                 className={({ isActive }) => {
                   return (
@@ -191,7 +191,7 @@ const MainNavigation = () => {
               >
                 Assess Yourself
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink
                 className={({ isActive }) => {
