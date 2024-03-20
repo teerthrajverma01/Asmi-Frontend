@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import giftImg from "../assets/image/gift.jpeg";
 import { FiPlus } from "react-icons/fi";
@@ -8,25 +8,52 @@ import BASE_URL from "../apis/Config";
 
 const GiftCard = () => {
   const [userEmail, setUserEmail] = useState("");
-  const [recipientEmail, setrecipientEmail] = useState("");
+  const [recipientEmail, setRecipientEmail] = useState("");
   const [userName, setUserName] = useState("");
-  const [recipientName, setRecipentName] = useState("");
-  const [deliveryDate, setDeliveryDate] = useState("");
+  const [recipientName, setRecipientName] = useState("");
   const [message, setMessage] = useState("");
   const [isMyself, setIsMyself] = useState(true);
+  const [amount, setAmount] = useState(699);
+  const [quantity, setQuantity] = useState(1);
+
+  useEffect(() => {
+    if (isMyself) {
+      setRecipientName("");
+      setRecipientEmail("");
+      setMessage("");
+    }
+  }, [isMyself]);
+
+  useEffect(() => {
+    setAmount(699 * quantity);
+  }, [quantity]);
+
+  const handleDecrease = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+  const handleIncrease = () => {
+    if (quantity < 10) {
+      setQuantity(quantity + 1);
+    }
+  };
 
   // payment-----------------------------
   const paymentHandler = async (event) => {
     event.preventDefault();
 
-    const amount = 500;
     const currency = "INR";
     const receiptID = "qwsaq1";
+    const payingAmount = amount * 100;
+
+    console.log(payingAmount);
 
     const response = await fetch(`${BASE_URL}/order`, {
       method: "POST",
       body: JSON.stringify({
-        amount,
+        amount: payingAmount,
         currency,
         receipt: receiptID,
       }),
@@ -36,13 +63,7 @@ const GiftCard = () => {
     });
 
     const order = await response.json();
-    console.log(order);
-
-    if (isMyself) {
-      setRecipentName("");
-      setrecipientEmail("");
-      setMessage("");
-    }
+    // console.log(order);
 
     const razorpayKey = await fetch(`${BASE_URL}/getKey`);
 
@@ -50,11 +71,12 @@ const GiftCard = () => {
 
     var options = {
       key: razorpayKeyData.key, // Enter the Key ID generated from the Dashboard
-      amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      amount: payingAmount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       currency,
       name: "Asmi Health", //your business name
-      description: "Test Transaction",
-      image: "https://example.com/your_logo",
+      description: "Gift Card",
+      image:
+        "https://res.cloudinary.com/dhlmdbx4t/image/upload/v1710864005/logo_hliyyv.png",
       order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
       handler: async function (response) {
         const data = {
@@ -63,7 +85,8 @@ const GiftCard = () => {
           userEmail: userEmail,
           recipientName: recipientName,
           recipientEmail: recipientEmail,
-          deliveryDate: deliveryDate,
+          quantity: quantity,
+          // deliveryDate: deliveryDate,
           userMessage: message,
           razorpay_payment_id: response.razorpay_payment_id,
           razorpay_order_id: response.razorpay_order_id,
@@ -81,7 +104,9 @@ const GiftCard = () => {
         const responseData = await result.json();
 
         if (result.ok) {
-          alert(`Success!   Order ID: ${responseData.orderId}`);
+          alert(
+            `Your Payment is Successful Success!   Order ID: ${responseData.orderId}`
+          );
         } else {
           alert(responseData.msg);
         }
@@ -92,7 +117,7 @@ const GiftCard = () => {
         // contact: "9000090000",
       },
       notes: {
-        address: "Razorpay Corporate Office",
+        address: "",
       },
       theme: {
         color: "#3399cc",
@@ -108,22 +133,6 @@ const GiftCard = () => {
   };
   // end of payment-----------------------------
 
-  const [quantity, setQuantity] = useState(1);
-
-  const handleDecrease = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
-
-  const handleIncrease = () => {
-    if (quantity < 10) {
-      setQuantity(quantity + 1);
-    }
-  };
-
-  const amount = 650 * quantity;
-
   return (
     <>
       <div className="container px-[5%] mx-auto">
@@ -138,14 +147,14 @@ const GiftCard = () => {
                   Gift Card
                 </div>
                 <div className="text-4xl my-4 font-medium leading-[1.2] font-sans text-neutral-900">
-                  ₹650
+                  ₹{amount}
                 </div>
                 <p className="text-xl">
                   The best Gift you can give your loved ones this festive
                   season, is a window to happiness! Gift them a free counselling
                   session today!
                 </p>
-                <form className="mt-8" onSubmit={paymentHandler}>
+                <div className="mt-8">
                   <div className="grid grid-cols-2 mt-6">
                     <div>
                       <h1>Amount</h1>
@@ -244,10 +253,13 @@ const GiftCard = () => {
                     </div>
                   )}
 
-                  <button className="w-full p-3 text-white transition transform bg-black hover:bg-neutral-900">
+                  <button
+                    className="w-full p-3 text-white transition transform bg-black hover:bg-neutral-900"
+                    onClick={paymentHandler}
+                  >
                     Buy now
                   </button>
-                </form>
+                </div>
               </div>
             </div>
           </section>
