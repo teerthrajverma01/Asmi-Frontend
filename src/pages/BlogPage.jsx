@@ -82,19 +82,25 @@ const BlogPage = () => {
             </section>
           </div>
         </section>
-
-        <div className="my-16">
+        {/* APPU removing this addded to admin page */}
+        {/* <div className="my-16">
           {username && (
             <>
               <Link
-                className="inline-block px-4 py-2 text-white rounded-md bg-primary03 hover:bg-primary02 focus:outline-none"
+                className="inline-block px-4 py-2 mx-2 text-white rounded-md bg-primary03 hover:bg-primary02 focus:outline-none"
                 to={"/create-blog"}
               >
                 Create new Blog
               </Link>
+              <Link
+                className="inline-block px-4 py-2 mx-2 text-white rounded-md bg-primary03 hover:bg-primary02 focus:outline-none"
+                to={"/create-newsitem"}
+              >
+                Create new NewsItem
+              </Link>
 
               <a
-                className="inline-block px-4 py-2 ml-4 text-white rounded-md bg-primary03 hover:bg-primary02 focus:outline-none"
+                className="inline-block px-4 py-2 mx-2 ml-4 text-white rounded-md bg-primary03 hover:bg-primary02 focus:outline-none"
                 onClick={logout}
               >
                 Logout
@@ -112,7 +118,7 @@ const BlogPage = () => {
               </Link>
             </>
           )}
-        </div>
+        </div> */}
       </div>
     </div>
   );
