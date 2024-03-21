@@ -39,10 +39,10 @@ const EatingProblem = ({ username, email }) => {
         return response.json();
       })
       .then((result) => {
-        navigate(`/submitassessment/${result.status}`);
+        navigate(`/submitassessment/${result.result}`);
       })
       .catch((error) => {
-        console.error("Error :", error);
+        console.error("Error while submitting form:", error);
       })
       .finally(() => {
         setLoading(false);
@@ -89,7 +89,7 @@ const EatingProblem = ({ username, email }) => {
                     value={q1}
                     name="q1choice"
                     className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQ1(false)}
+                    onChange={(e) => setQ1(true)}
                   />
                   <p className="inline-block ml-8 text-xl">No</p>
                   <input
@@ -97,7 +97,7 @@ const EatingProblem = ({ username, email }) => {
                     value={q1}
                     name="q1choice"
                     className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQ1(true)}
+                    onChange={(e) => setQ1(false)}
                   />
                 </div>
               </div>
@@ -207,9 +207,9 @@ const EatingProblem = ({ username, email }) => {
         </div>
         <div className="my-20 opacity-50 sm:my-40">
           Luck, A.J., Morgan, J.F., Reid, F., O'Brien, A., Brunton, J., Price,
-          C., Perry, L., Lacey, J.H. (2002), ‘The SCOFF questionnaire and
+          C., Perry, L., Lacey, J.H. (2002), 'The SCOFF questionnaire and
           clinical interview for eating disorders in general practice:
-          comparative study’, British Medical Journal, 325,7367, 755 - 756.
+          comparative study', British Medical Journal, 325,7367, 755 - 756.
         </div>
       </div>
     </div>

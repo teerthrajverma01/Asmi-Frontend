@@ -30,9 +30,9 @@ const AssessmentLink = () => {
         }
       })
       .then((data) => {
-        setUsername(data.username);
-        setEmail(data.email);
-        setAssessmentCategory(data.assessmentCategory);
+        setUsername((prev) => data.username);
+        setEmail((prev) => data.email);
+        setAssessmentCategory((prev) => data.assessmentCategory);
       })
       .catch((error) => {
         console.error("Error fetching post", error);
@@ -53,37 +53,37 @@ const AssessmentLink = () => {
           )}
           {assessmentCategory === "substance-use" && (
             <div>
-              <SubstanceUse />
+              <SubstanceUse username={username} email={email} />
             </div>
           )}
           {assessmentCategory === "mood-imbalance" && (
             <div>
-              <MoodImbalance />
+              <MoodImbalance username={username} email={email} />
             </div>
           )}
           {assessmentCategory === "sucide-risk" && (
             <div>
-              <SucideRisk />
+              <SucideRisk username={username} email={email} />
             </div>
           )}
           {assessmentCategory === "sleep-disturbance" && (
             <div>
-              <SleepDisturbance />
+              <SleepDisturbance username={username} email={email} />
             </div>
           )}
           {assessmentCategory === "das" && (
             <div>
-              <Das />
+              <Das username={username} email={email} />
             </div>
           )}
           {assessmentCategory === "stress" && (
             <div>
-              <Stress />
+              <Stress username={username} email={email} />
             </div>
           )}
           {assessmentCategory === "low-self-esteem" && (
             <div>
-              <LowSelfEsteem />
+              <LowSelfEsteem username={username} email={email} />
             </div>
           )}
         </div>

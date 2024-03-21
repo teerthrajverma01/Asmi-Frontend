@@ -8,10 +8,11 @@ import BASE_URL from "../apis/Config";
 const CreateNews = () => {
   const [loading, setLoading] = useState(false);
 
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("NEWS");
 
   const [tag, setTag] = useState("");
   const [date, setDate] = useState("");
+  const [publishedBy, setPublishedBy] = useState("");
   const [headline, setHeadline] = useState("");
   const [subheadline, setSubheadline] = useState("");
   const [content, setContent] = useState("");
@@ -30,6 +31,7 @@ const CreateNews = () => {
     data.set("category", category);
     data.set("tag", tag);
     data.set("date", date);
+    data.set("publishedBy", publishedBy);
     data.set("headline", headline);
     data.set("subheadline", subheadline);
     data.set("content", content);
@@ -91,6 +93,14 @@ const CreateNews = () => {
           onChange={(ev) => setDate(ev.target.value)}
           required
         />
+        <p>Published By </p>
+        <input
+          type="publishedby"
+          placeholder="Publishedby: 1-2word eg:ZeeNews"
+          className="w-full p-2 mb-6 border rounded-md border-neutral300 focus:outline-none focus:border-primary03"
+          value={publishedBy}
+          onChange={(ev) => setPublishedBy(ev.target.value)}
+        />
         <p>Headline*</p>
         <input
           type="headline"
@@ -109,10 +119,10 @@ const CreateNews = () => {
           onChange={(ev) => setSubheadline(ev.target.value)}
           required
         />
-        <p>Social Media link </p>
+        <p>Coverage link* </p>
         <input
           type="SocialMedialink"
-          placeholder="socialMedia Link"
+          placeholder="coverageLink"
           className="w-full p-2 mb-4 border rounded-md border-neutral300 focus:outline-none focus:border-primary03"
           value={socialmedialink}
           onChange={(ev) => setSocialmedialink(ev.target.value)}
@@ -130,7 +140,7 @@ const CreateNews = () => {
           className="mb-4 border rounded-md border-neutral300"
           value={content}
           onChange={(newValue) => setContent(newValue)}
-          required
+          // required
         />
         <button
           className="w-full py-2 text-white rounded-md bg-primary03 hover:bg-primary02 focus:outline-none"

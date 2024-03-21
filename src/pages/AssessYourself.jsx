@@ -106,7 +106,8 @@ const AssessYourself = () => {
                       Eating Problem
                     </div>
                     <div className="sm:mb-4 sm:text-xl">
-                      Explore how stress has been taking toll on you
+                      Do you think your appetite is fluctuating? Take a test to
+                      know if it’s actually problematic.
                     </div>
                     <Link to={`/registeruser/eatingproblem`}>
                       <button
@@ -119,7 +120,7 @@ const AssessYourself = () => {
                   </div>
                 </div>
                 {/* Substance Use */}
-                <div className="grid grid-cols-4 gap-4 overflow-hidden border rounded-3xl">
+                {/* <div className="grid grid-cols-4 gap-4 overflow-hidden border rounded-3xl">
                   <div className="flex col-span-1">
                     <img className="object-cover" src={alcoholic} alt="" />
                   </div>
@@ -139,7 +140,7 @@ const AssessYourself = () => {
                       </button>
                     </Link>
                   </div>
-                </div>
+                </div> */}
                 {/* Mood Imbalance */}
                 <div className="grid grid-cols-4 gap-4 overflow-hidden border rounded-3xl">
                   <div className="flex col-span-1">
@@ -150,7 +151,8 @@ const AssessYourself = () => {
                       Mood Imbalance
                     </div>
                     <div className="sm:mb-4 sm:text-xl">
-                      Explore how stress has been taking toll on you
+                      Do you feel your mood switches drastically? Take an
+                      assessment to find out if you need professional help
                     </div>
                     <Link to={`/registeruser/mood-imbalance`}>
                       <button
@@ -172,7 +174,9 @@ const AssessYourself = () => {
                       Sucide Risk
                     </div>
                     <div className="sm:mb-4 sm:text-xl">
-                      Explore how stress has been taking toll on you
+                      In case you’re having any suicidal thoughts or feelings of
+                      self harm, please take this assessment and reach out for
+                      better care.
                     </div>
                     <Link to={`/registeruser/sucide-risk`}>
                       <button
@@ -194,7 +198,9 @@ const AssessYourself = () => {
                       Sleep Disturbance
                     </div>
                     <div className="sm:mb-4 sm:text-xl">
-                      Explore how stress has been taking toll on you
+                      Having disturbed sleep can affect your mood, stress levels
+                      and productivity. Check now if this actually needs
+                      attention.
                     </div>
                     <Link to={`/registeruser/sleep-disturbance`}>
                       <button
@@ -216,7 +222,9 @@ const AssessYourself = () => {
                       Depression, Anxiety and Stress
                     </div>
                     <div className="sm:mb-4 sm:text-xl">
-                      Explore how stress has been taking toll on you
+                      Take one assessment to find out whether or not your levels
+                      of anxiety, stress and sadness/worthlessness needs
+                      professional attention.
                     </div>
                     <Link to={`/registeruser/das`}>
                       <button
@@ -238,7 +246,8 @@ const AssessYourself = () => {
                       Stress
                     </div>
                     <div className="sm:mb-4 sm:text-xl">
-                      Explore how stress has been taking toll on you
+                      Do you feel overwhelmed by work or other commitments? Take
+                      an assessment and find out if you need help
                     </div>
                     <Link to={`/registeruser/stress`}>
                       <button

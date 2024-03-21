@@ -7,8 +7,9 @@ import BASE_URL from "../apis/Config";
 const RegisterUserForm = () => {
   const [username, setUser] = useState("");
   const [email, setEmail] = useState("");
-  const { assessmenttype } = useParams();
   const [redirect, setRedirect] = useState();
+
+  const { assessmenttype } = useParams();
 
   //   const [assessmentCategory, setAssessmentCategory] = useState("");
   //   const [paymentid, setPaymentid] = useState("");

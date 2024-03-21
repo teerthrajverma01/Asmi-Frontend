@@ -43,10 +43,10 @@ const NewsRoomPage = () => {
       });
   }, []);
 
-  // console.log(news);
+  console.log(news);
   // console.log(storieshead);
   // console.log(latestnewshead);
-  console.log(latestnews);
+  // console.log(latestnews);
   // console.log(stories);
   return (
     <>
@@ -59,11 +59,107 @@ const NewsRoomPage = () => {
               <div className="mb-4 text-3xl font-bold">Latest News</div>
               {/* highlight news */}
 
-              <div className="relative mb-8 ">
-                <Link to={`/news/${latestnewshead && latestnewshead._id}`}>
-                  <div className="flex bg-yellow-200">
+              {/* ################################## */}
+              {/*  mobile view*/}
+
+              <div className="relative mb-8 sm:hidden">
+                <a
+                  href={
+                    latestnewshead && latestnewshead.socialmedialink
+                      ? latestnewshead.socialmedialink
+                      : ""
+                  }
+                  target="_blank"
+                >
+                  <img
+                    className="object-cover min-h-[50vh] w-full rounded-3xl"
+                    src={
+                      latestnewshead && latestnewshead.coverImage
+                        ? latestnewshead.coverImage
+                        : ""
+                    }
+                    alt=""
+                  />
+                  <div className="absolute pr-3 bottom-[5%] left-[4%] ">
+                    <div className="px-2 py-1 font-medium text-white rounded-2xl bg-primary04 max-w-fit">
+                      {latestnewshead && latestnewshead.tag
+                        ? latestnewshead.tag
+                        : ""}
+                    </div>
+                    <div className="pt-2 text-2xl font-bold leading-6 sm:text-3xl lg:text-5xl text-wrap">
+                      {latestnewshead && latestnewshead.headline
+                        ? latestnewshead.headline
+                        : ""}
+                    </div>
+                    <div className="font-medium">
+                      {latestnewshead && latestnewshead.date
+                        ? latestnewshead.date
+                        : ""}
+                    </div>
+                  </div>
+                </a>
+              </div>
+              {/* lap view */}
+              <a
+                href={
+                  latestnewshead && latestnewshead.socialmedialink
+                    ? latestnewshead.socialmedialink
+                    : ""
+                }
+                target="_blank"
+              >
+                <div className="hidden mb-12 sm:grid sm:grid-cols-2 ">
+                  <div className="flex">
                     <img
-                      className="object-cover "
+                      className="object-cover max-h-[50vh] w-full"
+                      src={
+                        latestnewshead && latestnewshead.coverImage
+                          ? latestnewshead.coverImage
+                          : ""
+                      }
+                    />
+                  </div>
+                  <div className="flex flex-col justify-center p-8 ">
+                    <div className="px-2 py-1 mb-3 font-medium text-white rounded-2xl bg-primary04 max-w-fit">
+                      {latestnewshead && latestnewshead.tag
+                        ? latestnewshead.tag
+                        : ""}
+                    </div>
+
+                    <div className="pt-2 font-bold leading-6 sm:text-2xl xl:text-3xl text-wrap">
+                      {latestnewshead && latestnewshead.headline
+                        ? latestnewshead.headline
+                        : ""}
+                    </div>
+                    <div className="mb-4 text-lg">
+                      {latestnewshead && latestnewshead.subheadline
+                        ? latestnewshead.subheadline
+                        : ""}
+                    </div>
+                    {latestnewshead && latestnewshead.publishedBy ? (
+                      <div className="text-xl text-slate-700">
+                        Published By:{" "}
+                        {latestnewshead && latestnewshead.publishedBy
+                          ? latestnewshead.publishedBy
+                          : ""}
+                      </div>
+                    ) : (
+                      <></>
+                    )}
+                    <div className="font-medium">
+                      {latestnewshead && latestnewshead.date
+                        ? latestnewshead.date
+                        : ""}
+                    </div>
+                  </div>
+                </div>
+              </a>
+              {/* ################################################### */}
+              {/* <div className="relative mb-8 ">
+                <Link to={`/news/${latestnewshead && latestnewshead._id}`}>
+                  <div className="flex ">
+                    <img
+                      className="object-cover h-[40vh]"
                       src={
                         latestnewshead && latestnewshead.coverImage
                           ? latestnewshead.coverImage
@@ -90,7 +186,7 @@ const NewsRoomPage = () => {
                     </div>
                   </div>
                 </Link>
-              </div>
+              </div> */}
 
               {/* rest news grid */}
 
@@ -101,8 +197,13 @@ const NewsRoomPage = () => {
                       key={latestnewsitem._id}
                       className="bg-white overflow-hidden rounded-[3%]"
                     >
-                      <Link
-                        to={`/news/${latestnewsitem && latestnewsitem._id}`}
+                      <a
+                        href={
+                          latestnewsitem && latestnewsitem.socialmedialink
+                            ? latestnewsitem.socialmedialink
+                            : ""
+                        }
+                        target="_blank"
                       >
                         <img
                           src={
@@ -113,7 +214,7 @@ const NewsRoomPage = () => {
                           alt=""
                         />
                         <div className="p-6">
-                          <div className="font-medium text-gray-600">
+                          <div className="px-2 py-1 mb-2 font-medium text-white rounded-2xl bg-primary04 max-w-fit ">
                             {latestnewsitem && latestnewsitem.tag
                               ? latestnewsitem.tag
                               : ""}
@@ -123,13 +224,23 @@ const NewsRoomPage = () => {
                               ? latestnewsitem.headline
                               : ""}
                           </div>
+                          {latestnewsitem && latestnewsitem.publishedBy ? (
+                            <div className="text-xl text-slate-700">
+                              Published By:{" "}
+                              {latestnewsitem && latestnewsitem.publishedBy
+                                ? latestnewsitem.publishedBy
+                                : ""}
+                            </div>
+                          ) : (
+                            <></>
+                          )}
                           <div className="font-medium text-gray-600">
                             {latestnewsitem && latestnewsitem.date
                               ? latestnewsitem.date
                               : ""}
                           </div>
                         </div>
-                      </Link>
+                      </a>
                     </div>
                   ))
                 ) : (
@@ -150,14 +261,21 @@ const NewsRoomPage = () => {
                 better than they found it.
               </div>
             </div>
-            {/* highlight story */}
 
+            {/* highlight story */}
             <div className="">
               {/*  mobile view*/}
               <div className="relative mb-8 sm:hidden">
-                <Link to={`/news/${storieshead && storieshead._id}`}>
+                <a
+                  href={
+                    storieshead && storieshead.socialmedialink
+                      ? storieshead.socialmedialink
+                      : ""
+                  }
+                  target="_blank"
+                >
                   <img
-                    className="rounded-3xl"
+                    className="object-cover w-full max-h-[50vh] rounded-3xl"
                     src={
                       storieshead && storieshead.coverImage
                         ? storieshead.coverImage
@@ -166,7 +284,7 @@ const NewsRoomPage = () => {
                     alt=""
                   />
                   <div className="absolute pr-3 bottom-[5%] left-[4%] ">
-                    <div className="font-medium">
+                    <div className="px-2 py-1 font-medium text-white rounded-2xl bg-primary04 max-w-fit">
                       {storieshead && storieshead.tag ? storieshead.tag : ""}
                     </div>
                     <div className="pt-2 text-2xl font-bold leading-6 sm:text-3xl lg:text-5xl text-wrap">
@@ -174,17 +292,35 @@ const NewsRoomPage = () => {
                         ? storieshead.headline
                         : ""}
                     </div>
+                    {storieshead && storieshead.publishedBy ? (
+                      <div className="text-xl text-slate-700">
+                        Published By:{" "}
+                        {storieshead && storieshead.publishedBy
+                          ? storieshead.publishedBy
+                          : ""}
+                      </div>
+                    ) : (
+                      <></>
+                    )}
                     <div className="font-medium">
                       {storieshead && storieshead.date ? storieshead.date : ""}
                     </div>
                   </div>
-                </Link>
+                </a>
               </div>
               {/* lap view */}
-              <Link to={`/news/${storieshead && storieshead._id}`}>
+              <a
+                href={
+                  storieshead && storieshead.socialmedialink
+                    ? storieshead.socialmedialink
+                    : ""
+                }
+                target="_blank"
+              >
                 <div className="hidden mb-12 sm:grid sm:grid-cols-2 ">
                   <div className="flex">
                     <img
+                      className="object-cover max-h-[50vh] w-full"
                       src={
                         storieshead && storieshead.coverImage
                           ? storieshead.coverImage
@@ -193,7 +329,7 @@ const NewsRoomPage = () => {
                     />
                   </div>
                   <div className="flex flex-col justify-center p-8 ">
-                    <div className="mb-3 font-medium">
+                    <div className="px-2 py-1 mb-3 font-medium text-white rounded-2xl bg-primary04 max-w-fit">
                       {storieshead && storieshead.tag ? storieshead.tag : ""}
                     </div>
                     <div className="pt-2 font-bold leading-6 sm:text-2xl xl:text-3xl text-wrap">
@@ -206,22 +342,40 @@ const NewsRoomPage = () => {
                         ? storieshead.subheadline
                         : ""}
                     </div>
+                    {storieshead && storieshead.publishedBy ? (
+                      <div className="text-xl text-slate-700">
+                        Published By:{" "}
+                        {storieshead && storieshead.publishedBy
+                          ? storieshead.publishedBy
+                          : ""}
+                      </div>
+                    ) : (
+                      <></>
+                    )}
                     <div className="font-medium">
                       {storieshead && storieshead.date ? storieshead.date : ""}
                     </div>
                   </div>
                 </div>
-              </Link>
+              </a>
 
               {/* rest stories grid */}
               <div className="grid mb-8 lg:grid-cols-3 sm:gap-6 lg:gap-8 sm:grid-cols-2">
                 {stories ? (
                   stories.map((story) => (
-                    <div key={story._id} className="relative mb-4">
-                      <Link to={`/news/${story && story._id}`}>
-                        <div className="flex">
+                    <div key={story._id} className="mb-4 ">
+                      <a
+                        className="relative h-full "
+                        href={
+                          story && story.socialmedialink
+                            ? story.socialmedialink
+                            : ""
+                        }
+                        target="_blank"
+                      >
+                        <div className="flex h-full">
                           <img
-                            className="object-cover rounded-3xl"
+                            className="object-cover w-full h-full rounded-3xl"
                             src={
                               story && story.coverImage ? story.coverImage : ""
                             }
@@ -229,18 +383,28 @@ const NewsRoomPage = () => {
                           />
                         </div>
                         <div className="absolute pr-3 bottom-[5%] left-[4%] ">
-                          <div className="font-medium">
+                          <div className="px-2 py-1 font-medium text-white rounded-2xl bg-primary04 max-w-fit">
                             {" "}
                             {story && story.tag ? story.tag : ""}
                           </div>
                           <div className="pt-2 text-xl font-bold 2xl:text-2xl text-wrap">
                             {story && story.headline ? story.headline : ""}
                           </div>
+                          {story && story.publishedBy ? (
+                            <div className="text-base text-gray-900">
+                              Published By:{" "}
+                              {story && story.publishedBy
+                                ? story.publishedBy
+                                : ""}
+                            </div>
+                          ) : (
+                            <></>
+                          )}
                           <div className="font-medium">
                             {story && story.date ? story.date : ""}
                           </div>
                         </div>
-                      </Link>
+                      </a>
                     </div>
                   ))
                 ) : (
@@ -256,14 +420,19 @@ const NewsRoomPage = () => {
 
           <div className="flex flex-col items-center ">
             <div className="pt-12 mx-4 sm:mx-[10%] lg:mx[20%]  ">
-              <div className="mb-4 text-3xl font-bold">More From NewsRoom</div>
+              <div className="mb-4 text-3xl font-bold">More From News Room</div>
               {/* grid all-news-items */}
               <div className="grid gap-8 mb-8 lg:grid-cols-2">
                 {news ? (
                   news.map((indinews) => (
-                    <Link
+                    <a
                       key={indinews._id}
-                      to={`/news/${indinews && indinews._id}`}
+                      href={
+                        indinews && indinews.socialmedialink
+                          ? indinews.socialmedialink
+                          : ""
+                      }
+                      target="_blank"
                     >
                       <div className="grid grid-cols-3">
                         <div className="flex col-span-1 bg-black">
@@ -273,12 +442,12 @@ const NewsRoomPage = () => {
                                 ? indinews.coverImage
                                 : ""
                             }
-                            className="object-cover"
+                            className="object-cover w-full h-full max-h-[25vh]"
                             alt=""
                           />
                         </div>
                         <div className="col-span-2 px-2 m-2">
-                          <div className="pb-2 font-semibold text-gray-600">
+                          <div className="px-2 py-1 mb-2 font-semibold text-white rounded-2xl bg-primary04 max-w-fit">
                             {indinews && indinews.tag ? indinews.tag : ""}
                           </div>
                           <div className="pb-2 font-semibold">
@@ -286,12 +455,22 @@ const NewsRoomPage = () => {
                               ? indinews.headline
                               : ""}
                           </div>
+                          {indinews && indinews.publishedBy ? (
+                            <div className="sm:text-xl text-slate-700">
+                              Published By:{" "}
+                              {indinews && indinews.publishedBy
+                                ? indinews.publishedBy
+                                : ""}
+                            </div>
+                          ) : (
+                            <></>
+                          )}
                           <div className="font-semibold text-gray-600">
                             {indinews && indinews.date ? indinews.date : ""}
                           </div>
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   ))
                 ) : (
                   <p>no news</p>
