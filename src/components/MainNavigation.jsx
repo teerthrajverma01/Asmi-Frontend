@@ -100,7 +100,7 @@ const MainNavigation = () => {
                 Blogs
               </NavLink>
             </li>
-            {/* <li>
+            <li>
               <NavLink
                 className={({ isActive }) => {
                   return (
@@ -110,9 +110,9 @@ const MainNavigation = () => {
                 }}
                 to={"/news"}
               >
-                NewsRoom
+                News Room
               </NavLink>
-            </li> */}
+            </li>
             <li>
               <NavLink
                 className={({ isActive }) => {
@@ -244,7 +244,7 @@ const MainNavigation = () => {
                 Blogs
               </NavLink>
             </li>
-            {/* <li>
+            <li>
               <NavLink
                 className={({ isActive }) => {
                   return (
@@ -254,9 +254,9 @@ const MainNavigation = () => {
                 }}
                 to={"/news"}
               >
-                NewsRoom
+                News Room
               </NavLink>
-            </li> */}
+            </li>
             <li>
               <NavLink
                 className={({ isActive }) => {

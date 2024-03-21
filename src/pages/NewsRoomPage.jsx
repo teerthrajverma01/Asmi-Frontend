@@ -52,11 +52,11 @@ const NewsRoomPage = () => {
     <>
       <div className="">
         {/* section1 */}
-        <div className="bg-[#F5F5F7] pb-8">
+        <div className="pb-8 bg-gray-100">
           {/* to center all items */}
           <div className="flex flex-col items-center ">
             <div className="pt-12 mx-4 sm:mx-[10%] lg:mx[20%]  ">
-              <div className="mb-4 text-3xl font-bold">Latest News</div>
+              <div className="mb-10 text-3xl font-bold">Latest News</div>
               {/* highlight news */}
 
               {/* ################################## */}
@@ -71,17 +71,20 @@ const NewsRoomPage = () => {
                   }
                   target="_blank"
                 >
-                  <img
-                    className="object-cover min-h-[50vh] w-full rounded-3xl"
-                    src={
-                      latestnewshead && latestnewshead.coverImage
-                        ? latestnewshead.coverImage
-                        : ""
-                    }
-                    alt=""
-                  />
+                  <div className=" bg-white rounded-[3%] flex">
+                    <img
+                      className="object-contain w-full h-[55vh] rounded-3xl"
+                      src={
+                        latestnewshead && latestnewshead.coverImage
+                          ? latestnewshead.coverImage
+                          : ""
+                      }
+                      alt="latest news"
+                    />
+                  </div>
+
                   <div className="absolute pr-3 bottom-[5%] left-[4%] ">
-                    <div className="px-2 py-1 font-medium text-white rounded-2xl bg-primary04 max-w-fit">
+                    <div className="px-2 py-1 font-medium text-white rounded-md bg-primary04 max-w-fit">
                       {latestnewshead && latestnewshead.tag
                         ? latestnewshead.tag
                         : ""}
@@ -110,17 +113,19 @@ const NewsRoomPage = () => {
               >
                 <div className="hidden mb-12 sm:grid sm:grid-cols-2 ">
                   <div className="flex">
-                    <img
-                      className="object-cover max-h-[50vh] w-full"
-                      src={
-                        latestnewshead && latestnewshead.coverImage
-                          ? latestnewshead.coverImage
-                          : ""
-                      }
-                    />
+                    <div className="flex items-center transition duration-300 hover:scale-[1.02] ">
+                      <img
+                        className="object-cover w-full rounded-xl"
+                        src={
+                          latestnewshead && latestnewshead.coverImage
+                            ? latestnewshead.coverImage
+                            : ""
+                        }
+                      />
+                    </div>
                   </div>
                   <div className="flex flex-col justify-center p-8 ">
-                    <div className="px-2 py-1 mb-3 font-medium text-white rounded-2xl bg-primary04 max-w-fit">
+                    <div className="px-2 py-1 mb-3 font-medium text-white rounded-md bg-primary04 max-w-fit">
                       {latestnewshead && latestnewshead.tag
                         ? latestnewshead.tag
                         : ""}
@@ -190,12 +195,12 @@ const NewsRoomPage = () => {
 
               {/* rest news grid */}
 
-              <div className="grid mb-8 lg:grid-cols-3 sm:gap-6 lg:gap-8 sm:grid-cols-2">
+              <div className="grid gap-10 mb-8 lg:grid-cols-3 sm:gap-6 lg:gap-8 sm:grid-cols-2">
                 {latestnews ? (
                   latestnews.map((latestnewsitem) => (
                     <div
                       key={latestnewsitem._id}
-                      className="bg-white overflow-hidden rounded-[3%]"
+                      className="bg-white overflow-hidden rounded-[3%]  hover:scale-[1.02] transition duration-300"
                     >
                       <a
                         href={
@@ -206,6 +211,7 @@ const NewsRoomPage = () => {
                         target="_blank"
                       >
                         <img
+                          className="h-[50%] object-cover w-full"
                           src={
                             latestnewsitem && latestnewsitem.coverImage
                               ? latestnewsitem.coverImage
@@ -214,7 +220,7 @@ const NewsRoomPage = () => {
                           alt=""
                         />
                         <div className="p-6">
-                          <div className="px-2 py-1 mb-2 font-medium text-white rounded-2xl bg-primary04 max-w-fit ">
+                          <div className="px-2 py-1 mb-2 font-medium text-white rounded-md bg-primary04 max-w-fit ">
                             {latestnewsitem && latestnewsitem.tag
                               ? latestnewsitem.tag
                               : ""}
@@ -275,7 +281,7 @@ const NewsRoomPage = () => {
                   target="_blank"
                 >
                   <img
-                    className="object-cover w-full max-h-[50vh] rounded-3xl"
+                    className="object-cover w-full max-h-[50vh] rounded-3xl "
                     src={
                       storieshead && storieshead.coverImage
                         ? storieshead.coverImage
@@ -284,7 +290,7 @@ const NewsRoomPage = () => {
                     alt=""
                   />
                   <div className="absolute pr-3 bottom-[5%] left-[4%] ">
-                    <div className="px-2 py-1 font-medium text-white rounded-2xl bg-primary04 max-w-fit">
+                    <div className="px-2 py-1 font-medium text-white rounded-md bg-primary04 max-w-fit">
                       {storieshead && storieshead.tag ? storieshead.tag : ""}
                     </div>
                     <div className="pt-2 text-2xl font-bold leading-6 sm:text-3xl lg:text-5xl text-wrap">
@@ -317,10 +323,10 @@ const NewsRoomPage = () => {
                 }
                 target="_blank"
               >
-                <div className="hidden mb-12 sm:grid sm:grid-cols-2 ">
-                  <div className="flex">
+                <div className="hidden mb-16 sm:grid sm:grid-cols-2 ">
+                  <div className="flex transition duration-300 hover:scale-[1.02]">
                     <img
-                      className="object-cover max-h-[50vh] w-full"
+                      className="object-cover max-h-[50vh] w-full rounded-xl"
                       src={
                         storieshead && storieshead.coverImage
                           ? storieshead.coverImage
@@ -329,7 +335,7 @@ const NewsRoomPage = () => {
                     />
                   </div>
                   <div className="flex flex-col justify-center p-8 ">
-                    <div className="px-2 py-1 mb-3 font-medium text-white rounded-2xl bg-primary04 max-w-fit">
+                    <div className="px-2 py-1 mb-3 font-medium text-white rounded-md bg-primary04 max-w-fit">
                       {storieshead && storieshead.tag ? storieshead.tag : ""}
                     </div>
                     <div className="pt-2 font-bold leading-6 sm:text-2xl xl:text-3xl text-wrap">
@@ -363,7 +369,10 @@ const NewsRoomPage = () => {
               <div className="grid mb-8 lg:grid-cols-3 sm:gap-6 lg:gap-8 sm:grid-cols-2">
                 {stories ? (
                   stories.map((story) => (
-                    <div key={story._id} className="mb-4 ">
+                    <div
+                      key={story._id}
+                      className="mb-4  hover:scale-[1.02] transition duration-300"
+                    >
                       <a
                         className="relative h-full "
                         href={
@@ -375,7 +384,7 @@ const NewsRoomPage = () => {
                       >
                         <div className="flex h-full">
                           <img
-                            className="object-cover w-full h-full rounded-3xl"
+                            className="object-cover w-full h-full rounded-xl"
                             src={
                               story && story.coverImage ? story.coverImage : ""
                             }
@@ -383,7 +392,7 @@ const NewsRoomPage = () => {
                           />
                         </div>
                         <div className="absolute pr-3 bottom-[5%] left-[4%] ">
-                          <div className="px-2 py-1 font-medium text-white rounded-2xl bg-primary04 max-w-fit">
+                          <div className="px-2 py-1 font-medium text-white rounded-md bg-primary04 max-w-fit">
                             {" "}
                             {story && story.tag ? story.tag : ""}
                           </div>
@@ -415,14 +424,14 @@ const NewsRoomPage = () => {
           </div>
         </div>
         {/* section3 */}
-        <div className="bg-[#f5f5f7]">
+        <div className="bg-gray-100">
           {/* to center all items */}
 
           <div className="flex flex-col items-center ">
             <div className="pt-12 mx-4 sm:mx-[10%] lg:mx[20%]  ">
               <div className="mb-4 text-3xl font-bold">More From News Room</div>
               {/* grid all-news-items */}
-              <div className="grid gap-8 mb-8 lg:grid-cols-2">
+              <div className="grid gap-8 mb-16 lg:grid-cols-2">
                 {news ? (
                   news.map((indinews) => (
                     <a
@@ -434,20 +443,22 @@ const NewsRoomPage = () => {
                       }
                       target="_blank"
                     >
-                      <div className="grid grid-cols-3">
-                        <div className="flex col-span-1 bg-black">
-                          <img
-                            src={
-                              indinews && indinews.coverImage
-                                ? indinews.coverImage
-                                : ""
-                            }
-                            className="object-cover w-full h-full max-h-[25vh]"
-                            alt=""
-                          />
+                      <div className="grid grid-cols-3 p-4 bg-white rounded-lg hover:scale-[1.02] transition duration-300">
+                        <div className="flex col-span-1 bg-white">
+                          <div className="h-[20vh] flex items-center mx-auto bg-white overflow-hidden">
+                            <img
+                              src={
+                                indinews && indinews.coverImage
+                                  ? indinews.coverImage
+                                  : ""
+                              }
+                              className="object-contain w-full rounded-md"
+                              alt=""
+                            />
+                          </div>
                         </div>
                         <div className="col-span-2 px-2 m-2">
-                          <div className="px-2 py-1 mb-2 font-semibold text-white rounded-2xl bg-primary04 max-w-fit">
+                          <div className="px-2 py-1 mb-2 font-semibold text-white rounded-md bg-primary04 max-w-fit">
                             {indinews && indinews.tag ? indinews.tag : ""}
                           </div>
                           <div className="pb-2 font-semibold">
