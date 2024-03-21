@@ -68,8 +68,8 @@ const router = createBrowserRouter([
       { path: "/blogs", element: <BlogPage /> },
       { path: "/post/:id", element: <SingleBlogPage /> },
 
-      // { path: "/news", element: <NewsRoomPage /> },
-      // { path: "/news/:id", element: <SingleNewsPage /> },
+      { path: "/news", element: <NewsRoomPage /> },
+      { path: "/news/:id", element: <SingleNewsPage /> },
 
       { path: "/assessyourself", element: <AssessYourself /> },
       { path: "/registeruser/:assessmenttype", element: <RegisterUserForm /> },
