@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import BASE_URL from "../apis/Config";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import { MdDelete } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import { IoIosArrowRoundBack } from "react-icons/io";
 
 const SingleBlogPage = () => {
   const [postInfo, setPostInfo] = useState();
@@ -95,9 +96,15 @@ const SingleBlogPage = () => {
 
           <img className="w-3/4 mx-auto my-6" src={postInfo.cover} alt="img" />
 
-          <p className="mb-20 md:mt-20 md:mb-32">
+          <p className="mb-8 md:mt-20 ">
             <div dangerouslySetInnerHTML={{ __html: postInfo.content }}></div>
           </p>
+        </div>
+
+        <div className="mb-12">
+          <NavLink to={"/blogs"}>
+            <IoIosArrowRoundBack className="size-9 hover:scale-110" />
+          </NavLink>
         </div>
       </div>
     </div>
