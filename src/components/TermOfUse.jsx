@@ -134,9 +134,9 @@ const TermOfUse = () => {
             Your legal guardian or parent and to the extent permissible under
             applicable laws, enforceable against You. Kindly inform your parent
             or legal guardian to provide their consent by writing to us at
-            General.care@anjanajyoti.org. Anyone under 13 is strictly prohibited
-            from creating an account and/or using the Service. Asmi does not
-            take responsibility for any misrepresentation of age and use.
+            hello@asmi.life. Anyone under 13 is strictly prohibited from
+            creating an account and/or using the Service. Asmi does not take
+            responsibility for any misrepresentation of age and use.
           </p>
 
           <p className="pt-6 text-base md:text-lg text-neutral-800">
@@ -159,11 +159,11 @@ const TermOfUse = () => {
               You will be asked to provide a Parental or Legal Guardian consent
               if You reveal Your age to be between 13 and 18 years. You will be
               required to inform Your parents or legal guardian and have them
-              send Us an email consent to General.care@anjanajyoti.org, as
-              directed by Your Asmi Counsellor and Peer, using the same email ID
-              that was used to subscribe to Our Service. Without receiving your
-              informed consent or parental or legal guardian consent, We will be
-              unable to offer Our full Services.
+              send Us an email consent to hello@asmi.life, as directed by Your
+              Asmi Counsellor and Peer, using the same email ID that was used to
+              subscribe to Our Service. Without receiving your informed consent
+              or parental or legal guardian consent, We will be unable to offer
+              Our full Services.
             </li>
           </ul>
           <p className="text-base md:text-lg text-neutral-800">
@@ -1167,11 +1167,8 @@ const TermOfUse = () => {
           <p className="text-base md:text-lg text-neutral-800">
             If You have any questions, comments, or concerns about this
             Agreement or practices, please contact us at{" "}
-            <a
-              href="mailto:general.care@anjanajyoti.org"
-              className="text-blue-500"
-            >
-              general.care@anjanajyoti.org
+            <a href="mailto:hello@asmi.life" className="text-blue-500">
+              hello@asmi.life
             </a>{" "}
             or by writing to:
           </p>

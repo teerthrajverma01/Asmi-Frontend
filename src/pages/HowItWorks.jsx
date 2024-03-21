@@ -188,7 +188,7 @@ const HowItWorks = () => {
             <div className=" w-full max-w-[35rem]">
               <div className="text-4xl font-semibold leading-[1.2] font-sans text-neutral-900 flex flex-col items-center">
                 <img
-                  className="items-center hidden h-64 md:block "
+                  className="items-center hidden h-44 md:block "
                   src={yogaLogo}
                   alt=""
                 />
@@ -214,33 +214,55 @@ const HowItWorks = () => {
                   ))}
                 </div>
               </div>
-              <div className="flex flex-col items-center justify-center mt-4">
+              <div className="flex flex-col items-center justify-center ">
                 <p className="text-center">
                   Enjoy Our Daily Free Online Yoga Sessions, offered multiple
                   times during both mornings and evenings.
                 </p>
-                <div className="flex flex-col gap-4 my-6 lg:flex-row lg:gap-16">
-                  <div className="flex flex-col">
-                    <h1 className="text-2xl font-semibold">Morning Sessions</h1>
-                    <div className="text-lg font-medium text-center">
-                      <h2>6am - 6:45am</h2>
-                      <h2>7am - 7:45am</h2>
-                      <h2>8am - 8:45am</h2>
+
+                <div className="flex flex-col gap-4 my-2 lg:gap-8">
+                  <div>
+                    <div className="flex flex-col">
+                      <h1 className="text-xl font-semibold">
+                        Morning Sessions
+                        <span className="text-xl font-normal">
+                          (6 days a week)
+                        </span>
+                      </h1>
+                      <div className="flex justify-center gap-12">
+                        <div className="text-lg font-medium text-center">
+                          <div className="underline">Monday to Friday</div>
+                          <h2>6:00am - 6:45am</h2>
+                          <h2>7:00am - 7:45am</h2>
+                        </div>
+                        <div className="text-lg font-medium text-center">
+                          <div className="underline">Saturday</div>
+
+                          <h2>7:00am - 7:45am</h2>
+                          <h2>8:00am - 8:45am</h2>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div>
-                    <h1 className="text-2xl font-semibold">Evening Sessions</h1>
+                    <h1 className="text-xl font-semibold">
+                      Evening Sessions
+                      <span className="text-xl font-normal">
+                        (6 days a week)
+                      </span>
+                    </h1>
                     <div className="text-lg font-medium text-center">
+                      <div className="underline">Monday to Saturday</div>
+
                       <h2>6pm - 6:45pm</h2>
                       <h2>7pm - 7:45pm</h2>
-                      <h2>8pm - 8:45pm</h2>
                     </div>
                   </div>
                 </div>
-                <div className="flex mt-4 justify-center transition duration-300 ease-in-out  hover:translate-y-[-2px]">
+                <div className="flex  justify-center transition duration-300 ease-in-out  hover:translate-y-[-2px]">
                   <NavLink
                     className="p-3 font-semibold bg-white border border-solid rounded-md hover:bg-neutral-200 border-neutral-300 text-neutral-900 "
-                    to={"/contact-us"}
+                    to={"/yoga-form"}
                   >
                     Sign up
                   </NavLink>

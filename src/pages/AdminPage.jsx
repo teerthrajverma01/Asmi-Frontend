@@ -27,7 +27,7 @@ const AdminPage = () => {
     dispatch(setUserName(null));
   };
   return (
-    <div className="my-16">
+    <div className="my-16 h-[35vh] text-center">
       {username && (
         <>
           <Link
@@ -36,12 +36,12 @@ const AdminPage = () => {
           >
             Create new Blog
           </Link>
-          <Link
+          {/* <Link
             className="inline-block px-4 py-2 mx-2 text-white rounded-md bg-primary03 hover:bg-primary02 focus:outline-none"
             to={"/create-newsitem"}
           >
             Create new NewsItem
-          </Link>
+          </Link> */}
 
           <a
             className="inline-block px-4 py-2 mx-2 ml-4 text-white rounded-md bg-primary03 hover:bg-primary02 focus:outline-none"

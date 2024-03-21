@@ -202,63 +202,63 @@ const GiftCard = () => {
                     </div>
                   </div>
 
-                  <div>
-                    <label className="block my-1">Your Name*</label>
-                    <input
-                      type="text"
-                      className="block w-full p-2 mb-6 bg-white border border-black border-solid min-h-12"
-                      value={userName}
-                      onChange={(e) => setUserName(e.target.value)}
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block my-1 ">Your Email*</label>
-                    <input
-                      type="email"
-                      className="block w-full p-2 mb-4 bg-white border border-black border-solid min-h-12"
-                      value={userEmail}
-                      onChange={(e) => setUserEmail(e.target.value)}
-                      required
-                    />
-                  </div>
-                  {!isMyself && (
+                  <form onSubmit={paymentHandler}>
                     <div>
-                      <label className="block my-1">Recipient Name*</label>
+                      <label className="block my-1">Your Name*</label>
                       <input
                         type="text"
                         className="block w-full p-2 mb-6 bg-white border border-black border-solid min-h-12"
-                        value={recipientName}
-                        onChange={(e) => setRecipentName(e.target.value)}
+                        value={userName}
+                        onChange={(e) => setUserName(e.target.value)}
                         required
                       />
+                    </div>
 
-                      <label className="block my-1 ">Recipient Email*</label>
+                    <div>
+                      <label className="block my-1 ">Your Email*</label>
                       <input
                         type="email"
                         className="block w-full p-2 mb-4 bg-white border border-black border-solid min-h-12"
-                        value={recipientEmail}
-                        onChange={(e) => setrecipientEmail(e.target.value)}
+                        value={userEmail}
+                        onChange={(e) => setUserEmail(e.target.value)}
                         required
                       />
-
-                      <label className="block my-1">Message*</label>
-                      <textarea
-                        value={message}
-                        placeholder="Type your message.."
-                        className="w-full p-2 mb-4 bg-white border border-black border-solid rounded min-h-32"
-                        onChange={(e) => setMessage(e.target.value)}
-                      ></textarea>
                     </div>
-                  )}
+                    {!isMyself && (
+                      <div>
+                        <label className="block my-1">Recipient Name*</label>
+                        <input
+                          type="text"
+                          className="block w-full p-2 mb-6 bg-white border border-black border-solid min-h-12"
+                          value={recipientName}
+                          onChange={(e) => setRecipientName(e.target.value)}
+                          required
+                        />
 
-                  <button
-                    className="w-full p-3 text-white transition transform bg-black hover:bg-neutral-900"
-                    onClick={paymentHandler}
-                  >
-                    Buy now
-                  </button>
+                        <label className="block my-1 ">Recipient Email*</label>
+                        <input
+                          type="email"
+                          className="block w-full p-2 mb-4 bg-white border border-black border-solid min-h-12"
+                          value={recipientEmail}
+                          onChange={(e) => setRecipientEmail(e.target.value)}
+                          required
+                        />
+
+                        <label className="block my-1">Message*</label>
+                        <textarea
+                          value={message}
+                          required
+                          placeholder="Type your message.."
+                          className="w-full p-2 mb-4 bg-white border border-black border-solid rounded min-h-32"
+                          onChange={(e) => setMessage(e.target.value)}
+                        ></textarea>
+                      </div>
+                    )}
+
+                    <button className="w-full p-3 text-white transition transform bg-black hover:bg-neutral-900">
+                      Buy now
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>

@@ -105,11 +105,8 @@ const Refunds = () => {
           <p className="text-base md:text-lg text-neutral-800">
             Since Asmi does not charge any monthly or annual subscriptions, You
             can cancel your account at any time by sending an email to{" "}
-            <a
-              href="mailto:general.care@anjanajyoti.org"
-              className="text-blue-500"
-            >
-              general.care@anjanajyoti.org
+            <a href="mailto:hello@asmi.life" className="text-blue-500">
+              hello@asmi.life
             </a>{" "}
           </p>
           <h2 className="mt-8 text-xl font-semibold">Refunds</h2>
@@ -149,11 +146,8 @@ const Refunds = () => {
           <p className="text-base md:text-lg text-neutral-800">
             If You have any questions, comments, or concerns about this
             Agreement or practices, please contact us at{" "}
-            <a
-              href="mailto:general.care@anjanajyoti.org"
-              className="text-blue-500"
-            >
-              general.care@anjanajyoti.org
+            <a href="mailto:hello@asmi.life" className="text-blue-500">
+              hello@asmi.life
             </a>{" "}
             or by writing to:
           </p>
