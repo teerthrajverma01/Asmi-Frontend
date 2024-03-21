@@ -247,6 +247,7 @@ const GiftCard = () => {
                         <label className="block my-1">Message*</label>
                         <textarea
                           value={message}
+                          required
                           placeholder="Type your message.."
                           className="w-full p-2 mb-4 bg-white border border-black border-solid rounded min-h-32"
                           onChange={(e) => setMessage(e.target.value)}
