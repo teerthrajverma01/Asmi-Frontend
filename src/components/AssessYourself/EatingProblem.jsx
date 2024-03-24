@@ -18,15 +18,6 @@ const EatingProblem = ({ username, email }) => {
     event.preventDefault();
     setLoading(true);
 
-    // const AssessmentFormData = new FormData();
-    // AssessmentFormData.append("username", username);
-    // AssessmentFormData.append("email", email);
-    // AssessmentFormData.append("q1", q1);
-    // AssessmentFormData.append("q2", q2);
-    // AssessmentFormData.append("q3", q3);
-    // AssessmentFormData.append("q4", q4);
-    // AssessmentFormData.append("q5", q5);
-
     fetch(`${BASE_URL}/assessyourself/eatingproblem/postformdata`, {
       method: "POST",
       body: JSON.stringify({ username, email, q1, q2, q3, q4, q5 }),
@@ -200,6 +191,8 @@ const EatingProblem = ({ username, email }) => {
                 <input
                   type="submit"
                   className="px-3 py-2 text-2xl text-white bg-primary04 rounded-xl"
+                  value={loading ? "Loading..." : "Submit"} // Change button text based on loading state
+                  disabled={loading} // Disable button when loading
                 />
               </div>
             </form>

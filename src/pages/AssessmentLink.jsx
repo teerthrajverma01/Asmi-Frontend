@@ -51,22 +51,22 @@ const AssessmentLink = () => {
               <EatingProblem username={username} email={email} />
             </div>
           )}
-          {assessmentCategory === "substance-use" && (
+          {assessmentCategory === "substanceuse" && (
             <div>
               <SubstanceUse username={username} email={email} />
             </div>
           )}
-          {assessmentCategory === "mood-imbalance" && (
+          {assessmentCategory === "moodimbalance" && (
             <div>
               <MoodImbalance username={username} email={email} />
             </div>
           )}
-          {assessmentCategory === "sucide-risk" && (
+          {assessmentCategory === "suciderisk" && (
             <div>
               <SucideRisk username={username} email={email} />
             </div>
           )}
-          {assessmentCategory === "sleep-disturbance" && (
+          {assessmentCategory === "sleepdisturbance" && (
             <div>
               <SleepDisturbance username={username} email={email} />
             </div>
@@ -81,7 +81,7 @@ const AssessmentLink = () => {
               <Stress username={username} email={email} />
             </div>
           )}
-          {assessmentCategory === "low-self-esteem" && (
+          {assessmentCategory === "lowselfesteem" && (
             <div>
               <LowSelfEsteem username={username} email={email} />
             </div>

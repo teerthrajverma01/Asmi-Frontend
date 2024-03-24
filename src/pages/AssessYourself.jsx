@@ -1,23 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { FaIndianRupeeSign } from "react-icons/fa6";
 import { GrLinkNext } from "react-icons/gr";
 
-import BASE_URL from "../apis/Config";
+// import BASE_URL from "../apis/Config";
 import { Link } from "react-router-dom";
 
 import img1 from "../assets/image/assessyourself/assesmentmain.svg";
 import alcoholic from "../assets/image/assessyourself/alcoholic.svg";
 
 const AssessYourself = () => {
-  const registerHandler = () => {
-    navigate();
-  };
-
   return (
     <div>
       {/* layout  */}
-      <div classname="">
+      <div className="">
         {/* first section */}
         <div>
           {/* layout */}
@@ -110,10 +106,7 @@ const AssessYourself = () => {
                       know if it’s actually problematic.
                     </div>
                     <Link to={`/registeruser/eatingproblem`}>
-                      <button
-                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
-                        onClick={registerHandler}
-                      >
+                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
                         Take Test {">"}
                       </button>
                     </Link>
@@ -134,7 +127,7 @@ const AssessYourself = () => {
                     <Link to={`/registeruser/substance-use`}>
                       <button
                         className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
-                        onClick={registerHandler}
+                  
                       >
                         Take Test {">"}
                       </button>
@@ -154,11 +147,8 @@ const AssessYourself = () => {
                       Do you feel your mood switches drastically? Take an
                       assessment to find out if you need professional help
                     </div>
-                    <Link to={`/registeruser/mood-imbalance`}>
-                      <button
-                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
-                        onClick={registerHandler}
-                      >
+                    <Link to={`/registeruser/moodimbalance`}>
+                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
                         Take Test {">"}
                       </button>
                     </Link>
@@ -178,11 +168,8 @@ const AssessYourself = () => {
                       self harm, please take this assessment and reach out for
                       better care.
                     </div>
-                    <Link to={`/registeruser/sucide-risk`}>
-                      <button
-                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
-                        onClick={registerHandler}
-                      >
+                    <Link to={`/registeruser/suciderisk`}>
+                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
                         Take Test {">"}
                       </button>
                     </Link>
@@ -202,11 +189,8 @@ const AssessYourself = () => {
                       and productivity. Check now if this actually needs
                       attention.
                     </div>
-                    <Link to={`/registeruser/sleep-disturbance`}>
-                      <button
-                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
-                        onClick={registerHandler}
-                      >
+                    <Link to={`/registeruser/sleepdisturbance`}>
+                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
                         Take Test {">"}
                       </button>
                     </Link>
@@ -227,10 +211,7 @@ const AssessYourself = () => {
                       professional attention.
                     </div>
                     <Link to={`/registeruser/das`}>
-                      <button
-                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
-                        onClick={registerHandler}
-                      >
+                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
                         Take Test {">"}
                       </button>
                     </Link>
@@ -250,10 +231,7 @@ const AssessYourself = () => {
                       an assessment and find out if you need help
                     </div>
                     <Link to={`/registeruser/stress`}>
-                      <button
-                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
-                        onClick={registerHandler}
-                      >
+                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
                         Take Test {">"}
                       </button>
                     </Link>
@@ -271,11 +249,8 @@ const AssessYourself = () => {
                     <div className="sm:mb-4 sm:text-xl">
                       Explore how stress has been taking toll on you
                     </div>
-                    <Link to={`/registeruser/low-self-esteem`}>
-                      <button
-                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
-                        onClick={registerHandler}
-                      >
+                    <Link to={`/registeruser/lowselfesteem`}>
+                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
                         Take Test {">"}
                       </button>
                     </Link>

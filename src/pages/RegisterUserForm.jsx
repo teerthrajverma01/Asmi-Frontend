@@ -11,6 +11,8 @@ const RegisterUserForm = () => {
 
   const { assessmenttype } = useParams();
 
+  const [loading, setLoading] = useState(false);
+
   //   const [assessmentCategory, setAssessmentCategory] = useState("");
   //   const [paymentid, setPaymentid] = useState("");
   //   const [assessmentAppeared, setAssessmentAppeared] = useState(false);
@@ -19,26 +21,36 @@ const RegisterUserForm = () => {
 
   const login = async (event) => {
     event.preventDefault();
+    setLoading(true);
 
-    const res = await fetch(`${BASE_URL}/aru/postuser`, {
-      method: "POST",
-      body: JSON.stringify({
-        username,
-        email,
-        assessmentCategory: assessmenttype,
-        paymentid: "#123",
-        assessmentAppeared: "false",
-      }),
-      headers: { "Content-Type": "application/json" },
-    });
+    try {
+      const res = await fetch(`${BASE_URL}/aru/postuser`, {
+        method: "POST",
+        body: JSON.stringify({
+          username,
+          email,
+          assessmentCategory: assessmenttype,
+          paymentid: "#123",
+          assessmentAppeared: "false",
+        }),
+        headers: { "Content-Type": "application/json" },
+      });
 
-    console.log(res.ok);
+      if (!res.ok) {
+        throw new Error("Network response was not ok.");
+      }
 
-    if (res.ok) {
-      setRedirect(true);
-      navigate("/");
-    } else {
-      alert("wrong credentials");
+      if (res.ok) {
+        setRedirect(true);
+        navigate("/");
+      } else {
+        alert("wrong credentials");
+      }
+    } catch (error) {
+      console.error("Error in registerUserEmail:", error);
+      // Handle error (e.g., display error message to user)
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -68,12 +80,12 @@ const RegisterUserForm = () => {
         />
       </div>
 
-      <button
+      <input
         className="w-full py-2 text-white rounded-md bg-primary03 hover:bg-primary02 focus:outline-none"
         type="submit"
-      >
-        Register
-      </button>
+        value={loading ? "Loading..." : "Register"}
+        disabled={loading}
+      />
     </form>
   );
 };
