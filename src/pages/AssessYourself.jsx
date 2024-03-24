@@ -9,6 +9,14 @@ import { Link } from "react-router-dom";
 import img1 from "../assets/image/assessyourself/assesmentmain.svg";
 import alcoholic from "../assets/image/assessyourself/alcoholic.svg";
 
+import eating from "../assets/assesImg/eating.png";
+import low from "../assets/assesImg/low.png";
+import stress from "../assets/assesImg/stress.png";
+import suicide from "../assets/assesImg/suicide.png";
+import sleep from "../assets/assesImg/sleep.png";
+import mood from "../assets/assesImg/mood.png";
+import depression from "../assets/assesImg/depression.png";
+
 const AssessYourself = () => {
   return (
     <div>
@@ -93,9 +101,13 @@ const AssessYourself = () => {
               {/* individual assessments */}
               <div className="grid gap-6 sm:gap-8 sm:grid-cols-2">
                 {/* eating problem */}
-                <div className="grid grid-cols-4 gap-4 overflow-hidden border rounded-3xl">
-                  <div className="flex col-span-1">
-                    <img className="object-cover" src={alcoholic} alt="" />
+                <div className="grid grid-cols-5 gap-4 overflow-hidden border md:grid-cols-4 rounded-3xl">
+                  <div className="flex col-span-2 md:col-span-1">
+                    <img
+                      className="object-contain"
+                      src={eating}
+                      alt="Eating Problem"
+                    />
                   </div>
                   <div className="self-center col-span-3">
                     <div className="mt-4 mb-2 text-xl font-medium sm:text-3xl">
@@ -105,15 +117,21 @@ const AssessYourself = () => {
                       Do you think your appetite is fluctuating? Take a test to
                       know if it’s actually problematic.
                     </div>
-                    <Link to={`/registeruser/eatingproblem`}>
-                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
+                    <Link
+                      onClick={() => window.scrollTo(0, 0)}
+                      to={`/registeruser/eatingproblem`}
+                    >
+                      <button
+                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
+                        onClick={registerHandler}
+                      >
                         Take Test {">"}
                       </button>
                     </Link>
                   </div>
                 </div>
                 {/* Substance Use */}
-                {/* <div className="grid grid-cols-4 gap-4 overflow-hidden border rounded-3xl">
+                {/* <div className="grid grid-cols-4 grid-cols-5 gap-4 overflow-hidden border md:grid rounded-3xl">
                   <div className="flex col-span-1">
                     <img className="object-cover" src={alcoholic} alt="" />
                   </div>
@@ -124,7 +142,8 @@ const AssessYourself = () => {
                     <div className="sm:mb-4 sm:text-xl">
                       Explore how stress has been taking toll on you
                     </div>
-                    <Link to={`/registeruser/substance-use`}>
+                    <Link
+                      onClick={() => window.scrollTo(0, 0)} to={`/registeruser/substance-use`}>
                       <button
                         className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
                   
@@ -135,9 +154,13 @@ const AssessYourself = () => {
                   </div>
                 </div> */}
                 {/* Mood Imbalance */}
-                <div className="grid grid-cols-4 gap-4 overflow-hidden border rounded-3xl">
-                  <div className="flex col-span-1">
-                    <img className="object-cover" src={alcoholic} alt="" />
+                <div className="grid grid-cols-5 gap-4 overflow-hidden border md:grid-cols-4 rounded-3xl">
+                  <div className="flex col-span-2 md:col-span-1">
+                    <img
+                      className="object-contain"
+                      src={mood}
+                      alt="Mood Imbalance"
+                    />
                   </div>
                   <div className="self-center col-span-3">
                     <div className="mt-4 mb-2 text-xl font-medium sm:text-3xl">
@@ -147,17 +170,27 @@ const AssessYourself = () => {
                       Do you feel your mood switches drastically? Take an
                       assessment to find out if you need professional help
                     </div>
-                    <Link to={`/registeruser/moodimbalance`}>
-                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
+                    <Link
+                      onClick={() => window.scrollTo(0, 0)}
+                      to={`/registeruser/mood-imbalance`}
+                    >
+                      <button
+                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
+                        onClick={registerHandler}
+                      >
                         Take Test {">"}
                       </button>
                     </Link>
                   </div>
                 </div>
                 {/* Sucide Risk*/}
-                <div className="grid grid-cols-4 gap-4 overflow-hidden border rounded-3xl">
-                  <div className="flex col-span-1">
-                    <img className="object-cover" src={alcoholic} alt="" />
+                <div className="grid grid-cols-5 gap-4 overflow-hidden border md:grid-cols-4 rounded-3xl">
+                  <div className="flex col-span-2 md:col-span-1">
+                    <img
+                      className="object-cover p-6 md:object-contain"
+                      src={suicide}
+                      alt=" Sucide Risk"
+                    />
                   </div>
                   <div className="self-center col-span-3">
                     <div className="mt-4 mb-2 text-xl font-medium sm:text-3xl">
@@ -168,17 +201,27 @@ const AssessYourself = () => {
                       self harm, please take this assessment and reach out for
                       better care.
                     </div>
-                    <Link to={`/registeruser/suciderisk`}>
-                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
+                    <Link
+                      onClick={() => window.scrollTo(0, 0)}
+                      to={`/registeruser/sucide-risk`}
+                    >
+                      <button
+                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
+                        onClick={registerHandler}
+                      >
                         Take Test {">"}
                       </button>
                     </Link>
                   </div>
                 </div>
                 {/* Sleep Disturbance */}
-                <div className="grid grid-cols-4 gap-4 overflow-hidden border rounded-3xl">
-                  <div className="flex col-span-1">
-                    <img className="object-cover" src={alcoholic} alt="" />
+                <div className="grid grid-cols-5 gap-4 overflow-hidden border md:grid-cols-4 rounded-3xl">
+                  <div className="flex col-span-2 md:col-span-1">
+                    <img
+                      className="object-contain"
+                      src={sleep}
+                      alt="Sleep Disturbance"
+                    />
                   </div>
                   <div className="self-center col-span-3">
                     <div className="mt-4 mb-2 text-xl font-medium sm:text-3xl">
@@ -189,17 +232,27 @@ const AssessYourself = () => {
                       and productivity. Check now if this actually needs
                       attention.
                     </div>
-                    <Link to={`/registeruser/sleepdisturbance`}>
-                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
+                    <Link
+                      onClick={() => window.scrollTo(0, 0)}
+                      to={`/registeruser/sleep-disturbance`}
+                    >
+                      <button
+                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
+                        onClick={registerHandler}
+                      >
                         Take Test {">"}
                       </button>
                     </Link>
                   </div>
                 </div>
                 {/* Depression, Anxiety and Stress */}
-                <div className="grid grid-cols-4 gap-4 overflow-hidden border rounded-3xl">
-                  <div className="flex col-span-1">
-                    <img className="object-cover" src={alcoholic} alt="" />
+                <div className="grid grid-cols-5 gap-4 overflow-hidden border md:grid-cols-4 rounded-3xl">
+                  <div className="flex col-span-2 md:col-span-1">
+                    <img
+                      className="object-contain "
+                      src={depression}
+                      alt="  Depression, Anxiety and Stress"
+                    />
                   </div>
                   <div className="self-center col-span-3">
                     <div className="mt-4 mb-2 text-xl font-medium sm:text-3xl">
@@ -210,17 +263,23 @@ const AssessYourself = () => {
                       of anxiety, stress and sadness/worthlessness needs
                       professional attention.
                     </div>
-                    <Link to={`/registeruser/das`}>
-                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
+                    <Link
+                      onClick={() => window.scrollTo(0, 0)}
+                      to={`/registeruser/das`}
+                    >
+                      <button
+                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
+                        onClick={registerHandler}
+                      >
                         Take Test {">"}
                       </button>
                     </Link>
                   </div>
                 </div>
                 {/* Stress */}
-                <div className="grid grid-cols-4 gap-4 overflow-hidden border rounded-3xl">
-                  <div className="flex col-span-1">
-                    <img className="object-cover" src={alcoholic} alt="" />
+                <div className="grid grid-cols-5 gap-4 overflow-hidden border md:grid-cols-4 rounded-3xl">
+                  <div className="flex col-span-2 md:col-span-1">
+                    <img className="object-contain" src={stress} alt="Stress" />
                   </div>
                   <div className="self-center col-span-3">
                     <div className="mt-4 mb-2 text-xl font-medium sm:text-3xl">
@@ -230,27 +289,44 @@ const AssessYourself = () => {
                       Do you feel overwhelmed by work or other commitments? Take
                       an assessment and find out if you need help
                     </div>
-                    <Link to={`/registeruser/stress`}>
-                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
+                    <Link
+                      onClick={() => window.scrollTo(0, 0)}
+                      to={`/registeruser/stress`}
+                    >
+                      <button
+                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
+                        onClick={registerHandler}
+                      >
                         Take Test {">"}
                       </button>
                     </Link>
                   </div>
                 </div>
                 {/* Low Self Esteem */}
-                <div className="grid grid-cols-4 gap-4 overflow-hidden border rounded-3xl">
-                  <div className="flex col-span-1">
-                    <img className="object-cover" src={alcoholic} alt="" />
+                <div className="grid grid-cols-5 gap-4 overflow-hidden border md:grid-cols-4 rounded-3xl">
+                  <div className="flex col-span-2 md:col-span-1 ">
+                    <img
+                      className="object-contain"
+                      src={low}
+                      alt=" Low Self Esteem"
+                    />
                   </div>
                   <div className="self-center col-span-3">
                     <div className="mt-4 mb-2 text-xl font-medium sm:text-3xl">
                       Low Self Esteem
                     </div>
                     <div className="sm:mb-4 sm:text-xl">
-                      Explore how stress has been taking toll on you
+                      Do you feel overwhelmed by work or other commitments? Take
+                      an assessment and find out if you need help.
                     </div>
-                    <Link to={`/registeruser/lowselfesteem`}>
-                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
+                    <Link
+                      onClick={() => window.scrollTo(0, 0)}
+                      to={`/registeruser/low-self-esteem`}
+                    >
+                      <button
+                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
+                        onClick={registerHandler}
+                      >
                         Take Test {">"}
                       </button>
                     </Link>
