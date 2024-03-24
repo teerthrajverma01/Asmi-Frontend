@@ -169,7 +169,7 @@ const AssessYourself = () => {
                     </div>
                     <Link
                       onClick={() => window.scrollTo(0, 0)}
-                      to={`/registeruser/mood-imbalance`}
+                      to={`/registeruser/moodimbalance`}
                     >
                       <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
                         Take Test {">"}
@@ -197,7 +197,7 @@ const AssessYourself = () => {
                     </div>
                     <Link
                       onClick={() => window.scrollTo(0, 0)}
-                      to={`/registeruser/sucide-risk`}
+                      to={`/registeruser/suciderisk`}
                     >
                       <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
                         Take Test {">"}
@@ -225,7 +225,7 @@ const AssessYourself = () => {
                     </div>
                     <Link
                       onClick={() => window.scrollTo(0, 0)}
-                      to={`/registeruser/sleep-disturbance`}
+                      to={`/registeruser/sleepdisturbance`}
                     >
                       <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
                         Take Test {">"}
