@@ -121,10 +121,7 @@ const AssessYourself = () => {
                       onClick={() => window.scrollTo(0, 0)}
                       to={`/registeruser/eatingproblem`}
                     >
-                      <button
-                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
-                        onClick={registerHandler}
-                      >
+                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
                         Take Test {">"}
                       </button>
                     </Link>
@@ -174,10 +171,7 @@ const AssessYourself = () => {
                       onClick={() => window.scrollTo(0, 0)}
                       to={`/registeruser/mood-imbalance`}
                     >
-                      <button
-                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
-                        onClick={registerHandler}
-                      >
+                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
                         Take Test {">"}
                       </button>
                     </Link>
@@ -205,10 +199,7 @@ const AssessYourself = () => {
                       onClick={() => window.scrollTo(0, 0)}
                       to={`/registeruser/sucide-risk`}
                     >
-                      <button
-                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
-                        onClick={registerHandler}
-                      >
+                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
                         Take Test {">"}
                       </button>
                     </Link>
@@ -236,10 +227,7 @@ const AssessYourself = () => {
                       onClick={() => window.scrollTo(0, 0)}
                       to={`/registeruser/sleep-disturbance`}
                     >
-                      <button
-                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
-                        onClick={registerHandler}
-                      >
+                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
                         Take Test {">"}
                       </button>
                     </Link>
@@ -267,10 +255,7 @@ const AssessYourself = () => {
                       onClick={() => window.scrollTo(0, 0)}
                       to={`/registeruser/das`}
                     >
-                      <button
-                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
-                        onClick={registerHandler}
-                      >
+                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
                         Take Test {">"}
                       </button>
                     </Link>
@@ -293,10 +278,7 @@ const AssessYourself = () => {
                       onClick={() => window.scrollTo(0, 0)}
                       to={`/registeruser/stress`}
                     >
-                      <button
-                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
-                        onClick={registerHandler}
-                      >
+                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
                         Take Test {">"}
                       </button>
                     </Link>
@@ -323,10 +305,7 @@ const AssessYourself = () => {
                       onClick={() => window.scrollTo(0, 0)}
                       to={`/registeruser/low-self-esteem`}
                     >
-                      <button
-                        className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04"
-                        onClick={registerHandler}
-                      >
+                      <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
                         Take Test {">"}
                       </button>
                     </Link>
