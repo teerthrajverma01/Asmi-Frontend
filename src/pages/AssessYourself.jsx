@@ -303,7 +303,7 @@ const AssessYourself = () => {
                     </div>
                     <Link
                       onClick={() => window.scrollTo(0, 0)}
-                      to={`/registeruser/low-self-esteem`}
+                      to={`/registeruser/lowselfesteem`}
                     >
                       <button className="p-1 my-4 text-white rounded-lg sm:text-xl bg-primary04">
                         Take Test {">"}

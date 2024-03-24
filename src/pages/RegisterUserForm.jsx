@@ -97,7 +97,7 @@ const RegisterUserForm = () => {
 
     const rzp1 = new window.Razorpay(options);
     rzp1.on("payment.failed", function (response) {
-      alert(response.error.description);
+      toast.error(response.error.description);
     });
 
     rzp1.open();
