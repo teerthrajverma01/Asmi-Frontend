@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import formheader from "../../assets/image/assessyourself/formheader.png";
 
 import BASE_URL from "../../apis/Config";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const SucideRisk = ({ username, email }) => {
+  const { id } = useParams();
+
   const [qn1, setQn1] = useState();
   const [qn2, setQn2] = useState();
   const [qn3, setQn3] = useState();
@@ -16,6 +18,8 @@ const SucideRisk = ({ username, email }) => {
 
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  console.log(id);
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -34,6 +38,7 @@ const SucideRisk = ({ username, email }) => {
         qnfourres2,
         qn5,
         qnfiveres,
+        id,
       }),
       headers: { "Content-Type": "application/json" },
     })
