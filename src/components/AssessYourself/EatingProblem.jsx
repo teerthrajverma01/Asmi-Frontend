@@ -70,127 +70,225 @@ const EatingProblem = ({ username, email }) => {
 
               <div className="mb-6">
                 <div className="font-medium ">
-                  <span>S</span> – Do you make yourself Sick because you feel
+                  <span>S</span> - Do you make yourself Sick because you feel
                   uncomfortably full?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={q1}
-                    name="q1choice"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQ1(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={q1}
-                    name="q1choice"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQ1(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300 ">
+                    <input
+                      id="q1choice-radio-1"
+                      type="radio"
+                      value={q1}
+                      name="q1choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+                      required
+                      onChange={(e) => setQ1(true)}
+                    />
+                    <label
+                      htmlFor="q1choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q1choice-radio-2"
+                      type="radio"
+                      value={q1}
+                      name="q1choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+                      onChange={(e) => setQ1(false)}
+                    />
+                    <label
+                      htmlFor="q1choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
+              {/* Question 2 */}
               <div className="mb-6">
                 <div className="font-medium ">
-                  <span>C</span> Do you worry you have lost Control over how
+                  <span>C</span> - Do you worry you have lost Control over how
                   much you eat?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={q2}
-                    name="q2choice"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQ2(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={q2}
-                    name="q2choice"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQ2(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q2choice-radio-1"
+                      type="radio"
+                      value={q2}
+                      name="q2choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      required
+                      onChange={(e) => setQ2(true)}
+                    />
+                    <label
+                      htmlFor="q2choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q2choice-radio-2"
+                      type="radio"
+                      value={q2}
+                      name="q2choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      onChange={(e) => setQ2(false)}
+                    />
+                    <label
+                      htmlFor="q2choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
+
+              {/* Question 3 */}
               <div className="mb-6">
                 <div className="font-medium ">
-                  <span>O</span> Have you recently lost more than One stone 6.35
-                  kg in a three-month period?
+                  <span>O</span> - Have you recently lost more than One stone
+                  6.35 kg in a three-month period?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={q3}
-                    name="q3choice"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQ3(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={q3}
-                    name="q3choice"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQ3(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q3choice-radio-1"
+                      type="radio"
+                      value={q3}
+                      name="q3choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      required
+                      onChange={(e) => setQ3(true)}
+                    />
+                    <label
+                      htmlFor="q3choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q3choice-radio-2"
+                      type="radio"
+                      value={q3}
+                      name="q3choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      onChange={(e) => setQ3(false)}
+                    />
+                    <label
+                      htmlFor="q3choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
+
+              {/* Question 4 */}
               <div className="mb-6">
                 <div className="font-medium ">
-                  <span>F</span> Do you believe yourself to be Fat when others
+                  <span>F</span> - Do you believe yourself to be Fat when others
                   say you are too thin?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={q4}
-                    name="q4choice"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQ4(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={q4}
-                    name="q4choice"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQ4(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q4choice-radio-1"
+                      type="radio"
+                      value={q4}
+                      name="q4choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      required
+                      onChange={(e) => setQ4(true)}
+                    />
+                    <label
+                      htmlFor="q4choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q4choice-radio-2"
+                      type="radio"
+                      value={q4}
+                      name="q4choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      onChange={(e) => setQ4(false)}
+                    />
+                    <label
+                      htmlFor="q4choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
+
+              {/* Question 5 */}
               <div className="mb-6">
                 <div className="font-medium ">
                   <span>F</span> - Would you say Food dominates your life?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={q5}
-                    name="q5choice"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQ5(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={q5}
-                    name="q5choice"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQ5(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q5choice-radio-1"
+                      type="radio"
+                      value={q5}
+                      name="q5choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      required
+                      onChange={(e) => setQ5(true)}
+                    />
+                    <label
+                      htmlFor="q5choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q5choice-radio-2"
+                      type="radio"
+                      value={q5}
+                      name="q5choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      onChange={(e) => setQ5(false)}
+                    />
+                    <label
+                      htmlFor="q5choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
+
               <div className="py-8">
                 <input
                   type="submit"
-                  className="px-3 py-2 text-2xl text-white bg-primary04 rounded-xl"
+                  className="px-3 py-2 text-xl text-white cursor-pointer bg-primary04 rounded-xl"
                   value={loading ? "Loading..." : "Submit"} // Change button text based on loading state
                   disabled={loading} // Disable button when loading
                 />
