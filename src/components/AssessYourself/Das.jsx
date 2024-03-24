@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import formheader from "../../assets/image/assessyourself/formheader.png";
 
 import BASE_URL from "../../apis/Config";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Das = ({ username, email }) => {
+  const { id } = useParams();
+
   const [qn1, setQn1] = useState();
   const [qn2, setQn2] = useState();
   const [qn3, setQn3] = useState();
@@ -29,6 +31,7 @@ const Das = ({ username, email }) => {
 
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  console.log(id);
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -60,6 +63,7 @@ const Das = ({ username, email }) => {
         qn19,
         qn20,
         qn21,
+        id,
       }),
       headers: { "Content-Type": "application/json" },
     })

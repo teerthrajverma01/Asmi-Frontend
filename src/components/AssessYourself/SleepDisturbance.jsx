@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import formheader from "../../assets/image/assessyourself/formheader.png";
 
 import BASE_URL from "../../apis/Config";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const SleepDisturbance = ({ username, email }) => {
+  const { id } = useParams();
+
   const [qn0, setQn0] = useState();
   const [qn1, setQn1] = useState();
   const [qn2, setQn2] = useState();
@@ -24,6 +26,7 @@ const SleepDisturbance = ({ username, email }) => {
 
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  console.log(id);
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -49,6 +52,7 @@ const SleepDisturbance = ({ username, email }) => {
         qnelevensubqn3,
         qnelevensubqn4,
         qnelevensubqn5,
+        id,
       }),
       headers: { "Content-Type": "application/json" },
     })

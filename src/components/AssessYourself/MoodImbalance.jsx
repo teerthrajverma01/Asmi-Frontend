@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import formheader from "../../assets/image/assessyourself/formheader.png";
 
 import BASE_URL from "../../apis/Config";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const MoodImbalance = ({ username, email }) => {
   const [qnonesubqn1, setQnonesubqn1] = useState();
@@ -23,6 +23,9 @@ const MoodImbalance = ({ username, email }) => {
   const [qnthree, setQnthree] = useState();
   const [qnfour, setQnfour] = useState();
   const [qnfive, setQnfive] = useState();
+
+  const { id } = useParams();
+  console.log(id);
 
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -54,6 +57,7 @@ const MoodImbalance = ({ username, email }) => {
         qnthree,
         qnfour,
         qnfive,
+        id,
       }),
       headers: { "Content-Type": "application/json" },
     })
