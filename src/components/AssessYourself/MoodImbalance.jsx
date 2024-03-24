@@ -93,11 +93,6 @@ const MoodImbalance = ({ username, email }) => {
             <form className="" onSubmit={submitHandler}>
               <div className="mb-12">
                 <div className="font-medium">
-                  The SCOFF Questionnaire is a five-question screening tool
-                  designed to clarify suspicion that an eating disorder might
-                  exist rather than to make a diagnosis.
-                </div>
-                <div className="font-medium">
                   <p>Check the answer that best applies to you.</p>
                   <p>Please answer each question as best you can.</p>
                 </div>
