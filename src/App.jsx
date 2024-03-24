@@ -32,6 +32,7 @@ import AssessYourself from "./pages/AssessYourself";
 import AssessmentLink from "./pages/AssessmentLink";
 import RegisterUserForm from "./pages/RegisterUserForm";
 import FormSubmitRedirect from "./pages/FormSubmitRedirect";
+import FormSubmitted from "./components/AssessYourself/FormSubmitted";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,7 @@ const router = createBrowserRouter([
       { path: "/vendoronboarding", element: <VendorForm /> },
       { path: "/onboarding", element: <OnboardingForm /> },
       { path: "/submission-successful", element: <SubmissionSuccesful /> },
+      { path: "/payment-successful", element: <FormSubmitted /> },
 
       { path: "/admin", element: <AdminPage /> },
       { path: "/admin-login", element: <AdminLoginPage /> },
