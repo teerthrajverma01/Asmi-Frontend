@@ -2,17 +2,19 @@ import React, { useState } from "react";
 import formheader from "../../assets/image/assessyourself/formheader.png";
 
 import BASE_URL from "../../apis/Config";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const EatingProblem = ({ username, email }) => {
+  const { id } = useParams();
   const [q1, setQ1] = useState();
   const [q2, setQ2] = useState();
   const [q3, setQ3] = useState();
   const [q4, setQ4] = useState();
   const [q5, setQ5] = useState();
-
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  console.log(id);
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -20,7 +22,7 @@ const EatingProblem = ({ username, email }) => {
 
     fetch(`${BASE_URL}/assessyourself/eatingproblem/postformdata`, {
       method: "POST",
-      body: JSON.stringify({ username, email, q1, q2, q3, q4, q5 }),
+      body: JSON.stringify({ username, email, q1, q2, q3, q4, q5, id }),
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => {

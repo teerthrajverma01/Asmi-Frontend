@@ -30,6 +30,10 @@ const AssessmentLink = () => {
         }
       })
       .then((data) => {
+        console.log(data);
+        if (data.assessmentAppeared === true) {
+          navigate("/assessyourself");
+        }
         setUsername((prev) => data.username);
         setEmail((prev) => data.email);
         setAssessmentCategory((prev) => data.assessmentCategory);
