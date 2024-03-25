@@ -103,869 +103,1832 @@ const Das = ({ username, email }) => {
             <form className="" onSubmit={submitHandler}>
               <div className="mb-12">
                 <div className="font-medium">
-                  Please read each statement and circle a number 0, 1, 2 or 3
+                  Please read each statement and choose option 0, 1, 2 or 3
                   which indicates how much the statement applied to you over the
                   past week. There are no right or wrong answers. Do not spend
                   too much time on any statement
                 </div>
                 <div className="font-medium">
                   The rating scale is as follows:
-                  <p>0 Did not apply to me at all</p>
-                  <p>1 Applied to me to some degree, or some of the time</p>
+                  <p>0 - Did not apply to me at all</p>
+                  <p>1 - Applied to me to some degree, or some of the time</p>
                   <p>
-                    2 Applied to me to a considerable degree or a good part of
+                    2 - Applied to me to a considerable degree or a good part of
                     time
                   </p>
-                  <p>3 Applied to me very much or most of the time</p>
+                  <p>3 - Applied to me very much or most of the time</p>
                 </div>
               </div>
-              {/* Question 1 */}
+
+              {/* ############################################### */}
+              {/* qn1 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   1: I found it hard to wind down
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl ">Option 0 </p>
-                  <input
-                    type="radio"
-                    value={qn1}
-                    name="qn1"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn1(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn1}
-                    name="qn1"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn1(1)}
-                  />
-                  <p className="inline-block text-xl ">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn1}
-                    name="qn1"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn1(2)}
-                  />
-                  <p className="inline-block text-xl ">Option3 </p>
-                  <input
-                    type="radio"
-                    value={qn1}
-                    name="qn1"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn1(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q1-option-0"
+                          type="radio"
+                          value={qn1}
+                          name="qn1"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn1(0)}
+                        />
+                        <label
+                          htmlFor="q1-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q1-option-1"
+                          type="radio"
+                          value={qn1}
+                          name="qn1"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn1(1)}
+                        />
+                        <label
+                          htmlFor="q1-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q1-option-2"
+                          type="radio"
+                          value={qn1}
+                          required
+                          name="qn1"
+                          onChange={(e) => setQn1(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q1-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q1-option-3"
+                          type="radio"
+                          value={qn1}
+                          name="qn1"
+                          onChange={(e) => setQn1(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q1-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/* Question 2 */}
+              {/* qn2 */}
               <div className="mb-6">
                 <div className="font-medium ">
                   2: I was aware of dryness of my mouth
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl ">Option 0 </p>
-                  <input
-                    type="radio"
-                    value={qn2}
-                    name="qn2"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn2(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn2}
-                    name="qn2"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn2(1)}
-                  />
-                  <p className="inline-block text-xl ">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn2}
-                    name="qn2"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn2(2)}
-                  />
-                  <p className="inline-block text-xl ">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn2}
-                    name="qn2"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn2(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q2-option-0"
+                          type="radio"
+                          value={qn2}
+                          name="qn2"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn2(0)}
+                        />
+                        <label
+                          htmlFor="q2-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q2-option-1"
+                          type="radio"
+                          value={qn2}
+                          name="qn2"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn2(1)}
+                        />
+                        <label
+                          htmlFor="q2-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q2-option-2"
+                          type="radio"
+                          value={qn2}
+                          required
+                          name="qn2"
+                          onChange={(e) => setQn2(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q2-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q2-option-3"
+                          type="radio"
+                          value={qn2}
+                          name="qn2"
+                          onChange={(e) => setQn2(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q2-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-
-              {/* Question 3 */}
+              {/* qn3 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   3: I couldn’t seem to experience any positive feeling at all
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl ">Option 0 </p>
-                  <input
-                    type="radio"
-                    value={qn3}
-                    name="qn3"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn3(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn3}
-                    name="qn3"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn3(1)}
-                  />
-                  <p className="inline-block text-xl ">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn3}
-                    name="qn3"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn3(2)}
-                  />
-                  <p className="inline-block text-xl ">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn3}
-                    name="qn3"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn3(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q3-option-0"
+                          type="radio"
+                          value={qn3}
+                          name="qn3"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn3(0)}
+                        />
+                        <label
+                          htmlFor="q3-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q3-option-1"
+                          type="radio"
+                          value={qn3}
+                          name="qn3"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn3(1)}
+                        />
+                        <label
+                          htmlFor="q3-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q3-option-2"
+                          type="radio"
+                          value={qn3}
+                          required
+                          name="qn3"
+                          onChange={(e) => setQn3(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q3-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q3-option-3"
+                          type="radio"
+                          value={qn3}
+                          name="qn3"
+                          onChange={(e) => setQn3(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q3-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-
-              {/* Question 4 */}
+              {/* qn4 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   4: I experienced breathing difficulty (e.g. excessively rapid
                   breathing, breathlessness in the absence of physical exertion)
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl ">Option 0 </p>
-                  <input
-                    type="radio"
-                    value={qn4}
-                    name="qn4"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn4(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn4}
-                    name="qn4"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn4(1)}
-                  />
-                  <p className="inline-block text-xl ">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn4}
-                    name="qn4"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn4(2)}
-                  />
-                  <p className="inline-block text-xl ">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn4}
-                    name="qn4"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn4(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q4-option-0"
+                          type="radio"
+                          value={qn4}
+                          name="qn4"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn4(0)}
+                        />
+                        <label
+                          htmlFor="q4-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q4-option-1"
+                          type="radio"
+                          value={qn4}
+                          name="qn4"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn4(1)}
+                        />
+                        <label
+                          htmlFor="q4-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q4-option-2"
+                          type="radio"
+                          value={qn4}
+                          required
+                          name="qn4"
+                          onChange={(e) => setQn4(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q4-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q4-option-3"
+                          type="radio"
+                          value={qn4}
+                          name="qn4"
+                          onChange={(e) => setQn4(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q4-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/* Question 5 */}
+              {/* qn5 */}
               <div className="mb-6">
                 <div className="font-medium">
                   5: I found it difficult to work up the initiative to do things
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl">Option 0</p>
-                  <input
-                    type="radio"
-                    value={qn5}
-                    name="qn5"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn5(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn5}
-                    name="qn5"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn5(1)}
-                  />
-                  <p className="inline-block text-xl">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn5}
-                    name="qn5"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn5(2)}
-                  />
-                  <p className="inline-block text-xl">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn5}
-                    name="qn5"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn5(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q5-option-0"
+                          type="radio"
+                          value={qn5}
+                          name="qn5"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn5(0)}
+                        />
+                        <label
+                          htmlFor="q5-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q5-option-1"
+                          type="radio"
+                          value={qn5}
+                          name="qn5"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn5(1)}
+                        />
+                        <label
+                          htmlFor="q5-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q5-option-2"
+                          type="radio"
+                          value={qn5}
+                          required
+                          name="qn5"
+                          onChange={(e) => setQn5(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q5-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q5-option-3"
+                          type="radio"
+                          value={qn5}
+                          name="qn5"
+                          onChange={(e) => setQn5(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q5-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/* Question 6 */}
+
+              {/* qn6 */}
               <div className="mb-6">
                 <div className="font-medium">
                   6: I tended to over-react to situations
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl">Option 0</p>
-                  <input
-                    type="radio"
-                    value={qn6}
-                    name="qn6"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn6(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn6}
-                    name="qn6"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn6(1)}
-                  />
-                  <p className="inline-block text-xl">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn6}
-                    name="qn6"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn6(2)}
-                  />
-                  <p className="inline-block text-xl">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn6}
-                    name="qn6"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn6(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q6-option-0"
+                          type="radio"
+                          value={qn6}
+                          name="qn6"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn6(0)}
+                        />
+                        <label
+                          htmlFor="q6-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q6-option-1"
+                          type="radio"
+                          value={qn6}
+                          name="qn6"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn6(1)}
+                        />
+                        <label
+                          htmlFor="q6-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q6-option-2"
+                          type="radio"
+                          value={qn6}
+                          required
+                          name="qn6"
+                          onChange={(e) => setQn6(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q6-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q6-option-3"
+                          type="radio"
+                          value={qn6}
+                          name="qn6"
+                          onChange={(e) => setQn6(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q6-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/* Question 7 */}
+
+              {/* qn7 */}
               <div className="mb-6">
                 <div className="font-medium">
                   7: I experienced trembling (e.g. in the hands)
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl">Option 0</p>
-                  <input
-                    type="radio"
-                    value={qn7}
-                    name="qn7"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn7(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn7}
-                    name="qn7"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn7(1)}
-                  />
-                  <p className="inline-block text-xl">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn7}
-                    name="qn7"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn7(2)}
-                  />
-                  <p className="inline-block text-xl">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn7}
-                    name="qn7"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn7(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q7-option-0"
+                          type="radio"
+                          value={qn7}
+                          name="qn7"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn7(0)}
+                        />
+                        <label
+                          htmlFor="q7-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q7-option-1"
+                          type="radio"
+                          value={qn7}
+                          name="qn7"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn7(1)}
+                        />
+                        <label
+                          htmlFor="q7-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q7-option-2"
+                          type="radio"
+                          value={qn7}
+                          required
+                          name="qn7"
+                          onChange={(e) => setQn7(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q7-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q7-option-3"
+                          type="radio"
+                          value={qn7}
+                          name="qn7"
+                          onChange={(e) => setQn7(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q7-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/* Question 8 */}
+
+              {/* qn8 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   8: I felt that I was using a lot of nervous energy
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl ">Option 0</p>
-                  <input
-                    type="radio"
-                    value={qn8}
-                    name="qn8"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn8(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn8}
-                    name="qn8"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn8(1)}
-                  />
-                  <p className="inline-block text-xl ">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn8}
-                    name="qn8"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn8(2)}
-                  />
-                  <p className="inline-block text-xl ">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn8}
-                    name="qn8"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn8(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q8-option-0"
+                          type="radio"
+                          value={qn8}
+                          name="qn8"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn8(0)}
+                        />
+                        <label
+                          htmlFor="q8-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q8-option-1"
+                          type="radio"
+                          value={qn8}
+                          name="qn8"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn8(1)}
+                        />
+                        <label
+                          htmlFor="q8-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q8-option-2"
+                          type="radio"
+                          value={qn8}
+                          required
+                          name="qn8"
+                          onChange={(e) => setQn8(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q8-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q8-option-3"
+                          type="radio"
+                          value={qn8}
+                          name="qn8"
+                          onChange={(e) => setQn8(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q8-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/* Question 9 */}
+
+              {/* qn9 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   9: I was worried about situations in which I might panic and
                   make a fool of myself
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl ">Option 0</p>
-                  <input
-                    type="radio"
-                    value={qn9}
-                    name="qn9"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn9(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn9}
-                    name="qn9"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn9(1)}
-                  />
-                  <p className="inline-block text-xl ">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn9}
-                    name="qn9"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn9(2)}
-                  />
-                  <p className="inline-block text-xl ">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn9}
-                    name="qn9"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn9(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q9-option-0"
+                          type="radio"
+                          value={qn9}
+                          name="qn9"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn9(0)}
+                        />
+                        <label
+                          htmlFor="q9-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q9-option-1"
+                          type="radio"
+                          value={qn9}
+                          name="qn9"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn9(1)}
+                        />
+                        <label
+                          htmlFor="q9-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q9-option-2"
+                          type="radio"
+                          value={qn9}
+                          required
+                          name="qn9"
+                          onChange={(e) => setQn9(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q9-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q9-option-3"
+                          type="radio"
+                          value={qn9}
+                          name="qn9"
+                          onChange={(e) => setQn9(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q9-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/* Question 10 */}
+
+              {/* qn10 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   10: I felt that I had nothing to look forward to
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl ">Option 0</p>
-                  <input
-                    type="radio"
-                    value={qn10}
-                    name="qn10"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn10(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn10}
-                    name="qn10"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn10(1)}
-                  />
-                  <p className="inline-block text-xl ">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn10}
-                    name="qn10"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn10(2)}
-                  />
-                  <p className="inline-block text-xl ">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn10}
-                    name="qn10"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn10(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q10-option-0"
+                          type="radio"
+                          value={qn10}
+                          name="qn10"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn10(0)}
+                        />
+                        <label
+                          htmlFor="q10-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q10-option-1"
+                          type="radio"
+                          value={qn10}
+                          name="qn10"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn10(1)}
+                        />
+                        <label
+                          htmlFor="q10-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q10-option-2"
+                          type="radio"
+                          value={qn10}
+                          required
+                          name="qn10"
+                          onChange={(e) => setQn10(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q10-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q10-option-3"
+                          type="radio"
+                          value={qn10}
+                          name="qn10"
+                          onChange={(e) => setQn10(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q10-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/* Question 11 */}
+
+              {/* qn11 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   11: I found myself getting agitated
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl ">Option 0</p>
-                  <input
-                    type="radio"
-                    value={qn11}
-                    name="qn11"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn11(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn11}
-                    name="qn11"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn11(1)}
-                  />
-                  <p className="inline-block text-xl ">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn11}
-                    name="qn11"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn11(2)}
-                  />
-                  <p className="inline-block text-xl ">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn11}
-                    name="qn11"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn11(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q11-option-0"
+                          type="radio"
+                          value={qn11}
+                          name="qn11"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn11(0)}
+                        />
+                        <label
+                          htmlFor="q11-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q11-option-1"
+                          type="radio"
+                          value={qn11}
+                          name="qn11"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn11(1)}
+                        />
+                        <label
+                          htmlFor="q11-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q11-option-2"
+                          type="radio"
+                          value={qn11}
+                          required
+                          name="qn11"
+                          onChange={(e) => setQn11(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q11-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q11-option-3"
+                          type="radio"
+                          value={qn11}
+                          name="qn11"
+                          onChange={(e) => setQn11(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q11-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/* Question 12 */}
+
+              {/* qn12 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   12: I found it difficult to relax
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl ">Option 0</p>
-                  <input
-                    type="radio"
-                    value={qn12}
-                    name="qn12"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn12(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn12}
-                    name="qn12"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn12(1)}
-                  />
-                  <p className="inline-block text-xl ">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn12}
-                    name="qn12"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn12(2)}
-                  />
-                  <p className="inline-block text-xl ">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn12}
-                    name="qn12"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn12(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q12-option-0"
+                          type="radio"
+                          value={qn12}
+                          name="qn12"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn12(0)}
+                        />
+                        <label
+                          htmlFor="q12-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q12-option-1"
+                          type="radio"
+                          value={qn12}
+                          name="qn12"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn12(1)}
+                        />
+                        <label
+                          htmlFor="q12-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q12-option-2"
+                          type="radio"
+                          value={qn12}
+                          required
+                          name="qn12"
+                          onChange={(e) => setQn12(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q12-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q12-option-3"
+                          type="radio"
+                          value={qn12}
+                          name="qn12"
+                          onChange={(e) => setQn12(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q12-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/* Question 13 */}
+
+              {/* qn13 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   13: I felt down-hearted and blue
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl ">Option 0</p>
-                  <input
-                    type="radio"
-                    value={qn13}
-                    name="qn13"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn13(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn13}
-                    name="qn13"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn13(1)}
-                  />
-                  <p className="inline-block text-xl ">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn13}
-                    name="qn13"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn13(2)}
-                  />
-                  <p className="inline-block text-xl ">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn13}
-                    name="qn13"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn13(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q13-option-0"
+                          type="radio"
+                          value={qn13}
+                          name="qn13"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn13(0)}
+                        />
+                        <label
+                          htmlFor="q13-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q13-option-1"
+                          type="radio"
+                          value={qn13}
+                          name="qn13"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn13(1)}
+                        />
+                        <label
+                          htmlFor="q13-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q13-option-2"
+                          type="radio"
+                          value={qn13}
+                          required
+                          name="qn13"
+                          onChange={(e) => setQn13(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q13-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q13-option-3"
+                          type="radio"
+                          value={qn13}
+                          name="qn13"
+                          onChange={(e) => setQn13(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q13-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/* Question 14 */}
+
+              {/* qn14 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   14: I was intolerant of anything that kept me from getting on
                   with what I was doing
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl ">Option 0</p>
-                  <input
-                    type="radio"
-                    value={qn14}
-                    name="qn14"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn14(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn14}
-                    name="qn14"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn14(1)}
-                  />
-                  <p className="inline-block text-xl ">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn14}
-                    name="qn14"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn14(2)}
-                  />
-                  <p className="inline-block text-xl ">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn14}
-                    name="qn14"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn14(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q14-option-0"
+                          type="radio"
+                          value={qn14}
+                          name="qn14"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn14(0)}
+                        />
+                        <label
+                          htmlFor="q14-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q14-option-1"
+                          type="radio"
+                          value={qn14}
+                          name="qn14"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn14(1)}
+                        />
+                        <label
+                          htmlFor="q14-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q14-option-2"
+                          type="radio"
+                          value={qn14}
+                          required
+                          name="qn14"
+                          onChange={(e) => setQn14(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q14-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q14-option-3"
+                          type="radio"
+                          value={qn14}
+                          name="qn14"
+                          onChange={(e) => setQn14(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q14-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/* Question 15 */}
+
+              {/* qn15 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   15: I felt I was close to panic
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl ">Option 0</p>
-                  <input
-                    type="radio"
-                    value={qn15}
-                    name="qn15"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn15(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn15}
-                    name="qn15"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn15(1)}
-                  />
-                  <p className="inline-block text-xl ">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn15}
-                    name="qn15"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn15(2)}
-                  />
-                  <p className="inline-block text-xl ">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn15}
-                    name="qn15"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn15(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q15-option-0"
+                          type="radio"
+                          value={qn15}
+                          name="qn15"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn15(0)}
+                        />
+                        <label
+                          htmlFor="q15-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q15-option-1"
+                          type="radio"
+                          value={qn15}
+                          name="qn15"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn15(1)}
+                        />
+                        <label
+                          htmlFor="q15-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q15-option-2"
+                          type="radio"
+                          value={qn15}
+                          required
+                          name="qn15"
+                          onChange={(e) => setQn15(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q15-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q15-option-3"
+                          type="radio"
+                          value={qn15}
+                          name="qn15"
+                          onChange={(e) => setQn15(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q15-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/* Question 16 */}
+
+              {/* qn16 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   16: I was unable to become enthusiastic about anything
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl ">Option 0</p>
-                  <input
-                    type="radio"
-                    value={qn16}
-                    name="qn16"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn16(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn16}
-                    name="qn16"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn16(1)}
-                  />
-                  <p className="inline-block text-xl ">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn16}
-                    name="qn16"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn16(2)}
-                  />
-                  <p className="inline-block text-xl ">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn16}
-                    name="qn16"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn16(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q16-option-0"
+                          type="radio"
+                          value={qn16}
+                          name="qn16"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn16(0)}
+                        />
+                        <label
+                          htmlFor="q16-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q16-option-1"
+                          type="radio"
+                          value={qn16}
+                          name="qn16"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn16(1)}
+                        />
+                        <label
+                          htmlFor="q16-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q16-option-2"
+                          type="radio"
+                          value={qn16}
+                          required
+                          name="qn16"
+                          onChange={(e) => setQn16(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q16-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q16-option-3"
+                          type="radio"
+                          value={qn16}
+                          name="qn16"
+                          onChange={(e) => setQn16(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q16-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/* Question 17 */}
+
+              {/* qn17 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   17: I felt I wasn’t worth much as a person
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl ">Option 0</p>
-                  <input
-                    type="radio"
-                    value={qn17}
-                    name="qn17"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn17(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn17}
-                    name="qn17"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn17(1)}
-                  />
-                  <p className="inline-block text-xl ">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn17}
-                    name="qn17"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn17(2)}
-                  />
-                  <p className="inline-block text-xl ">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn17}
-                    name="qn17"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn17(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q17-option-0"
+                          type="radio"
+                          value={qn17}
+                          name="qn17"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn17(0)}
+                        />
+                        <label
+                          htmlFor="q17-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q17-option-1"
+                          type="radio"
+                          value={qn17}
+                          name="qn17"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn17(1)}
+                        />
+                        <label
+                          htmlFor="q17-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q17-option-2"
+                          type="radio"
+                          value={qn17}
+                          required
+                          name="qn17"
+                          onChange={(e) => setQn17(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q17-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q17-option-3"
+                          type="radio"
+                          value={qn17}
+                          name="qn17"
+                          onChange={(e) => setQn17(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q17-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/* Question 18 */}
+
+              {/* qn18 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   18: I felt that I was rather touchy
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl ">Option 0</p>
-                  <input
-                    type="radio"
-                    value={qn18}
-                    name="qn18"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn18(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn18}
-                    name="qn18"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn18(1)}
-                  />
-                  <p className="inline-block text-xl ">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn18}
-                    name="qn18"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn18(2)}
-                  />
-                  <p className="inline-block text-xl ">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn18}
-                    name="qn18"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn18(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q18-option-0"
+                          type="radio"
+                          value={qn18}
+                          name="qn18"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn18(0)}
+                        />
+                        <label
+                          htmlFor="q18-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q18-option-1"
+                          type="radio"
+                          value={qn18}
+                          name="qn18"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn18(1)}
+                        />
+                        <label
+                          htmlFor="q18-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q18-option-2"
+                          type="radio"
+                          value={qn18}
+                          required
+                          name="qn18"
+                          onChange={(e) => setQn18(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q18-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q18-option-3"
+                          type="radio"
+                          value={qn18}
+                          name="qn18"
+                          onChange={(e) => setQn18(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q18-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/* Question 19 */}
+
+              {/* qn19 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   19: I was aware of the action of my heart in the absence of
                   physical exertion (e.g. sense of heart rate increase, heart
                   missing a beat)
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl ">Option 0</p>
-                  <input
-                    type="radio"
-                    value={qn19}
-                    name="qn19"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn19(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn19}
-                    name="qn19"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn19(1)}
-                  />
-                  <p className="inline-block text-xl ">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn19}
-                    name="qn19"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn19(2)}
-                  />
-                  <p className="inline-block text-xl ">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn19}
-                    name="qn19"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn19(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q19-option-0"
+                          type="radio"
+                          value={qn19}
+                          name="qn19"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn19(0)}
+                        />
+                        <label
+                          htmlFor="q19-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q19-option-1"
+                          type="radio"
+                          value={qn19}
+                          name="qn19"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn19(1)}
+                        />
+                        <label
+                          htmlFor="q19-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q19-option-2"
+                          type="radio"
+                          value={qn19}
+                          required
+                          name="qn19"
+                          onChange={(e) => setQn19(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q19-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q19-option-3"
+                          type="radio"
+                          value={qn19}
+                          name="qn19"
+                          onChange={(e) => setQn19(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q19-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/* Question 20 */}
+
+              {/* qn20 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   20: I felt scared without any good reason
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl ">Option 0</p>
-                  <input
-                    type="radio"
-                    value={qn20}
-                    name="qn20"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn20(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn20}
-                    name="qn20"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn20(1)}
-                  />
-                  <p className="inline-block text-xl ">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn20}
-                    name="qn20"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn20(2)}
-                  />
-                  <p className="inline-block text-xl ">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn20}
-                    name="qn20"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn20(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q20-option-0"
+                          type="radio"
+                          value={qn20}
+                          name="qn20"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn20(0)}
+                        />
+                        <label
+                          htmlFor="q20-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q20-option-1"
+                          type="radio"
+                          value={qn20}
+                          name="qn20"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn20(1)}
+                        />
+                        <label
+                          htmlFor="q20-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q20-option-2"
+                          type="radio"
+                          value={qn20}
+                          required
+                          name="qn20"
+                          onChange={(e) => setQn20(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q20-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q20-option-3"
+                          type="radio"
+                          value={qn20}
+                          name="qn20"
+                          onChange={(e) => setQn20(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q20-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/* Question 21 */}
+
+              {/* qn21 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   21: I felt that life was meaningless
                 </div>
                 <div className="">
-                  <p className="inline-block text-xl ">Option 0</p>
-                  <input
-                    type="radio"
-                    value={qn21}
-                    name="qn21"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn21(0)}
-                  />
-                  <p className="inline-block text-xl">Option 1</p>
-                  <input
-                    type="radio"
-                    value={qn21}
-                    name="qn21"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn21(1)}
-                  />
-                  <p className="inline-block text-xl ">Option 2</p>
-                  <input
-                    type="radio"
-                    value={qn21}
-                    name="qn21"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn21(2)}
-                  />
-                  <p className="inline-block text-xl ">Option 3</p>
-                  <input
-                    type="radio"
-                    value={qn21}
-                    name="qn21"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn21(3)}
-                  />
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q21-option-0"
+                          type="radio"
+                          value={qn21}
+                          name="qn21"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn21(0)}
+                        />
+                        <label
+                          htmlFor="q21-option-0"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 0
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q21-option-1"
+                          type="radio"
+                          value={qn21}
+                          name="qn21"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn21(1)}
+                        />
+                        <label
+                          htmlFor="q21-option-1"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 1
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q21-option-2"
+                          type="radio"
+                          value={qn21}
+                          required
+                          name="qn21"
+                          onChange={(e) => setQn21(2)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q21-option-2"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 2
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q21-option-3"
+                          type="radio"
+                          value={qn21}
+                          name="qn21"
+                          onChange={(e) => setQn21(3)}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q21-option-3"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Option 3
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
+
+              {/* ############################################### */}
 
               {/* Submit */}
               <div className="py-8">

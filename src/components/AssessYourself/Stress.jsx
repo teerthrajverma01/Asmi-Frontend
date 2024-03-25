@@ -75,378 +75,650 @@ const Stress = ({ username, email }) => {
           </div>
           {/* form type */}
           <div className="p-4 text-2xl text-center bg-orange-300 sm:text-5xl">
-            Questionnaire for Sleep Disturbance
+            Questionnaire for Stress
           </div>
           {/* form */}
           <div className="mx-3 my-12 text-xl sm:mx-12 ">
             <form className="" onSubmit={submitHandler}>
               <div className="mb-12">
                 <div className="font-medium">
-                  <p>Check the answer that best applies to you.</p>
+                  <p>
+                    For each question choose from the following alternatives:
+                  </p>
                   <p>Please answer each question as best you can.</p>
                 </div>
               </div>
 
-              {/* qn1  */}
+              {/* ###################################################### */}
+              {/* qn1 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   1. In the last month, how often have you been upset because of
                   something that happened unexpectedly?
                 </div>
                 <div className="">
-                  <div>
-                    <p className="inline ml-8 text-xl ">Never</p>
-                    <input
-                      type="radio"
-                      value={qn1}
-                      name="qn1"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn1("Never")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Almost Never</p>
-                    <input
-                      type="radio"
-                      value={qn1}
-                      name="qn1"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn1("Almost Never")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Sometimes</p>
-                    <input
-                      type="radio"
-                      value={qn1}
-                      name="qn1"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn1("Sometimes")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Fairly Often</p>
-                    <input
-                      type="radio"
-                      value={qn1}
-                      name="qn1"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn1("Fairly Often")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Very Often</p>
-                    <input
-                      type="radio"
-                      value={qn1}
-                      name="qn1"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn1("Very Often")}
-                      required
-                    />
-                  </div>
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q1-never"
+                          type="radio"
+                          value="Never"
+                          name="qn1"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn1("Never")}
+                        />
+                        <label
+                          htmlFor="q1-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q1-almost-never"
+                          type="radio"
+                          value="Almost Never"
+                          name="qn1"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn1("Almost Never")}
+                        />
+                        <label
+                          htmlFor="q1-almost-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Almost Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q1-sometimes"
+                          type="radio"
+                          value="Sometimes"
+                          required
+                          name="qn1"
+                          onChange={(e) => setQn1("Sometimes")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q1-sometimes"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Sometimes
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q1-fairly-often"
+                          type="radio"
+                          value="Fairly Often"
+                          name="qn1"
+                          onChange={(e) => setQn1("Fairly Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q1-fairly-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Fairly Often
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q1-very-often"
+                          type="radio"
+                          value="Very Often"
+                          name="qn1"
+                          onChange={(e) => setQn1("Very Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q1-very-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Very Often
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
               {/* qn2 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   2. In the last month, how often have you felt that you were
                   unable to control the important things in your life?
                 </div>
                 <div className="">
-                  <div>
-                    <p className="inline ml-8 text-xl ">Never</p>
-                    <input
-                      type="radio"
-                      value={qn2}
-                      name="qn2"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn2("Never")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Almost Never</p>
-                    <input
-                      type="radio"
-                      value={qn2}
-                      name="qn2"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn2("Almost Never")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Sometimes</p>
-                    <input
-                      type="radio"
-                      value={qn2}
-                      name="qn2"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn2("Sometimes")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Fairly Often</p>
-                    <input
-                      type="radio"
-                      value={qn2}
-                      name="qn2"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn2("Fairly Often")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Very Often</p>
-                    <input
-                      type="radio"
-                      value={qn2}
-                      name="qn2"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn2("Very Often")}
-                    />
-                  </div>
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q2-never"
+                          type="radio"
+                          value={qn2}
+                          name="qn2"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn2("Never")}
+                        />
+                        <label
+                          htmlFor="q2-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q2-almost-never"
+                          type="radio"
+                          value={qn2}
+                          name="qn2"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn2("Almost Never")}
+                        />
+                        <label
+                          htmlFor="q2-almost-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Almost Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q2-sometimes"
+                          type="radio"
+                          value={qn2}
+                          required
+                          name="qn2"
+                          onChange={(e) => setQn2("Sometimes")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q2-sometimes"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Sometimes
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q2-fairly-often"
+                          type="radio"
+                          value={qn2}
+                          name="qn2"
+                          onChange={(e) => setQn2("Fairly Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q2-fairly-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Fairly Often
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q2-very-often"
+                          type="radio"
+                          value={qn2}
+                          name="qn2"
+                          onChange={(e) => setQn2("Very Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q2-very-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Very Often
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
               {/* qn3 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   3. In the last month, how often have you felt nervous and
                   stressed?
                 </div>
                 <div className="">
-                  <div>
-                    <p className="inline ml-8 text-xl ">Never</p>
-                    <input
-                      type="radio"
-                      value={qn3}
-                      name="qn3"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn3("Never")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Almost Never</p>
-                    <input
-                      type="radio"
-                      value={qn3}
-                      name="qn3"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn3("Almost Never")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Sometimes</p>
-                    <input
-                      type="radio"
-                      value={qn3}
-                      name="qn3"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn3("Sometimes")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Fairly Often</p>
-                    <input
-                      type="radio"
-                      value={qn3}
-                      name="qn3"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn3("Fairly Often")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Very Often</p>
-                    <input
-                      type="radio"
-                      value={qn3}
-                      name="qn3"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn3("Very Often")}
-                    />
-                  </div>
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q3-never"
+                          type="radio"
+                          value={qn3}
+                          name="qn3"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn3("Never")}
+                        />
+                        <label
+                          htmlFor="q3-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q3-almost-never"
+                          type="radio"
+                          value={qn3}
+                          name="qn3"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn3("Almost Never")}
+                        />
+                        <label
+                          htmlFor="q3-almost-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Almost Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q3-sometimes"
+                          type="radio"
+                          value={qn3}
+                          required
+                          name="qn3"
+                          onChange={(e) => setQn3("Sometimes")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q3-sometimes"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Sometimes
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q3-fairly-often"
+                          type="radio"
+                          value={qn3}
+                          name="qn3"
+                          onChange={(e) => setQn3("Fairly Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q3-fairly-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Fairly Often
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q3-very-often"
+                          type="radio"
+                          value={qn3}
+                          name="qn3"
+                          onChange={(e) => setQn3("Very Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q3-very-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Very Often
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
               {/* qn4 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   4. In the last month, how often have you felt confident about
                   your ability to handle your personal problems?
                 </div>
                 <div className="">
-                  <div>
-                    <p className="inline ml-8 text-xl ">Never</p>
-                    <input
-                      type="radio"
-                      value={qn4}
-                      name="qn4"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn4("Never")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Almost Never</p>
-                    <input
-                      type="radio"
-                      value={qn4}
-                      name="qn4"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn4("Almost Never")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Sometimes</p>
-                    <input
-                      type="radio"
-                      value={qn4}
-                      name="qn4"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn4("Sometimes")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Fairly Often</p>
-                    <input
-                      type="radio"
-                      value={qn4}
-                      name="qn4"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn4("Fairly Often")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Very Often</p>
-                    <input
-                      type="radio"
-                      value={qn4}
-                      name="qn4"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn4("Very Often")}
-                    />
-                  </div>
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q4-option-never"
+                          type="radio"
+                          value={qn4}
+                          name="qn4"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn4("Never")}
+                        />
+                        <label
+                          htmlFor="q4-option-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q4-option-almost-never"
+                          type="radio"
+                          value={qn4}
+                          name="qn4"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn4("Almost Never")}
+                        />
+                        <label
+                          htmlFor="q4-option-almost-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Almost Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q4-option-sometimes"
+                          type="radio"
+                          value={qn4}
+                          required
+                          name="qn4"
+                          onChange={(e) => setQn4("Sometimes")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q4-option-sometimes"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Sometimes
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q4-option-fairly-often"
+                          type="radio"
+                          value={qn4}
+                          name="qn4"
+                          onChange={(e) => setQn4("Fairly Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q4-option-fairly-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Fairly Often
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q4-option-very-often"
+                          type="radio"
+                          value={qn4}
+                          name="qn4"
+                          onChange={(e) => setQn4("Very Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q4-option-very-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Very Often
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
+
               {/* qn5 */}
               <div className="mb-6">
                 <div className="font-medium">
-                  5. In the last month, how often have you felt that things were
+                  5: In the last month, how often have you felt that things were
                   going your way?
                 </div>
-                <div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Never</p>
-                    <input
-                      type="radio"
-                      value={qn5}
-                      name="qn5"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn5("Never")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Almost Never</p>
-                    <input
-                      type="radio"
-                      value={qn5}
-                      name="qn5"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn5("Almost Never")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Sometimes</p>
-                    <input
-                      type="radio"
-                      value={qn5}
-                      name="qn5"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn5("Sometimes")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Fairly Often</p>
-                    <input
-                      type="radio"
-                      value={qn5}
-                      name="qn5"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn5("Fairly Often")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Very Often</p>
-                    <input
-                      type="radio"
-                      value={qn5}
-                      name="qn5"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn5("Very Often")}
-                    />
-                  </div>
+                <div className="">
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q5-never"
+                          type="radio"
+                          value={qn5}
+                          name="qn5"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn5("Never")}
+                        />
+                        <label
+                          htmlFor="q5-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q5-almost-never"
+                          type="radio"
+                          value={qn5}
+                          name="qn5"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn5("Almost Never")}
+                        />
+                        <label
+                          htmlFor="q5-almost-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Almost Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q5-sometimes"
+                          type="radio"
+                          value={qn5}
+                          required
+                          name="qn5"
+                          onChange={(e) => setQn5("Sometimes")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q5-sometimes"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Sometimes
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q5-fairly-often"
+                          type="radio"
+                          value={qn5}
+                          required
+                          name="qn5"
+                          onChange={(e) => setQn5("Fairly Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q5-fairly-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Fairly Often
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q5-very-often"
+                          type="radio"
+                          value={qn5}
+                          required
+                          name="qn5"
+                          onChange={(e) => setQn5("Very Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q5-very-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Very Often
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
+
               {/* qn6 */}
               <div className="mb-6">
                 <div className="font-medium">
                   6. In the last month, how often have you found that you could
                   not cope with all the things that you had to do?
                 </div>
-                <div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Never</p>
-                    <input
-                      type="radio"
-                      value={qn6}
-                      name="qn6"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn6("Never")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Almost Never</p>
-                    <input
-                      type="radio"
-                      value={qn6}
-                      name="qn6"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn6("Almost Never")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Sometimes</p>
-                    <input
-                      type="radio"
-                      value={qn6}
-                      name="qn6"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn6("Sometimes")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Fairly Often</p>
-                    <input
-                      type="radio"
-                      value={qn6}
-                      name="qn6"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn6("Fairly Often")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Very Often</p>
-                    <input
-                      type="radio"
-                      value={qn6}
-                      name="qn6"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn6("Very Often")}
-                    />
-                  </div>
+                <div className="">
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q6-never"
+                          type="radio"
+                          value={qn6}
+                          name="qn6"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn6("Never")}
+                        />
+                        <label
+                          htmlFor="q6-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q6-almost-never"
+                          type="radio"
+                          value={qn6}
+                          name="qn6"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn6("Almost Never")}
+                        />
+                        <label
+                          htmlFor="q6-almost-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Almost Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q6-sometimes"
+                          type="radio"
+                          value={qn6}
+                          required
+                          name="qn6"
+                          onChange={(e) => setQn6("Sometimes")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q6-sometimes"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Sometimes
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q6-fairly-often"
+                          type="radio"
+                          value={qn6}
+                          name="qn6"
+                          onChange={(e) => setQn6("Fairly Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q6-fairly-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Fairly Often
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q6-very-often"
+                          type="radio"
+                          value={qn6}
+                          name="qn6"
+                          onChange={(e) => setQn6("Very Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q6-very-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Very Often
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
@@ -456,236 +728,421 @@ const Stress = ({ username, email }) => {
                   7. In the last month, how often have you been able to control
                   irritations in your life?
                 </div>
-                <div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Never</p>
-                    <input
-                      type="radio"
-                      value={qn7}
-                      name="qn7"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn7("Never")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Almost Never</p>
-                    <input
-                      type="radio"
-                      value={qn7}
-                      name="qn7"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn7("Almost Never")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Sometimes</p>
-                    <input
-                      type="radio"
-                      value={qn7}
-                      name="qn7"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn7("Sometimes")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Fairly Often</p>
-                    <input
-                      type="radio"
-                      value={qn7}
-                      name="qn7"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn7("Fairly Often")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Very Often</p>
-                    <input
-                      type="radio"
-                      value={qn7}
-                      name="qn7"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn7("Very Often")}
-                    />
-                  </div>
+                <div className="">
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q7-never"
+                          type="radio"
+                          value={qn7}
+                          name="qn7"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn7("Never")}
+                        />
+                        <label
+                          htmlFor="q7-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q7-almost-never"
+                          type="radio"
+                          value={qn7}
+                          name="qn7"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn7("Almost Never")}
+                        />
+                        <label
+                          htmlFor="q7-almost-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Almost Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q7-sometimes"
+                          type="radio"
+                          value={qn7}
+                          required
+                          name="qn7"
+                          onChange={(e) => setQn7("Sometimes")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q7-sometimes"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Sometimes
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q7-fairly-often"
+                          type="radio"
+                          value={qn7}
+                          name="qn7"
+                          onChange={(e) => setQn7("Fairly Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q7-fairly-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Fairly Often
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q7-very-often"
+                          type="radio"
+                          value={qn7}
+                          name="qn7"
+                          onChange={(e) => setQn7("Very Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q7-very-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Very Often
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
+
               {/* qn8 */}
               <div className="mb-6">
                 <div className="font-medium">
                   8. In the last month, how often have you felt that you were on
                   top of things?
                 </div>
-                <div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Never</p>
-                    <input
-                      type="radio"
-                      value={qn8}
-                      name="qn8"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn8("Never")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Almost Never</p>
-                    <input
-                      type="radio"
-                      value={qn8}
-                      name="qn8"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn8("Almost Never")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Sometimes</p>
-                    <input
-                      type="radio"
-                      value={qn8}
-                      name="qn8"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn8("Sometimes")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Fairly Often</p>
-                    <input
-                      type="radio"
-                      value={qn8}
-                      name="qn8"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn8("Fairly Often")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Very Often</p>
-                    <input
-                      type="radio"
-                      value={qn8}
-                      name="qn8"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn8("Very Often")}
-                    />
-                  </div>
+                <div className="">
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q8-never"
+                          type="radio"
+                          value={qn8}
+                          name="qn8"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn8("Never")}
+                        />
+                        <label
+                          htmlFor="q8-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q8-almost-never"
+                          type="radio"
+                          value={qn8}
+                          name="qn8"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn8("Almost Never")}
+                        />
+                        <label
+                          htmlFor="q8-almost-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Almost Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q8-sometimes"
+                          type="radio"
+                          value={qn8}
+                          required
+                          name="qn8"
+                          onChange={(e) => setQn8("Sometimes")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q8-sometimes"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Sometimes
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q8-fairly-often"
+                          type="radio"
+                          value={qn8}
+                          name="qn8"
+                          onChange={(e) => setQn8("Fairly Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q8-fairly-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Fairly Often
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q8-very-often"
+                          type="radio"
+                          value={qn8}
+                          name="qn8"
+                          onChange={(e) => setQn8("Very Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q8-very-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Very Often
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
+
               {/* qn9 */}
               <div className="mb-6">
                 <div className="font-medium">
                   9. In the last month, how often have you been angered because
                   of things that happened that were outside of your control?
                 </div>
-                <div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Never</p>
-                    <input
-                      type="radio"
-                      value={qn9}
-                      name="qn9"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn9("Never")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Almost Never</p>
-                    <input
-                      type="radio"
-                      value={qn9}
-                      name="qn9"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn9("Almost Never")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Sometimes</p>
-                    <input
-                      type="radio"
-                      value={qn9}
-                      name="qn9"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn9("Sometimes")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Fairly Often</p>
-                    <input
-                      type="radio"
-                      value={qn9}
-                      name="qn9"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn9("Fairly Often")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Very Often</p>
-                    <input
-                      type="radio"
-                      value={qn9}
-                      name="qn9"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn9("Very Often")}
-                    />
-                  </div>
+                <div className="">
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="qn9-never"
+                          type="radio"
+                          value={qn9}
+                          name="qn9"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn9("Never")}
+                        />
+                        <label
+                          htmlFor="qn9-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="qn9-almost-never"
+                          type="radio"
+                          value={qn9}
+                          name="qn9"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn9("Almost Never")}
+                        />
+                        <label
+                          htmlFor="qn9-almost-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Almost Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="qn9-sometimes"
+                          type="radio"
+                          value={qn9}
+                          required
+                          name="qn9"
+                          onChange={(e) => setQn9("Sometimes")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="qn9-sometimes"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Sometimes
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="qn9-fairly-often"
+                          type="radio"
+                          value={qn9}
+                          name="qn9"
+                          onChange={(e) => setQn9("Fairly Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="qn9-fairly-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Fairly Often
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="qn9-very-often"
+                          type="radio"
+                          value={qn9}
+                          name="qn9"
+                          onChange={(e) => setQn9("Very Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="qn9-very-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Very Often
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
+
               {/* qn10 */}
               <div className="mb-6">
                 <div className="font-medium">
                   10. In the last month, how often have you felt difficulties
                   were piling up so high that you could not overcome them?
                 </div>
-                <div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Never</p>
-                    <input
-                      type="radio"
-                      value={qn10}
-                      name="qn10"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn10("Never")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Almost Never</p>
-                    <input
-                      type="radio"
-                      value={qn10}
-                      name="qn10"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn10("Almost Never")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Sometimes</p>
-                    <input
-                      type="radio"
-                      value={qn10}
-                      name="qn10"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn10("Sometimes")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Fairly Often</p>
-                    <input
-                      type="radio"
-                      value={qn10}
-                      name="qn10"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn10("Fairly Often")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Very Often</p>
-                    <input
-                      type="radio"
-                      value={qn10}
-                      name="qn10"
-                      className="w-4 h-4 mx-4"
-                      onChange={(e) => setQn10("Very Often")}
-                    />
-                  </div>
+                <div className="">
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q10-never"
+                          type="radio"
+                          value={qn10}
+                          name="qn10"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn10("Never")}
+                        />
+                        <label
+                          htmlFor="q10-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q10-almost-never"
+                          type="radio"
+                          value={qn10}
+                          name="qn10"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn10("Almost Never")}
+                        />
+                        <label
+                          htmlFor="q10-almost-never"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Almost Never
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q10-sometimes"
+                          type="radio"
+                          value={qn10}
+                          required
+                          name="qn10"
+                          onChange={(e) => setQn10("Sometimes")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q10-sometimes"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Sometimes
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q10-fairly-often"
+                          type="radio"
+                          value={qn10}
+                          name="qn10"
+                          onChange={(e) => setQn10("Fairly Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q10-fairly-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Fairly Often
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q10-very-often"
+                          type="radio"
+                          value={qn10}
+                          name="qn10"
+                          onChange={(e) => setQn10("Very Often")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q10-very-often"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Very Often
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
+
+              {/* ###################################################### */}
 
               {/* submit */}
               <div className="py-8">

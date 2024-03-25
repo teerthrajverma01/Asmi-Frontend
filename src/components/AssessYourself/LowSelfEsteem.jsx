@@ -87,527 +87,862 @@ const LowSelfEsteem = ({ username, email }) => {
                 </div>
               </div>
 
-              {/* qn1  */}
+              {/* ################################################# */}
+              {/* qn1 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   1: On the whole, I am satisfied with myself.
                 </div>
                 <div className="">
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Agree</p>
-                    <input
-                      type="radio"
-                      value={qn1}
-                      name="qn1"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn1("Strongly Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Agree</p>
-                    <input
-                      type="radio"
-                      value={qn1}
-                      name="qn1"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn1("Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn1}
-                      name="qn1"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn1("Sometimes")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn1}
-                      name="qn1"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn1("Fairly Often")}
-                      required
-                    />
-                  </div>
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q1-strongly-agree"
+                          type="radio"
+                          value={qn1}
+                          name="qn1"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn1("Strongly Agree")}
+                        />
+                        <label
+                          htmlFor="q1-strongly-agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q1-agree"
+                          type="radio"
+                          value={qn1}
+                          name="qn1"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn1("Agree")}
+                        />
+                        <label
+                          htmlFor="q1-agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q1-disagree"
+                          type="radio"
+                          value={qn1}
+                          required
+                          name="qn1"
+                          onChange={(e) => setQn1("Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q1-disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Disagree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q1-strongly-disagree"
+                          type="radio"
+                          value={qn1}
+                          name="qn1"
+                          onChange={(e) => setQn1("Strongly Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q1-strongly-disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Disagree
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
+
               {/* qn2 */}
               <div className="mb-6">
-                <div className="font-medium ">
-                  2: At times, I think I am no good at all.
+                <div className="font-medium">
+                  2. At times, I think I am no good at all.
                 </div>
                 <div className="">
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Agree</p>
-                    <input
-                      type="radio"
-                      value={qn2}
-                      name="qn2"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn2("Strongly Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Agree</p>
-                    <input
-                      type="radio"
-                      value={qn2}
-                      name="qn2"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn2("Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn2}
-                      name="qn2"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn2("Disagree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn2}
-                      name="qn2"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn2("Strongly Disagree")}
-                      required
-                    />
-                  </div>
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q2-StronglyAgree"
+                          type="radio"
+                          value={qn2}
+                          name="qn2"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn2("Strongly Agree")}
+                        />
+                        <label
+                          htmlFor="q2-StronglyAgree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q2-Agree"
+                          type="radio"
+                          value={qn2}
+                          name="qn2"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn2("Agree")}
+                        />
+                        <label
+                          htmlFor="q2-Agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q2-Disagree"
+                          type="radio"
+                          value={qn2}
+                          name="qn2"
+                          required
+                          onChange={(e) => setQn2("Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q2-Disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Disagree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q2-StronglyDisagree"
+                          type="radio"
+                          value={qn2}
+                          name="qn2"
+                          onChange={(e) => setQn2("Strongly Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q2-StronglyDisagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Disagree
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
               {/* qn3 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   3: I feel that I have a number of good qualities.
                 </div>
                 <div className="">
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Agree</p>
-                    <input
-                      type="radio"
-                      value={qn3}
-                      name="qn3"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn3("Strongly Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Agree</p>
-                    <input
-                      type="radio"
-                      value={qn3}
-                      name="qn3"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn3("Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn3}
-                      name="qn3"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn3("Disagree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn3}
-                      name="qn3"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn3("Strongly Disagree")}
-                      required
-                    />
-                  </div>
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q3-strongly-agree"
+                          type="radio"
+                          value={qn3}
+                          name="qn3"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn3("Strongly Agree")}
+                        />
+                        <label
+                          htmlFor="q3-strongly-agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q3-agree"
+                          type="radio"
+                          value={qn3}
+                          name="qn3"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn3("Agree")}
+                        />
+                        <label
+                          htmlFor="q3-agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q3-disagree"
+                          type="radio"
+                          value={qn3}
+                          required
+                          name="qn3"
+                          onChange={(e) => setQn3("Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q3-disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Disagree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q3-strongly-disagree"
+                          type="radio"
+                          value={qn3}
+                          name="qn3"
+                          onChange={(e) => setQn3("Strongly Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q3-strongly-disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Disagree
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
               {/* qn4 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   4: I am able to do things as well as most other people.
                 </div>
                 <div className="">
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Agree</p>
-                    <input
-                      type="radio"
-                      value={qn4}
-                      name="qn4"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn4("Strongly Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Agree</p>
-                    <input
-                      type="radio"
-                      value={qn4}
-                      name="qn4"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn4("Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn4}
-                      name="qn4"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn4("Disagree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn4}
-                      name="qn4"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn4("Strongly Disagree")}
-                      required
-                    />
-                  </div>
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q4-strongly-agree"
+                          type="radio"
+                          value={qn4}
+                          name="qn4"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn4("Strongly Agree")}
+                        />
+                        <label
+                          htmlFor="q4-strongly-agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q4-agree"
+                          type="radio"
+                          value={qn4}
+                          name="qn4"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn4("Agree")}
+                        />
+                        <label
+                          htmlFor="q4-agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q4-disagree"
+                          type="radio"
+                          value={qn4}
+                          required
+                          name="qn4"
+                          onChange={(e) => setQn4("Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q4-disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Disagree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q4-strongly-disagree"
+                          type="radio"
+                          value={qn4}
+                          name="qn4"
+                          onChange={(e) => setQn4("Strongly Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q4-strongly-disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Disagree
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
               {/* qn5 */}
               <div className="mb-6">
-                <div className="font-medium ">
-                  5: I feel I do not have much to be proud of
+                <div className="font-medium">
+                  5: I feel I do not have much to be proud of.
                 </div>
                 <div className="">
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Agree</p>
-                    <input
-                      type="radio"
-                      value={qn5}
-                      name="qn5"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn5("Strongly Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Agree</p>
-                    <input
-                      type="radio"
-                      value={qn5}
-                      name="qn5"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn5("Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn5}
-                      name="qn5"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn5("Disagree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn5}
-                      name="qn5"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn5("Strongly Disagree")}
-                      required
-                    />
-                  </div>
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q5-strongly-agree"
+                          type="radio"
+                          value={qn5}
+                          name="qn5"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn5("Strongly Agree")}
+                        />
+                        <label
+                          htmlFor="q5-strongly-agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q5-agree"
+                          type="radio"
+                          value={qn5}
+                          name="qn5"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn5("Agree")}
+                        />
+                        <label
+                          htmlFor="q5-agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q5-disagree"
+                          type="radio"
+                          value={qn5}
+                          required
+                          name="qn5"
+                          onChange={(e) => setQn5("Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q5-disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Disagree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q5-strongly-disagree"
+                          type="radio"
+                          value={qn5}
+                          name="qn5"
+                          onChange={(e) => setQn5("Strongly Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q5-strongly-disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Disagree
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
               {/* qn6 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   6: I certainly feel useless at times.
                 </div>
                 <div className="">
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Agree</p>
-                    <input
-                      type="radio"
-                      value={qn6}
-                      name="qn6"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn6("Strongly Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Agree</p>
-                    <input
-                      type="radio"
-                      value={qn6}
-                      name="qn6"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn6("Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn6}
-                      name="qn6"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn6("Disagree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn6}
-                      name="qn6"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn6("Strongly Disagree")}
-                      required
-                    />
-                  </div>
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q6-strongly-agree"
+                          type="radio"
+                          value={qn6}
+                          name="qn6"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn6("Strongly Agree")}
+                        />
+                        <label
+                          htmlFor="q6-strongly-agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q6-agree"
+                          type="radio"
+                          value={qn6}
+                          name="qn6"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn6("Agree")}
+                        />
+                        <label
+                          htmlFor="q6-agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q6-disagree"
+                          type="radio"
+                          value={qn6}
+                          required
+                          name="qn6"
+                          onChange={(e) => setQn6("Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q6-disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Disagree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q6-strongly-disagree"
+                          type="radio"
+                          value={qn6}
+                          name="qn6"
+                          onChange={(e) => setQn6("Strongly Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q6-strongly-disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Disagree
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
               {/* qn7 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   7: I feel that I'm a person of worth, at least on an equal
                   plane with others.
                 </div>
                 <div className="">
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Agree</p>
-                    <input
-                      type="radio"
-                      value={qn7}
-                      name="qn7"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn7("Strongly Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Agree</p>
-                    <input
-                      type="radio"
-                      value={qn7}
-                      name="qn7"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn7("Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn7}
-                      name="qn7"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn7("Disagree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn7}
-                      name="qn7"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn7("Strongly Disagree")}
-                      required
-                    />
-                  </div>
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q7-strongly-agree"
+                          type="radio"
+                          value={qn7}
+                          name="qn7"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn7("Strongly Agree")}
+                        />
+                        <label
+                          htmlFor="q7-strongly-agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q7-agree"
+                          type="radio"
+                          value={qn7}
+                          name="qn7"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn7("Agree")}
+                        />
+                        <label
+                          htmlFor="q7-agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q7-disagree"
+                          type="radio"
+                          value={qn7}
+                          required
+                          name="qn7"
+                          onChange={(e) => setQn7("Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q7-disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Disagree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q7-strongly-disagree"
+                          type="radio"
+                          value={qn7}
+                          name="qn7"
+                          onChange={(e) => setQn7("Strongly Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q7-strongly-disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Disagree
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
+
               {/* qn8 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   8: I wish I could have more respect for myself.
                 </div>
                 <div className="">
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Agree</p>
-                    <input
-                      type="radio"
-                      value={qn8}
-                      name="qn8"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn8("Strongly Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Agree</p>
-                    <input
-                      type="radio"
-                      value={qn8}
-                      name="qn8"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn8("Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn8}
-                      name="qn8"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn8("Disagree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn8}
-                      name="qn8"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn8("Strongly Disagree")}
-                      required
-                    />
-                  </div>
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q8-strongly-agree"
+                          type="radio"
+                          value={qn8}
+                          name="qn8"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn8("Strongly Agree")}
+                        />
+                        <label
+                          htmlFor="q8-strongly-agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q8-agree"
+                          type="radio"
+                          value={qn8}
+                          name="qn8"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn8("Agree")}
+                        />
+                        <label
+                          htmlFor="q8-agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q8-disagree"
+                          type="radio"
+                          value={qn8}
+                          required
+                          name="qn8"
+                          onChange={(e) => setQn8("Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q8-disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Disagree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q8-strongly-disagree"
+                          type="radio"
+                          value={qn8}
+                          name="qn8"
+                          onChange={(e) => setQn8("Strongly Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q8-strongly-disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Disagree
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
+
               {/* qn9 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   9: All in all, I am inclined to feel that I am a failure.
                 </div>
                 <div className="">
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Agree</p>
-                    <input
-                      type="radio"
-                      value={qn9}
-                      name="qn9"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn9("Strongly Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Agree</p>
-                    <input
-                      type="radio"
-                      value={qn9}
-                      name="qn9"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn9("Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn9}
-                      name="qn9"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn9("Disagree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn9}
-                      name="qn9"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn9("Strongly Disagree")}
-                      required
-                    />
-                  </div>
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q9-strongly-agree"
+                          type="radio"
+                          value={qn9}
+                          name="qn9"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn9("Strongly Agree")}
+                        />
+                        <label
+                          htmlFor="q9-strongly-agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q9-agree"
+                          type="radio"
+                          value={qn9}
+                          name="qn9"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn9("Agree")}
+                        />
+                        <label
+                          htmlFor="q9-agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q9-disagree"
+                          type="radio"
+                          value={qn9}
+                          required
+                          name="qn9"
+                          onChange={(e) => setQn9("Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q9-disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Disagree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q9-strongly-disagree"
+                          type="radio"
+                          value={qn9}
+                          name="qn9"
+                          onChange={(e) => setQn9("Strongly Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q9-strongly-disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Disagree
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
               {/* qn10 */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   10: I take a positive attitude toward myself.
                 </div>
                 <div className="">
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Agree</p>
-                    <input
-                      type="radio"
-                      value={qn10}
-                      name="qn10"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn10("Strongly Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Agree</p>
-                    <input
-                      type="radio"
-                      value={qn10}
-                      name="qn10"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn10("Agree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn10}
-                      name="qn10"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn10("Disagree")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Strongly Disagree</p>
-                    <input
-                      type="radio"
-                      value={qn10}
-                      name="qn10"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQn10("Strongly Disagree")}
-                      required
-                    />
-                  </div>
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q10-strongly-agree"
+                          type="radio"
+                          value={qn10}
+                          name="qn10"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn10("Strongly Agree")}
+                        />
+                        <label
+                          htmlFor="q10-strongly-agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q10-agree"
+                          type="radio"
+                          value={qn10}
+                          name="qn10"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQn10("Agree")}
+                        />
+                        <label
+                          htmlFor="q10-agree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Agree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q10-disagree"
+                          type="radio"
+                          value={qn10}
+                          required
+                          name="qn10"
+                          onChange={(e) => setQn10("Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q10-disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Disagree
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q10-strongly-disagree"
+                          type="radio"
+                          value={qn10}
+                          name="qn10"
+                          onChange={(e) => setQn10("Strongly Disagree")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q10-strongly-disagree"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Strongly Disagree
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
+              {/* ############################################ */}
 
               {/* submit */}
               <div className="py-8">
@@ -620,10 +955,6 @@ const LowSelfEsteem = ({ username, email }) => {
               </div>
             </form>
           </div>
-        </div>
-        <div className="my-20 opacity-50 sm:my-40">
-          This instrument is designed for screening purposes only and is not to
-          be used as a diagnostic tool.
         </div>
       </div>
     </div>
