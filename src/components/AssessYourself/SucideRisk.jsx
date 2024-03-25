@@ -76,125 +76,205 @@ const SucideRisk = ({ username, email }) => {
           {/* form */}
           <div className="mx-3 my-12 text-xl sm:mx-12 ">
             <form className="" onSubmit={submitHandler}>
-              {/* qn1 */}
+              {/* ################################################# */}
+
               <div className="mb-6">
-                <div className="font-medium ">
-                  1. In the past few weeks, have you wished you were dead?
+                <div className="font-medium">
+                  <span>1.</span> In the past few weeks, have you wished you
+                  were dead?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qn1}
-                    name="qn1"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn1(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qn1}
-                    name="qn1"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn1(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q1choice-radio-1"
+                      type="radio"
+                      value={qn1}
+                      name="q1choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      required
+                      onChange={(e) => setQn1(true)}
+                    />
+                    <label
+                      htmlFor="q1choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q1choice-radio-2"
+                      type="radio"
+                      value={qn1}
+                      name="q1choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      onChange={(e) => setQn1(false)}
+                    />
+                    <label
+                      htmlFor="q1choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-              {/* qn2 */}
               <div className="mb-6">
-                <div className="font-medium ">
-                  In the past few weeks, have you felt that you or your family
-                  would be better off if you were dead?
+                <div className="font-medium">
+                  <span>2</span>. In the past few weeks, have you felt that you
+                  or your family would be better off if you were dead?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qn2}
-                    name="qn2"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn2(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qn2}
-                    name="qn2"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn2(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300 ">
+                    <input
+                      id="q2choice-radio-1"
+                      type="radio"
+                      value={qn2}
+                      name="q2choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+                      required
+                      onChange={(e) => setQn2(true)}
+                    />
+                    <label
+                      htmlFor="q2choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q2choice-radio-2"
+                      type="radio"
+                      value={qn2}
+                      name="q2choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+                      onChange={(e) => setQn2(false)}
+                    />
+                    <label
+                      htmlFor="q2choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-              {/* qn3 */}
               <div className="mb-6">
-                <div className="font-medium ">
-                  3. In the past week, have you been having thoughts about
-                  killing yourself?
+                <div className="font-medium">
+                  <span>3</span> - In the past week, have you been having
+                  thoughts about killing yourself?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qn3}
-                    name="qn3"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn3(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qn3}
-                    name="qn3"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn3(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q3choice-radio-1"
+                      type="radio"
+                      value={qn3}
+                      name="q3choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      required
+                      onChange={(e) => setQn3(true)}
+                    />
+                    <label
+                      htmlFor="q3choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q3choice-radio-2"
+                      type="radio"
+                      value={qn3}
+                      name="q3choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      onChange={(e) => setQn3(false)}
+                    />
+                    <label
+                      htmlFor="q3choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-              {/* qn4 */}
               <div className="mb-6">
-                <div className="font-medium ">
-                  4: Have you ever tried to kill yourself?
+                <div className="font-medium">
+                  <span>4:</span> Have you ever tried to kill yourself?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qn4}
-                    name="qn4"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn4(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qn4}
-                    name="qn4"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQn4(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q4choice-radio-1"
+                      type="radio"
+                      value={qn4}
+                      name="q4choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      required
+                      onChange={(e) => setQn4(true)}
+                    />
+                    <label
+                      htmlFor="q4choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q4choice-radio-2"
+                      type="radio"
+                      value={qn4}
+                      name="q4choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      onChange={(e) => setQn4(false)}
+                    />
+                    <label
+                      htmlFor="q4choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
+
+              {/* ################################################# */}
+
               {/*  qnfourres1 and qnfourres2*/}
               {qn4 && (
                 <>
                   <div>
-                    <div>
-                      <div>How?</div>
+                    <div className="mb-6">
+                      <div className="mb-2 font-medium">How?</div>
+
                       <textarea
-                        className="mb-2"
+                        rows="4"
                         value={qnfourres1}
                         onChange={(e) => setQnfourres1(e.target.value)}
-                        rows="3"
-                      ></textarea>
+                        className="block p-2.5 md:w-[50%] w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
+                        required
+                        placeholder="Write your thoughts here..."
+                      />
                     </div>
-                    <div>
-                      <div>When?</div>
+                    <div className="mb-6">
+                      <div className="mb-2 font-medium">When?</div>
+
                       <textarea
-                        className="mb-6"
+                        rows="4"
                         value={qnfourres2}
                         onChange={(e) => setQnfourres2(e.target.value)}
-                        rows="3"
-                      ></textarea>
+                        className="block p-2.5 md:w-[50%] w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
+                        required
+                        placeholder="Write your thoughts here..."
+                      />
                     </div>
                   </div>
                 </>
@@ -203,40 +283,62 @@ const SucideRisk = ({ username, email }) => {
               {(qn4 == true || qn4 == false) &&
                 (qn1 == true || qn2 == true || qn3 == true || qn4 == true) && (
                   <div className="mb-6">
-                    <div className="font-medium ">
-                      5. Are you having thoughts of killing yourself right now?
+                    <div className="font-medium">
+                      <span>5.</span> Are you having thoughts of killing
+                      yourself right now?
                     </div>
-                    <div className="">
-                      <p className="inline-block text-xl ">Yes</p>
-                      <input
-                        type="radio"
-                        value={qn5}
-                        name="qn5"
-                        className="inline-block w-4 h-4 mx-4"
-                        onChange={(e) => setQn5(true)}
-                      />
-                      <p className="inline-block ml-8 text-xl">No</p>
-                      <input
-                        type="radio"
-                        value={qn5}
-                        name="qn5"
-                        className="inline-block w-4 h-4 mx-4"
-                        onChange={(e) => setQn5(false)}
-                      />
+                    <div className="flex gap-4 pt-2">
+                      <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300 ">
+                        <input
+                          id="q5choice-radio-1"
+                          type="radio"
+                          value={qn5}
+                          name="q5choice"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                          required
+                          onChange={(e) => setQn5(true)}
+                        />
+                        <label
+                          htmlFor="q5choice-radio-1"
+                          className="w-full py-1 ml-2 cursor-pointer"
+                        >
+                          Yes
+                        </label>
+                      </div>
+                      <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                        <input
+                          id="q5choice-radio-2"
+                          type="radio"
+                          value={qn5}
+                          name="q5choice"
+                          required
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                          onChange={(e) => setQn5(false)}
+                        />
+                        <label
+                          htmlFor="q5choice-radio-2"
+                          className="w-full py-1 ml-2 cursor-pointer"
+                        >
+                          No
+                        </label>
+                      </div>
                     </div>
                   </div>
                 )}
               {/*  qnfiveres*/}
               {qn5 && (
                 <>
-                  <div>
-                    <div>please describe:</div>
+                  <div className="mb-6">
+                    <div className="mb-2 font-medium">Please Describe:</div>
+
                     <textarea
-                      className="mb-2"
+                      rows="4"
                       value={qnfiveres}
                       onChange={(e) => setQnfiveres(e.target.value)}
-                      rows="3"
-                    ></textarea>
+                      className="block p-2.5 md:w-[50%] w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
+                      required
+                      placeholder="Write your thoughts here..."
+                    />
                   </div>
                 </>
               )}
@@ -250,12 +352,7 @@ const SucideRisk = ({ username, email }) => {
               </div>
             </form>
           </div>
-        </div>
-        <div className="my-20 opacity-50 sm:my-40">
-          Luck, A.J., Morgan, J.F., Reid, F., O'Brien, A., Brunton, J., Price,
-          C., Perry, L., Lacey, J.H. (2002), 'The SCOFF questionnaire and
-          clinical interview for eating disorders in general practice:
-          comparative study', British Medical Journal, 325,7367, 755 - 756.
+          <div></div>
         </div>
       </div>
     </div>

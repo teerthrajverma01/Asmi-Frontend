@@ -101,480 +101,811 @@ const MoodImbalance = ({ username, email }) => {
                   <p>Please answer each question as best you can.</p>
                 </div>
               </div>
-              {/* qnonesubqn1 */}
+              {/* ############################################### */}
               <div className="mb-6">
                 <div className="font-medium ">
                   1: Has there ever been a period of time when you were not your
                   usual self and ...
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn1}
-                    name="qnonesubqn1"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn1(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn1}
-                    name="qnonesubqn1"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn1(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300 ">
+                    <input
+                      id="qnonesubqn1choice-radio-1"
+                      type="radio"
+                      value={qnonesubqn1}
+                      name="qnonesubqn1choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+                      required
+                      onChange={(e) => setQnonesubqn1(true)}
+                    />
+                    <label
+                      htmlFor="qnonesubqn1choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="qnonesubqn1choice-radio-2"
+                      type="radio"
+                      value={qnonesubqn1}
+                      name="qnonesubqn1choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+                      onChange={(e) => setQnonesubqn1(false)}
+                    />
+                    <label
+                      htmlFor="qnonesubqn1choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-              {/*qnonesubqn2  */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   ... you felt so good or so hyper that other people thought you
                   were not your normal self or you were so hyper that you got
                   into trouble?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn2}
-                    name="qnonesubqn2"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn2(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn2}
-                    name="qnonesubqn2"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn2(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q2choice-radio-1"
+                      type="radio"
+                      value={qnonesubqn2}
+                      name="q2choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      required
+                      onChange={(e) => setQnonesubqn2(true)}
+                    />
+                    <label
+                      htmlFor="q2choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q2choice-radio-2"
+                      type="radio"
+                      value={qnonesubqn2}
+                      name="q2choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      onChange={(e) => setQnonesubqn2(false)}
+                    />
+                    <label
+                      htmlFor="q2choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-              {/*qnonesubqn3  */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   ... you were so irritable that you shouted at people or
                   started fights or arguments?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn3}
-                    name="qnonesubqn3"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn3(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn3}
-                    name="qnonesubqn3"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn3(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="qonesubqn3-choice-radio-1"
+                      type="radio"
+                      value={qnonesubqn3}
+                      name="qonesubqn3choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      required
+                      onChange={(e) => setQnonesubqn3(true)}
+                    />
+                    <label
+                      htmlFor="qonesubqn3-choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="qonesubqn3-choice-radio-2"
+                      type="radio"
+                      value={qnonesubqn3}
+                      name="qonesubqn3choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      onChange={(e) => setQnonesubqn3(false)}
+                    />
+                    <label
+                      htmlFor="qonesubqn3-choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-              {/*qnonesubqn4  */}
               <div className="mb-6">
-                <div className="font-medium ">
-                  ... you felt much more self-confident than usual?
+                <div className="font-medium">
+                  ... Do you make yourself Sick because you feel uncomfortably
+                  full?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn4}
-                    name="qnonesubqn4"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn4(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn4}
-                    name="qnonesubqn4"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn4(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q1choice-radio-1"
+                      type="radio"
+                      value={qnonesubqn4}
+                      name="q1choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      required
+                      onChange={(e) => setQnonesubqn4(true)}
+                    />
+                    <label
+                      htmlFor="q1choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q1choice-radio-2"
+                      type="radio"
+                      value={qnonesubqn4}
+                      name="q1choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      onChange={(e) => setQnonesubqn4(false)}
+                    />
+                    <label
+                      htmlFor="q1choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-              {/*qnonesubqn5  */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   ... you got much less sleep than usual and found you didn't
                   really miss it?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn5}
-                    name="qnonesubqn5"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn5(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn5}
-                    name="qnonesubqn5"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn5(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300 ">
+                    <input
+                      id="qnonesubqn5-choice-radio-1"
+                      type="radio"
+                      value={qnonesubqn5}
+                      name="qnonesubqn5choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+                      required
+                      onChange={(e) => setQnonesubqn5(true)}
+                    />
+                    <label
+                      htmlFor="qnonesubqn5-choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="qnonesubqn5-choice-radio-2"
+                      type="radio"
+                      value={qnonesubqn5}
+                      name="qnonesubqn5choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+                      onChange={(e) => setQnonesubqn5(false)}
+                    />
+                    <label
+                      htmlFor="qnonesubqn5-choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-              {/*qnonesubqn6  */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   ... you were much more talkative or spoke faster than usual?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn6}
-                    name="qnonesubqn6"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn6(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn6}
-                    name="qnonesubqn6"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn6(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q6choice-radio-1"
+                      type="radio"
+                      value={qnonesubqn6}
+                      name="q6choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      required
+                      onChange={(e) => setQnonesubqn6(true)}
+                    />
+                    <label
+                      htmlFor="q6choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q6choice-radio-2"
+                      type="radio"
+                      value={qnonesubqn6}
+                      name="q6choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      onChange={(e) => setQnonesubqn6(false)}
+                    />
+                    <label
+                      htmlFor="q6choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-              {/*qnonesubqn7  */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   ... thoughts raced through your head or you couldn't slow your
                   mind down?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn7}
-                    name="qnonesubqn7"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn7(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn7}
-                    name="qnonesubqn7"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn7(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300 ">
+                    <input
+                      id="q7choice-radio-1"
+                      type="radio"
+                      value={qnonesubqn7}
+                      name="q7choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+                      required
+                      onChange={(e) => setQnonesubqn7(true)}
+                    />
+                    <label
+                      htmlFor="q7choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q7choice-radio-2"
+                      type="radio"
+                      value={qnonesubqn7}
+                      name="q7choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+                      onChange={(e) => setQnonesubqn7(false)}
+                    />
+                    <label
+                      htmlFor="q7choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-              {/*qnonesubqn8  */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   ... you were so easily distracted by things around you that
                   you had trouble concentrating or staying on track?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn8}
-                    name="qnonesubqn8"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn8(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn8}
-                    name="qnonesubqn8"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn8(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="qnonesubqn8-choice-radio-1"
+                      type="radio"
+                      value={qnonesubqn8}
+                      name="qnonesubqn8choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      required
+                      onChange={(e) => setQnonesubqn8(true)}
+                    />
+                    <label
+                      htmlFor="qnonesubqn8-choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="qnonesubqn8-choice-radio-2"
+                      type="radio"
+                      value={qnonesubqn8}
+                      name="qnonesubqn8choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      onChange={(e) => setQnonesubqn8(false)}
+                    />
+                    <label
+                      htmlFor="qnonesubqn8-choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-              {/*qnonesubqn9  */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   ... you had much more energy than usual?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn9}
-                    name="qnonesubqn9"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn9(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn9}
-                    name="qnonesubqn9"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn9(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300 ">
+                    <input
+                      id="qnonesubqn9-radio-1"
+                      type="radio"
+                      value={qnonesubqn9}
+                      name="qnonesubqn9"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+                      required
+                      onChange={(e) => setQnonesubqn9(true)}
+                    />
+                    <label
+                      htmlFor="qnonesubqn9-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="qnonesubqn9-radio-2"
+                      type="radio"
+                      value={qnonesubqn9}
+                      name="qnonesubqn9"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+                      onChange={(e) => setQnonesubqn9(false)}
+                    />
+                    <label
+                      htmlFor="qnonesubqn9-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-              {/*qnonesubqn10  */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   ... you were much more active or did many more things than
                   usual?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn10}
-                    name="qnonesubqn10"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn10(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn10}
-                    name="qnonesubqn10"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn10(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300 ">
+                    <input
+                      id="qnonesubqn10-choice-radio-1"
+                      type="radio"
+                      value={qnonesubqn10}
+                      name="qnonesubqn10choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      required
+                      onChange={(e) => setQnonesubqn10(true)}
+                    />
+                    <label
+                      htmlFor="qnonesubqn10-choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="qnonesubqn10-choice-radio-2"
+                      type="radio"
+                      value={qnonesubqn10}
+                      name="qnonesubqn10choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      onChange={(e) => setQnonesubqn10(false)}
+                    />
+                    <label
+                      htmlFor="qnonesubqn10-choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-              {/*qnonesubqn11  */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   ... you were much more social or outgoing than usual, for
                   example, you telephoned friends in the middle of the night?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn11}
-                    name="qnonesubqn11"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn11(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn11}
-                    name="qnonesubqn11"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn11(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300 ">
+                    <input
+                      id="qonesubqn11-radio-1"
+                      type="radio"
+                      value={qnonesubqn11}
+                      name="qonesubqn11choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+                      required
+                      onChange={(e) => setQnonesubqn11(true)}
+                    />
+                    <label
+                      htmlFor="qonesubqn11-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="qonesubqn11-radio-2"
+                      type="radio"
+                      value={qnonesubqn11}
+                      name="qonesubqn11choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+                      onChange={(e) => setQnonesubqn11(false)}
+                    />
+                    <label
+                      htmlFor="qonesubqn11-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-              {/*qnonesubqn12  */}
               <div className="mb-6">
-                <div className="font-medium ">
-                  ... you were much more interested in sex than usual?
+                <div className="font-medium">
+                  ... Were you much more interested in sex than usual?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn12}
-                    name="qnonesubqn12"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn12(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn12}
-                    name="qnonesubqn12"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn12(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="qnonesubqn12-choice-radio-1"
+                      type="radio"
+                      value={qnonesubqn12}
+                      name="qnonesubqn12choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      required
+                      onChange={(e) => setQnonesubqn12(true)}
+                    />
+                    <label
+                      htmlFor="qnonesubqn12-choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="qnonesubqn12-choice-radio-2"
+                      type="radio"
+                      value={qnonesubqn12}
+                      name="qnonesubqn12choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      onChange={(e) => setQnonesubqn12(false)}
+                    />
+                    <label
+                      htmlFor="qnonesubqn12-choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-              {/*qnonesubqn13  */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   ... you did things that were unusual for you or that other
                   people might have thought were excessive, foolish, or risky?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn13}
-                    name="qnonesubqn13"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn13(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn13}
-                    name="qnonesubqn13"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn13(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="qnonesubqn13-choice-radio-1"
+                      type="radio"
+                      value={qnonesubqn13}
+                      name="qnonesubqn13choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      required
+                      onChange={(e) => setQnonesubqn13(true)}
+                    />
+                    <label
+                      htmlFor="qnonesubqn13-choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="qnonesubqn13-choice-radio-2"
+                      type="radio"
+                      value={qnonesubqn13}
+                      name="qnonesubqn13choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      onChange={(e) => setQnonesubqn13(false)}
+                    />
+                    <label
+                      htmlFor="qnonesubqn13-choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-              {/*qnonesubqn14  */}
               <div className="mb-6">
                 <div className="font-medium ">
                   ... spending money got you or your family in trouble?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn14}
-                    name="qnonesubqn14"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn14(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qnonesubqn14}
-                    name="qnonesubqn14"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnonesubqn14(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300 ">
+                    <input
+                      id="qnonesubqn14-choice-radio-1"
+                      type="radio"
+                      value={qnonesubqn14}
+                      name="qnonesubqn14choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+                      required
+                      onChange={(e) => setQnonesubqn14(true)}
+                    />
+                    <label
+                      htmlFor="qnonesubqn14-choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="qnonesubqn14-choice-radio-2"
+                      type="radio"
+                      value={qnonesubqn14}
+                      name="qnonesubqn14choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+                      onChange={(e) => setQnonesubqn14(false)}
+                    />
+                    <label
+                      htmlFor="qnonesubqn14-choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-
-              {/*qntwo  */}
+              {/* qntwo */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   2: If you checked YES to more than one of the above, have
                   several of these ever happened during the same period of time?
                   Please check 1 response only.
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qntwo}
-                    name="qntwo"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQntwo(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qntwo}
-                    name="qntwo"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQntwo(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="qntwo-choice-radio-1"
+                      type="radio"
+                      value={qntwo}
+                      name="qntwo-choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      required
+                      onChange={(e) => setQntwo(true)}
+                    />
+                    <label
+                      htmlFor="qntwo-choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="qntwo-choice-radio-2"
+                      type="radio"
+                      value={qntwo}
+                      name="qntwo-choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      onChange={(e) => setQntwo(false)}
+                    />
+                    <label
+                      htmlFor="qntwo-choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
               {/*qnthree  */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   3: How much of a problem did any of these cause you — like
                   being able to work; having family, money, or legal troubles;
                   getting into arguments or fights?
                 </div>
                 <div className="">
-                  <div>
-                    <p className="inline ml-8 text-xl ">No problem</p>
-                    <input
-                      type="radio"
-                      value={qnthree}
-                      name="qnthreechoice"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQnthree("NO")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Minor problem</p>
-                    <input
-                      type="radio"
-                      value={qnthree}
-                      name="qnthreechoice"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQnthree("MINOR")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl ">Moderate problem</p>
-                    <input
-                      type="radio"
-                      value={qnthree}
-                      name="qnthreechoice"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQnthree("MODERATE")}
-                    />
-                  </div>
-                  <div>
-                    <p className="inline ml-8 text-xl">Serious problem</p>
-                    <input
-                      type="radio"
-                      value={qnthree}
-                      name="qnthreechoice"
-                      className="w-4 h-4 mx-4 "
-                      onChange={(e) => setQnthree("SERIOUS")}
-                    />
-                  </div>
+                  <ul className="items-center w-full mt-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex max-w-[55vw]">
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 rounded-l-lg ps-3 hover:bg-gray-300">
+                        <input
+                          id="q3-no-problem"
+                          type="radio"
+                          value={qnthree}
+                          name="qn3"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQnthree("NO")}
+                        />
+                        <label
+                          htmlFor="q3-no-problem"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          No problem
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q3-minor-problem"
+                          type="radio"
+                          value={qnthree}
+                          name="qn3"
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 cursor-pointer focus:ring-blue-500"
+                          required
+                          onChange={(e) => setQnthree("MINOR")}
+                        />
+                        <label
+                          htmlFor="q3-minor-problem"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Minor problem
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q3-moderate-problem"
+                          type="radio"
+                          value={qnthree}
+                          required
+                          name="qn3"
+                          onChange={(e) => setQnthree("MODERATE")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q3-moderate-problem"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Moderate problem
+                        </label>
+                      </div>
+                    </li>
+                    <li className="w-full">
+                      <div className="flex items-center transition duration-300 ps-3 hover:bg-gray-300">
+                        <input
+                          id="q3-serious-problem"
+                          type="radio"
+                          value={qnthree}
+                          name="qn3"
+                          onChange={(e) => setQnthree("SERIOUS")}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                        />
+                        <label
+                          htmlFor="q3-serious-problem"
+                          className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
+                        >
+                          Serious problem
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {/*qnfour  */}
+              {/* qnfour */}
               <div className="mb-6">
-                <div className="font-medium ">
+                <div className="font-medium">
                   4: Have any of your blood relatives (ie, children, siblings,
                   parents, grandparents, aunts, uncles) had manic-depressive
                   illness or bipolar disorder?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qnfour}
-                    name="qnfour"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnfour(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qnfour}
-                    name="qnfour"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnfour(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300 ">
+                    <input
+                      id="qnfour-choice-radio-1"
+                      type="radio"
+                      value={qnfour}
+                      name="qnfourchoice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+                      required
+                      onChange={(e) => setQnfour(true)}
+                    />
+                    <label
+                      htmlFor="qnfour-choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="qnfour-choice-radio-2"
+                      type="radio"
+                      value={qnfour}
+                      name="qnfourchoice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
+                      onChange={(e) => setQnfour(false)}
+                    />
+                    <label
+                      htmlFor="qnfour-choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-              {/*qnfive  */}
+              {/* qnfive */}
               <div className="mb-6">
-                <div className="font-medium ">
-                  5: Has a health professional ever told you that you have
-                  manic-depressive illness or bipolar disorder?
+                <div className="font-medium">
+                  <span>5:</span> - Has a health professional ever told you that
+                  you have manic-depressive illness or bipolar disorder?
                 </div>
-                <div className="">
-                  <p className="inline-block text-xl ">Yes</p>
-                  <input
-                    type="radio"
-                    value={qnfive}
-                    name="qnfive"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnfive(true)}
-                  />
-                  <p className="inline-block ml-8 text-xl">No</p>
-                  <input
-                    type="radio"
-                    value={qnfive}
-                    name="qnfive"
-                    className="inline-block w-4 h-4 mx-4"
-                    onChange={(e) => setQnfive(false)}
-                  />
+                <div className="flex gap-4 pt-2">
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300 ">
+                    <input
+                      id="q5choice-radio-1"
+                      type="radio"
+                      value={qnfive}
+                      name="q5choice"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      required
+                      onChange={(e) => setQnfive(true)}
+                    />
+                    <label
+                      htmlFor="q5choice-radio-1"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex items-center transition border border-gray-200 rounded ps-4 dark:border-gray-700 min-w-24 hover:bg-gray-300">
+                    <input
+                      id="q5choice-radio-2"
+                      type="radio"
+                      value={qnfive}
+                      name="q5choice"
+                      required
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+                      onChange={(e) => setQnfive(false)}
+                    />
+                    <label
+                      htmlFor="q5choice-radio-2"
+                      className="w-full py-1 ml-2 cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
+              {/* ############################################### */}
 
               <div className="py-8">
                 <input
