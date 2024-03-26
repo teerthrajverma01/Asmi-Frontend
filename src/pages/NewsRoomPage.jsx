@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from "react";
 
-import { Link } from "react-router-dom";
-
 import BASE_URL from "../apis/Config";
+import { useNavigate } from "react-router-dom";
+
+import { useSelector } from "react-redux";
+import { MdDelete } from "react-icons/md";
 
 const NewsRoomPage = () => {
+  const username = useSelector((state) => state.userInfo.username);
   const [news, setNews] = useState([]);
   const [latestnewshead, setLatestnewshead] = useState();
   const [storieshead, setStorieshead] = useState();
-  const [latestnews, setLatestnews] = useState();
+  const [latestnews, setLatestnews] = useState([]);
   const [stories, setStories] = useState([]);
+
+  console.log(username);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(`${BASE_URL}/news/fetchnews`)
@@ -42,6 +48,35 @@ const NewsRoomPage = () => {
         console.error("Fetch error:", error);
       });
   }, []);
+
+  const handleDelete = async (id) => {
+    try {
+      console.log("executing delete");
+      const confirmDelete = window.confirm(
+        "Are you sure you want to delete this post?"
+      );
+      if (confirmDelete) {
+        const response = await fetch(`${BASE_URL}/news/deletenews/${id}`, {
+          method: "DELETE",
+          // headers: {
+          //   Authorization: `Bearer ${YOUR_ACCESS_TOKEN}`, // Replace with your actual access token
+          // },
+        });
+
+        if (response.ok) {
+          // setReload((prev) => !prev);
+          console.log("delete successful");
+          navigate("/news");
+        } else {
+          console.error("Failed to delete post");
+        }
+      } else {
+        console.log("delete request cancelled");
+      }
+    } catch (error) {
+      console.error("Error deleting post", error);
+    }
+  };
 
   console.log(news);
   // console.log(storieshead);
@@ -437,11 +472,11 @@ const NewsRoomPage = () => {
                     <a
                       key={indinews._id}
                       href={
-                        indinews && indinews.socialmedialink
+                        !username && indinews && indinews.socialmedialink
                           ? indinews.socialmedialink
                           : ""
                       }
-                      target="_blank"
+                      target={!username ? "_blank" : "false"}
                     >
                       <div className="grid grid-cols-3 p-4 bg-white rounded-lg hover:scale-[1.02] transition duration-300">
                         <div className="flex col-span-1 bg-white">
@@ -479,6 +514,14 @@ const NewsRoomPage = () => {
                           <div className="font-semibold text-gray-600">
                             {indinews && indinews.date ? indinews.date : ""}
                           </div>
+                          {username && (
+                            <div className="flex justify-end">
+                              <MdDelete
+                                onClick={() => handleDelete(indinews._id)}
+                                className="text-3xl text-red-600 cursor-pointer hover:scale-105"
+                              />
+                            </div>
+                          )}
                         </div>
                       </div>
                     </a>
