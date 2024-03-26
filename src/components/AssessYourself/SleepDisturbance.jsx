@@ -37,6 +37,7 @@ const SleepDisturbance = ({ username, email }) => {
       body: JSON.stringify({
         username,
         email,
+        qn0,
         qn1,
         qn2,
         qn3,
