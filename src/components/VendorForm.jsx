@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const VendorOnboardingForm = () => {
   // State variables for form fields
   const [loading, setLoading] = useState(false);
@@ -67,7 +70,18 @@ const VendorOnboardingForm = () => {
       });
 
       if (!response.ok) {
-        throw new Error("Network response was not ok.");
+        // If the response is not okay (HTTP status code not in the range 200-299),
+        // we parse the error response JSON
+        const errorResponse = await response.json();
+
+        // Extracting the error message from the JSON response
+        const errorMessage = errorResponse.error.message;
+
+        // Displaying the error message to the user
+        toast.error(errorMessage);
+
+        // Throwing an error with the message received from the server
+        throw new Error(errorMessage);
       }
 
       navigate("/submission-successful");
@@ -453,6 +467,18 @@ const VendorOnboardingForm = () => {
           </div>
         </form>
       </div>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </Fragment>
   );
 };
