@@ -96,9 +96,9 @@ const SingleBlogPage = () => {
 
           <img className="w-3/4 mx-auto my-6" src={postInfo.cover} alt="img" />
 
-          <p className="mb-8 md:mt-20 ">
+          <div className="mb-8 md:mt-20 ">
             <div dangerouslySetInnerHTML={{ __html: postInfo.content }}></div>
-          </p>
+          </div>
         </div>
 
         <div className="mb-12">

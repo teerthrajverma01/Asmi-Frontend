@@ -29,8 +29,8 @@ const AssessYourself = () => {
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="sm:m-8">
                 <div className="text-3xl text-center">
-                  <div className="text-4xl">Confused !</div>
-                  <div className="mb-4 text-4xl">About your condition </div>
+                  <div className="text-4xl">Confused </div>
+                  <div className="mb-4 text-4xl">About your condition? </div>
                   <div>Whether it needs Professional attention?</div>
                 </div>
                 <div className="my-12 text-xl">
@@ -38,7 +38,7 @@ const AssessYourself = () => {
                     We all get confused about whether or not the condition we
                     think
                   </div>
-                  <div>We might have needs professional attention or not. </div>
+                  <div>we might have needs professional attention or not. </div>
                   <div className="mt-4">Find out right here</div>
                   <div>through standardised and generalizable tests</div>
                   <div className="flex gap-4 my-12">
@@ -46,9 +46,6 @@ const AssessYourself = () => {
                       Right now only for{" "}
                       <FaIndianRupeeSign className="inline-block" />
                       99
-                    </div>
-                    <div className="px-2 py-1 text-3xl text-center text-white sm:ml-8 rounded-xl bg-primary04 ">
-                      Assess here
                     </div>
                   </div>
                 </div>
@@ -298,8 +295,9 @@ const AssessYourself = () => {
                       Low Self Esteem
                     </div>
                     <div className="sm:mb-4 sm:text-xl">
-                      Do you feel overwhelmed by work or other commitments? Take
-                      an assessment and find out if you need help.
+                      If you feel you're not good enough or have extreme self
+                      doubts, take this test and find out the intensity.
+                      Consider speaking to a professional if suggested.
                     </div>
                     <Link
                       onClick={() => window.scrollTo(0, 0)}
