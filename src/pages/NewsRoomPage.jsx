@@ -427,7 +427,7 @@ const NewsRoomPage = () => {
                       >
                         <div className="flex h-full">
                           <img
-                            className="object-cover w-full h-full rounded-xl"
+                            className="object-cover w-full h-[30vh] rounded-xl"
                             src={
                               story && story.coverImage ? story.coverImage : ""
                             }

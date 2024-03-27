@@ -139,7 +139,9 @@ const OnboardingForm = () => {
       navigate("/submission-successful");
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("An error occurred, Please try again");
+      toast.error(
+        "An error occurred, Please try again after reloading website"
+      );
     } finally {
       setLoading(false);
     }
@@ -707,7 +709,9 @@ const OnboardingForm = () => {
               className="px-4 py-2 text-white rounded-md bg-primary03 hover:bg-primary05"
               disabled={loading} // Disable button when loading
             >
-              {loading ? "Submitting...  Please wait" : "Submit"}
+              {loading
+                ? "Submitting... Please wait, it will take some mins"
+                : "Submit"}
             </button>
           </div>
         </form>

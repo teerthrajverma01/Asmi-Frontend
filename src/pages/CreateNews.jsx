@@ -149,7 +149,7 @@ const CreateNews = () => {
           disabled={loading}
           // onClick={createNewPost}
         >
-          {loading ? "Creating a new NewsItem ..." : "Create new   newsItem"}
+          {loading ? "Creating a new NewsItem ..." : "Create new newsItem"}
         </button>
       </form>
     </div>
