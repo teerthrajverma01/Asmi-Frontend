@@ -14,6 +14,8 @@ const NewsRoomPage = () => {
   const [latestnews, setLatestnews] = useState([]);
   const [stories, setStories] = useState([]);
 
+  const [deleted, setDeleted] = useState(false);
+
   console.log(username);
   const navigate = useNavigate();
 
@@ -65,8 +67,9 @@ const NewsRoomPage = () => {
 
         if (response.ok) {
           // setReload((prev) => !prev);
+          setDeleted((prev) => !prev);
           console.log("delete successful");
-          navigate("/news");
+          navigate("/admin");
         } else {
           console.error("Failed to delete post");
         }
@@ -468,17 +471,69 @@ const NewsRoomPage = () => {
               {/* grid all-news-items */}
               <div className="grid gap-8 mb-16 lg:grid-cols-2">
                 {news ? (
-                  news.map((indinews) => (
-                    <a
-                      key={indinews._id}
-                      href={
-                        !username && indinews && indinews.socialmedialink
-                          ? indinews.socialmedialink
-                          : ""
-                      }
-                      target={!username ? "_blank" : "false"}
-                    >
-                      <div className="grid grid-cols-3 p-4 bg-white rounded-lg hover:scale-[1.02] transition duration-300">
+                  news.map((indinews) =>
+                    username !== "asmi" ? (
+                      <a
+                        key={indinews._id}
+                        href={
+                          indinews && indinews.socialmedialink
+                            ? indinews.socialmedialink
+                            : ""
+                        }
+                        target={"_blank"}
+                      >
+                        <div className="grid grid-cols-3 p-4 bg-white rounded-lg hover:scale-[1.02] transition duration-300">
+                          <div className="flex col-span-1 bg-white">
+                            <div className="h-[20vh] flex items-center mx-auto bg-white overflow-hidden">
+                              <img
+                                src={
+                                  indinews && indinews.coverImage
+                                    ? indinews.coverImage
+                                    : ""
+                                }
+                                className="object-contain w-full rounded-md"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div className="col-span-2 px-2 m-2">
+                            <div className="px-2 py-1 mb-2 font-semibold text-white rounded-md bg-primary04 max-w-fit">
+                              {indinews && indinews.tag ? indinews.tag : ""}
+                            </div>
+                            <div className="pb-2 font-semibold">
+                              {indinews && indinews.headline
+                                ? indinews.headline
+                                : ""}
+                            </div>
+                            {indinews && indinews.publishedBy ? (
+                              <div className="sm:text-xl text-slate-700">
+                                Published By:{" "}
+                                {indinews && indinews.publishedBy
+                                  ? indinews.publishedBy
+                                  : ""}
+                              </div>
+                            ) : (
+                              <></>
+                            )}
+                            <div className="font-semibold text-gray-600">
+                              {indinews && indinews.date ? indinews.date : ""}
+                            </div>
+                            {username && (
+                              <div className="flex justify-end">
+                                <MdDelete
+                                  onClick={() => handleDelete(indinews._id)}
+                                  className="text-3xl text-red-600 cursor-pointer hover:scale-105"
+                                />
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </a>
+                    ) : (
+                      <div
+                        key={indinews._id}
+                        className="grid grid-cols-3 p-4 bg-white rounded-lg hover:scale-[1.02] transition duration-300"
+                      >
                         <div className="flex col-span-1 bg-white">
                           <div className="h-[20vh] flex items-center mx-auto bg-white overflow-hidden">
                             <img
@@ -524,8 +579,8 @@ const NewsRoomPage = () => {
                           )}
                         </div>
                       </div>
-                    </a>
-                  ))
+                    )
+                  )
                 ) : (
                   <p>no news</p>
                 )}
