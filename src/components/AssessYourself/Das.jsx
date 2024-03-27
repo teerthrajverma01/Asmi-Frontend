@@ -103,20 +103,17 @@ const Das = ({ username, email }) => {
             <form className="" onSubmit={submitHandler}>
               <div className="mb-12">
                 <div className="font-medium">
-                  Please read each statement and choose option 0, 1, 2 or 3
+                  Please read each statement and choose a option 0, 1, 2 or 3
                   which indicates how much the statement applied to you over the
                   past week. There are no right or wrong answers. Do not spend
                   too much time on any statement
                 </div>
                 <div className="font-medium">
                   The rating scale is as follows:
-                  <p>0 - Did not apply to me at all</p>
-                  <p>1 - Applied to me to some degree, or some of the time</p>
-                  <p>
-                    2 - Applied to me to a considerable degree or a good part of
-                    time
-                  </p>
-                  <p>3 - Applied to me very much or most of the time</p>
+                  <p>0 - Never</p>
+                  <p>1 - Sometimes</p>
+                  <p>2 - Usually</p>
+                  <p>3 - Very Often</p>
                 </div>
               </div>
 
@@ -143,7 +140,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q1-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -162,7 +159,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q1-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -181,7 +178,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q1-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -199,7 +196,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q1-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -228,7 +225,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q2-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -247,7 +244,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q2-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -266,7 +263,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q2-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -284,7 +281,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q2-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -313,7 +310,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q3-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -332,7 +329,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q3-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -351,7 +348,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q3-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -369,7 +366,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q3-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -399,7 +396,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q4-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -418,7 +415,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q4-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -437,7 +434,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q4-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -455,7 +452,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q4-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -484,7 +481,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q5-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -503,7 +500,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q5-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -522,7 +519,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q5-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -540,7 +537,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q5-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -570,7 +567,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q6-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -589,7 +586,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q6-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -608,7 +605,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q6-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -626,7 +623,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q6-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -656,7 +653,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q7-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -675,7 +672,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q7-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -694,7 +691,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q7-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -712,7 +709,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q7-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -742,7 +739,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q8-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -761,7 +758,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q8-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -780,7 +777,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q8-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -798,7 +795,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q8-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -829,7 +826,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q9-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -848,7 +845,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q9-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -867,7 +864,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q9-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -885,7 +882,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q9-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -915,7 +912,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q10-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -934,7 +931,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q10-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -953,7 +950,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q10-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -971,7 +968,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q10-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -1001,7 +998,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q11-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -1020,7 +1017,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q11-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -1039,7 +1036,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q11-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -1057,7 +1054,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q11-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -1087,7 +1084,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q12-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -1106,7 +1103,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q12-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -1125,7 +1122,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q12-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -1143,7 +1140,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q12-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -1173,7 +1170,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q13-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -1192,7 +1189,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q13-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -1211,7 +1208,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q13-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -1229,7 +1226,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q13-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -1260,7 +1257,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q14-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -1279,7 +1276,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q14-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -1298,7 +1295,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q14-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -1316,7 +1313,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q14-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -1346,7 +1343,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q15-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -1365,7 +1362,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q15-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -1384,7 +1381,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q15-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -1402,7 +1399,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q15-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -1432,7 +1429,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q16-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -1451,7 +1448,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q16-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -1470,7 +1467,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q16-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -1488,7 +1485,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q16-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -1518,7 +1515,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q17-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -1537,7 +1534,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q17-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -1556,7 +1553,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q17-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -1574,7 +1571,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q17-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -1604,7 +1601,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q18-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -1623,7 +1620,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q18-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -1642,7 +1639,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q18-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -1660,7 +1657,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q18-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -1692,7 +1689,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q19-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -1711,7 +1708,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q19-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -1730,7 +1727,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q19-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -1748,7 +1745,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q19-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -1778,7 +1775,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q20-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -1797,7 +1794,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q20-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -1816,7 +1813,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q20-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -1834,7 +1831,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q20-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -1864,7 +1861,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q21-option-0"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 0
+                          Never
                         </label>
                       </div>
                     </li>
@@ -1883,7 +1880,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q21-option-1"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 1
+                          Sometimes
                         </label>
                       </div>
                     </li>
@@ -1902,7 +1899,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q21-option-2"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 2
+                          Usually
                         </label>
                       </div>
                     </li>
@@ -1920,7 +1917,7 @@ const Das = ({ username, email }) => {
                           htmlFor="q21-option-3"
                           className="w-full py-3 text-sm font-medium text-gray-900 cursor-pointer ms-2"
                         >
-                          Option 3
+                          Very Often
                         </label>
                       </div>
                     </li>
@@ -1949,7 +1946,7 @@ const Das = ({ username, email }) => {
             </div>
           </div>
         </div>
-        <div className="my-20 opacity-50 sm:my-40">
+        <div className="my-20 text-sm opacity-50 sm:my-40">
           Lovibond, S.H. & Lovibond, P.F. (1995). Manual for the Depression
           Anxiety & Stress Scales. (2nd Ed.)Sydney: Psychology Foundation.
         </div>

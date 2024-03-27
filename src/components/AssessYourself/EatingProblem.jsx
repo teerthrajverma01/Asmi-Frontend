@@ -298,7 +298,7 @@ const EatingProblem = ({ username, email }) => {
             </form>
           </div>
         </div>
-        <div className="my-20 opacity-50 sm:my-40">
+        <div className="my-20 text-sm opacity-50 sm:my-40">
           Luck, A.J., Morgan, J.F., Reid, F., O'Brien, A., Brunton, J., Price,
           C., Perry, L., Lacey, J.H. (2002), 'The SCOFF questionnaire and
           clinical interview for eating disorders in general practice:

@@ -1339,7 +1339,7 @@ const SleepDisturbance = ({ username, email }) => {
             </form>
           </div>
         </div>
-        <div className="my-20 opacity-50 sm:my-40">
+        <div className="my-20 text-sm opacity-50 sm:my-40">
           This instrument is designed for screening purposes only and is not to
           be used as a diagnostic tool.
         </div>

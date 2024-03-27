@@ -40,7 +40,7 @@ const AssessYourself = () => {
                   </div>
                   <div>we might have needs professional attention or not. </div>
                   <div className="mt-4">Find out right here</div>
-                  <div>through standardised and generalizable tests</div>
+                  <div>through standardised and generalizable tests.</div>
                   <div className="flex gap-4 my-12">
                     <div className="self-center text-3xl text-center">
                       Right now only for{" "}
@@ -83,7 +83,7 @@ const AssessYourself = () => {
 
                   <div className="col-span-11 px-4">
                     Take the test from the link received on your email ID
-                    registered with us
+                    registered with us.
                   </div>
                 </div>
               </div>
@@ -162,7 +162,7 @@ const AssessYourself = () => {
                     </div>
                     <div className="sm:mb-4 sm:text-xl">
                       Do you feel your mood switches drastically? Take an
-                      assessment to find out if you need professional help
+                      assessment to find out if you need professional help.
                     </div>
                     <Link
                       onClick={() => window.scrollTo(0, 0)}
@@ -269,7 +269,7 @@ const AssessYourself = () => {
                     </div>
                     <div className="sm:mb-4 sm:text-xl">
                       Do you feel overwhelmed by work or other commitments? Take
-                      an assessment and find out if you need help
+                      an assessment and find out if you need help.
                     </div>
                     <Link
                       onClick={() => window.scrollTo(0, 0)}

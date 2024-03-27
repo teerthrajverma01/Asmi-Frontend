@@ -137,39 +137,9 @@ const OnboardingForm = () => {
       }
 
       navigate("/submission-successful");
-
-      // Reset form fields
-      setFirstName("");
-      setLastName("");
-      setEmail("");
-      setMobile("");
-      setBirthday("");
-      setPresentAddress("");
-      setGender("");
-      setPhoto(null);
-      setAbout("");
-      setQualification("");
-      setCertificates(null);
-      setWorkExperience("");
-      setReference("");
-      setReferenceContact("");
-      setPan("");
-      setPanFile(null);
-      setAadhar("");
-      setAadharFile(null);
-      setAccountName("");
-      setAccountNumber("");
-      setBankName("");
-      setBranchName("");
-      setIfsc("");
-      setAccountType("");
-      setPreferredTimings("");
-      setPreferredLanguage("");
-      setConsentDataUsage(false);
-      setConsentNotifications(false);
-      setConsentAgreement(false);
     } catch (error) {
       console.error("Error submitting form:", error);
+      toast.error("An error occurred, Please try again");
     } finally {
       setLoading(false);
     }
@@ -734,10 +704,10 @@ const OnboardingForm = () => {
           <div className="mb-8">
             <button
               type="submit"
-              className="px-4 py-1 text-white rounded-md bg-primary03 hover:bg-primary05"
+              className="px-4 py-2 text-white rounded-md bg-primary03 hover:bg-primary05"
               disabled={loading} // Disable button when loading
             >
-              {loading ? "Loading..." : "Submit"}
+              {loading ? "Submitting...  Please wait" : "Submit"}
             </button>
           </div>
         </form>
