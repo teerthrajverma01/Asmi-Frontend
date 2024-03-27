@@ -39,6 +39,7 @@ const CreateNews = () => {
 
     data.set("coverImage", coverImage[0]);
 
+    console.log(date);
     const response = await fetch(`${BASE_URL}/news/postnews`, {
       method: "POST",
       body: data,
@@ -86,8 +87,8 @@ const CreateNews = () => {
         />
         <p> Event Date*</p>
         <input
-          type="string"
-          placeholder="EventDate egformat: 12-March-2019"
+          type="date"
+          // placeholder="EventDate egformat: 12-March-2019"
           className="w-full p-2 mb-6 border rounded-md border-neutral300 focus:outline-none focus:border-primary03"
           value={date}
           onChange={(ev) => setDate(ev.target.value)}
@@ -134,14 +135,15 @@ const CreateNews = () => {
           onChange={(ev) => setCoverImage(ev.target.files)}
           required
         />
-        <p>Content*</p>
+
+        {/* <p>Content*</p>
         <ReactQuill
           theme="snow"
           className="mb-4 border rounded-md border-neutral300"
           value={content}
           onChange={(newValue) => setContent(newValue)}
           // required
-        />
+        /> */}
         <button
           className="w-full py-2 text-white rounded-md bg-primary03 hover:bg-primary02 focus:outline-none"
           disabled={loading}
