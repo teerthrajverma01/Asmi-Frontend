@@ -23,7 +23,7 @@ import LekshmyImage from "../assets/image/Counselor/Lekshmy.jpg";
 import ManjulaImage from "../assets/image/Counselor/Manjula.jpeg";
 import ManviSodhiImage from "../assets/image/Counselor/Manvi Sodhi.jpg";
 import MeghaImage from "../assets/image/Counselor/Megha.jpg";
-import MuskanTikooImage from "../assets/image/Counselor/Muskan Tikoo.jpeg";
+// import MuskanTikooImage from "../assets/image/Counselor/Muskan Tikoo.jpeg";
 import NaincyImage from "../assets/image/Counselor/Naincy.jpeg";
 import NamrataImage from "../assets/image/Counselor/Namrata.jpg";
 import PrernaImage from "../assets/image/Counselor/Prerna.jpeg";
@@ -57,7 +57,7 @@ const counselorNames = [
   "Manjula",
   "Manvi Sodhi",
   "Megha",
-  "Muskan Tikoo",
+  // "Muskan Tikoo",
   "Naincy",
   "Namrata",
   "Prerna",
@@ -91,7 +91,7 @@ const counselorImages = [
   ManjulaImage,
   ManviSodhiImage,
   MeghaImage,
-  MuskanTikooImage,
+  // MuskanTikooImage,
   NaincyImage,
   NamrataImage,
   PrernaImage,

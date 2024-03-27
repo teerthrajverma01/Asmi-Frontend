@@ -15,7 +15,7 @@ import LekshmyImage from "../assets/image/Counselor/Lekshmy.jpg";
 import ManjulaImage from "../assets/image/Counselor/Manjula.jpeg";
 import ManviSodhiImage from "../assets/image/Counselor/Manvi Sodhi.jpg";
 import MeghaImage from "../assets/image/Counselor/Megha.jpg";
-import MuskanTikooImage from "../assets/image/Counselor/Muskan Tikoo.jpeg";
+// import MuskanTikooImage from "../assets/image/Counselor/Muskan Tikoo.jpeg";
 import NaincyImage from "../assets/image/Counselor/Naincy.jpeg";
 import NamrataImage from "../assets/image/Counselor/Namrata.jpg";
 import PrernaImage from "../assets/image/Counselor/Prerna.jpeg";
@@ -111,12 +111,12 @@ const CounselorPage = () => {
         "Diploma in Guidance and Counseling - NCERT, MA Psychology",
       specializations: ["Adolescent", "Queer"],
     },
-    {
-      name: "Muskan",
-      image: MuskanTikooImage,
-      qualification: "M.A. Mental Health (TISS Mumbai)",
-      specializations: ["Adolescent", "Anxiety and Eating disturbances"],
-    },
+    // {
+    //   name: "Muskan",
+    //   image: MuskanTikooImage,
+    //   qualification: "M.A. Mental Health (TISS Mumbai)",
+    //   specializations: ["Adolescent", "Anxiety and Eating disturbances"],
+    // },
     {
       name: "Manvi",
       image: ManviSodhiImage,
