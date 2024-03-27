@@ -29,6 +29,7 @@ const NewsRoomPage = () => {
       })
       .then((data) => {
         const reversenews = data.allNewsItem.reverse();
+
         setNews((prevstate) => reversenews);
 
         //seperate latestnews
@@ -82,7 +83,7 @@ const NewsRoomPage = () => {
   };
 
   console.log(news);
-  // console.log(storieshead);
+
   // console.log(latestnewshead);
   // console.log(latestnews);
   // console.log(stories);
@@ -134,7 +135,7 @@ const NewsRoomPage = () => {
                     </div>
                     <div className="font-medium">
                       {latestnewshead && latestnewshead.date
-                        ? latestnewshead.date
+                        ? latestnewshead.date.slice(0, 10)
                         : ""}
                     </div>
                   </div>
@@ -191,7 +192,7 @@ const NewsRoomPage = () => {
                     )}
                     <div className="font-medium">
                       {latestnewshead && latestnewshead.date
-                        ? latestnewshead.date
+                        ? latestnewshead.date.slice(0, 10)
                         : ""}
                     </div>
                   </div>
@@ -280,7 +281,7 @@ const NewsRoomPage = () => {
                           )}
                           <div className="font-medium text-gray-600">
                             {latestnewsitem && latestnewsitem.date
-                              ? latestnewsitem.date
+                              ? latestnewsitem.date.slice(0, 10)
                               : ""}
                           </div>
                         </div>
@@ -347,7 +348,9 @@ const NewsRoomPage = () => {
                       <></>
                     )}
                     <div className="font-medium">
-                      {storieshead && storieshead.date ? storieshead.date : ""}
+                      {storieshead && storieshead.date
+                        ? storieshead.date.slice(0, 10)
+                        : ""}
                     </div>
                   </div>
                 </a>
@@ -397,7 +400,9 @@ const NewsRoomPage = () => {
                       <></>
                     )}
                     <div className="font-medium">
-                      {storieshead && storieshead.date ? storieshead.date : ""}
+                      {storieshead && storieshead.date
+                        ? storieshead.date.slice(0, 10)
+                        : ""}
                     </div>
                   </div>
                 </div>
@@ -448,7 +453,7 @@ const NewsRoomPage = () => {
                             <></>
                           )}
                           <div className="font-medium">
-                            {story && story.date ? story.date : ""}
+                            {story && story.date ? story.date.slice(0, 10) : ""}
                           </div>
                         </div>
                       </a>
@@ -516,7 +521,9 @@ const NewsRoomPage = () => {
                               <></>
                             )}
                             <div className="font-semibold text-gray-600">
-                              {indinews && indinews.date ? indinews.date : ""}
+                              {indinews && indinews.date
+                                ? indinews.date.slice(0, 10)
+                                : ""}
                             </div>
                             {username && (
                               <div className="flex justify-end">
@@ -567,7 +574,9 @@ const NewsRoomPage = () => {
                             <></>
                           )}
                           <div className="font-semibold text-gray-600">
-                            {indinews && indinews.date ? indinews.date : ""}
+                            {indinews && indinews.date
+                              ? indinews.date.slice(0, 10)
+                              : ""}
                           </div>
                           {username && (
                             <div className="flex justify-end">
