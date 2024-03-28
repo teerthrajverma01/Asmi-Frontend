@@ -134,7 +134,7 @@ const OnboardingForm = () => {
           "File size too large. Got 17800381. Maximum is 10485760."
         ) {
           errorMessage =
-            "File size too large. Please Upload file less than 5mb";
+            "File size too large. Please Upload file less than 10mb";
         }
 
         // Displaying the error message to the user
