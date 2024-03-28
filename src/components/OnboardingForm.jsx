@@ -127,7 +127,15 @@ const OnboardingForm = () => {
         const errorResponse = await response.json();
 
         // Extracting the error message from the JSON response
-        const errorMessage = errorResponse.error.message;
+        let errorMessage = errorResponse.error.message;
+
+        if (
+          errorMessage ===
+          "File size too large. Got 17800381. Maximum is 10485760."
+        ) {
+          errorMessage =
+            "File size too large. Please Upload file less than 5mb";
+        }
 
         // Displaying the error message to the user
         toast.error(errorMessage);
