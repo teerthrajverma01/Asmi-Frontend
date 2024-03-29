@@ -103,17 +103,10 @@ const Das = ({ username, email }) => {
             <form className="" onSubmit={submitHandler}>
               <div className="mb-12">
                 <div className="font-medium">
-                  Please read each statement and choose a option 0, 1, 2 or 3
+                  Please read each statement and choose the most suitable option
                   which indicates how much the statement applied to you over the
                   past week. There are no right or wrong answers. Do not spend
-                  too much time on any statement
-                </div>
-                <div className="font-medium">
-                  The rating scale is as follows:
-                  <p>0 - Never</p>
-                  <p>1 - Sometimes</p>
-                  <p>2 - Usually</p>
-                  <p>3 - Very Often</p>
+                  too much time on any statement.
                 </div>
               </div>
 
