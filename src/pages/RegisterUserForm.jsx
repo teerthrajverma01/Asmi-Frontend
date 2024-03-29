@@ -107,7 +107,7 @@ const RegisterUserForm = () => {
   return (
     <>
       <div className="flex justify-center">
-        <div className=" md:min-w-[35rem] py-28">
+        <div className=" md:min-w-[35rem] py-28 px-6">
           <section className="text-xl">
             <div className=" w-full max-w-[35rem]">
               <div className="text-5xl font-semibold leading-[1.2] font-sans text-neutral-900 text-center">
