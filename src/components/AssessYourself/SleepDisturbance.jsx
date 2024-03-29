@@ -109,8 +109,7 @@ const SleepDisturbance = ({ username, email }) => {
                   value={qn0}
                   className="block p-2.5 md:w-[50%] w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
                   required
-                  placeholder="In case you do not have
-                  such an event, please write NA."
+                  placeholder="In case you do not have such an event, please write NA."
                   onChange={(e) => setQn0(e.target.value)}
                 />
               </div>
@@ -1321,8 +1320,7 @@ const SleepDisturbance = ({ username, email }) => {
                       value={qnelevensubqn5}
                       className="block p-2.5 md:w-[50%] w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
                       required
-                      placeholder="In case you do not have
-                      anything more to tell, please write NA."
+                      placeholder="In case you do not have anything more to tell, please write NA."
                       onChange={(e) => setQnelevensubqn5(e.target.value)}
                     />
                   </div>
