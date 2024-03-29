@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
 const FormSubmitRedirect = () => {
   const { result } = useParams();
 
   console.log(result);
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page when component mounts
+  }, []);
   return (
     <>
       <div className="flex flex-col justify-center h-[90vh] ">
