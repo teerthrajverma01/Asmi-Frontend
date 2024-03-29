@@ -111,7 +111,7 @@ const RegisterUserForm = () => {
           <section className="text-xl">
             <div className=" w-full max-w-[35rem]">
               <div className="text-5xl font-semibold leading-[1.2] font-sans text-neutral-900 text-center">
-                Buy the Assesment
+                Buy the Assessment
               </div>
               <div className="mt-8">
                 <div className="grid grid-cols-2 mt-6">
