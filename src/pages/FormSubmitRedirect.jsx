@@ -52,7 +52,7 @@ const FormSubmitRedirect = () => {
 
               <p className="mb-3 text-2xl font-normal text-gray-700 ">
                 If you would still want to consult a counsellor, you're always
-                welcome
+                welcome.
               </p>
               <Link
                 to={"/contact-us"}
