@@ -20,7 +20,7 @@ const MainNavigation = () => {
         </Link>
 
         <div className="hidden md:flex">
-          <ul className="flex max-w-xl gap-8 font-semibold lg:max-w-full text-neutral-900">
+          <ul className="flex max-w-xl gap-5 font-semibold lg:max-w-full text-neutral-900">
             <li>
               <NavLink
                 className={({ isActive }) => {
@@ -45,6 +45,19 @@ const MainNavigation = () => {
                 to={"/how-it-works"}
               >
                 How It Works
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) => {
+                  return (
+                    " hover:bg-neutral-200 flex transition duration-300 py-1 px-2 rounded ease-in-out " +
+                    (isActive ? "text-primary03" : "")
+                  );
+                }}
+                to={"/assessyourself"}
+              >
+                Assess Yourself
               </NavLink>
             </li>
             {/* <li>
@@ -203,6 +216,19 @@ const MainNavigation = () => {
                 to={"/how-it-works"}
               >
                 How It Works
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) => {
+                  return (
+                    " hover:bg-neutral-200 transition duration-300 py-1 px-2 rounded ease-in-out " +
+                    (isActive ? "text-primary03" : "")
+                  );
+                }}
+                to={"/assessyourself"}
+              >
+                Assess Yourself
               </NavLink>
             </li>
             <li>

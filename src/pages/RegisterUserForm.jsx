@@ -48,8 +48,8 @@ const RegisterUserForm = () => {
       key: razorpayKeyData.key, // Enter the Key ID generated from the Dashboard
       amount: payingAmount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       currency,
-      name: "Asmi Health", //your business name
-      description: "Gift Card",
+      name: "Asmi Life", //your business name
+      description: "Assess Yourself",
       image:
         "https://res.cloudinary.com/dhlmdbx4t/image/upload/v1710864005/logo_hliyyv.png",
       order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1

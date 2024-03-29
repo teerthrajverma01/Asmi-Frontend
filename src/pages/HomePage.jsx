@@ -388,6 +388,7 @@ const HomePage = () => {
               <div className="mt-8 flex justify-center text-center transition duration-300 ease-in-out  hover:translate-y-[-1px]">
                 <NavLink
                   className="p-3 mx-auto font-semibold text-white border border-solid rounded-md bg-primary03 w-fit hover:bg-primary05 border-neutral-300"
+                  onClick={() => window.scrollTo(0, 0)}
                   to={"/gift-card"}
                 >
                   Click Here To Gift Your Loved Ones A Mental Health Wellness
