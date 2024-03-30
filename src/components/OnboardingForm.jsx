@@ -31,6 +31,25 @@ const OnboardingForm = () => {
 
   const [selectedSpecializations, setSelectedSpecializations] = useState([]);
 
+  const [otherSpecialization, setOtherSpecialization] = useState("");
+  const [isOtherSelected, setIsOtherSelected] = useState(false);
+
+  const handleCheckboxChange = (e) => {
+    const value = e.target.value;
+    if (value === "Other") {
+      setIsOtherSelected(e.target.checked);
+    }
+    setSelectedSpecializations((prevSelectedSpecializations) =>
+      e.target.checked
+        ? [...prevSelectedSpecializations, value]
+        : prevSelectedSpecializations.filter((spec) => spec !== value)
+    );
+  };
+
+  const handleOtherSpecializationChange = (e) => {
+    setOtherSpecialization(e.target.value);
+  };
+
   const [reference, setReference] = useState("");
   const [referenceContact, setReferenceContact] = useState("");
   const [pan, setPan] = useState("");
@@ -44,7 +63,11 @@ const OnboardingForm = () => {
   const [ifsc, setIfsc] = useState("");
   const [accountType, setAccountType] = useState("");
   const [preferredTimings, setPreferredTimings] = useState("");
-  const [preferredLanguage, setPreferredLanguage] = useState("");
+  // const [preferredLanguage, setPreferredLanguage] = useState("");
+
+  const [languages, setLanguages] = useState([]); // State variable for selected languages
+  const [otherLanguage, setOtherLanguage] = useState(""); // State variable for other language input field
+
   const [consentDataUsage, setConsentDataUsage] = useState(false);
   const [consentNotifications, setConsentNotifications] = useState(false);
   const [consentAgreement, setConsentAgreement] = useState(false);
@@ -63,19 +86,19 @@ const OnboardingForm = () => {
     });
   };
 
-  const handleCheckboxChange = (e) => {
-    const { value, checked } = e.target;
+  // const handleCheckboxChange = (e) => {
+  //   const { value, checked } = e.target;
 
-    if (checked) {
-      // Add the selected specialization to the array
-      setSelectedSpecializations((prevSelected) => [...prevSelected, value]);
-    } else {
-      // Remove the deselected specialization from the array
-      setSelectedSpecializations((prevSelected) =>
-        prevSelected.filter((spec) => spec !== value)
-      );
-    }
-  };
+  //   if (checked) {
+  //     // Add the selected specialization to the array
+  //     setSelectedSpecializations((prevSelected) => [...prevSelected, value]);
+  //   } else {
+  //     // Remove the deselected specialization from the array
+  //     setSelectedSpecializations((prevSelected) =>
+  //       prevSelected.filter((spec) => spec !== value)
+  //     );
+  //   }
+  // };
 
   const sendFormData = async (event) => {
     event.preventDefault();
@@ -112,8 +135,23 @@ const OnboardingForm = () => {
     formData.append("ifsc", ifsc);
     formData.append("accountType", accountType);
     formData.append("preferredTimings", preferredTimings);
-    formData.append("preferredLanguage", preferredLanguage);
+    // formData.append("preferredLanguage", preferredLanguage);
     formData.append("chequeFile", chequeFile);
+
+    // Append selected languages
+    languages.forEach((lang) => {
+      formData.append("languages[]", lang);
+    });
+
+    // Append other language if provided
+    if (languages.includes("Other")) {
+      formData.append("otherLanguage", otherLanguage);
+    }
+
+    // Append other specialization if provide
+    if (selectedSpecializations.includes("Other")) {
+      formData.append("otherSpecialization", otherSpecialization);
+    }
 
     try {
       const response = await fetch(`${BASE_URL}/send-counselor-form`, {
@@ -229,7 +267,7 @@ const OnboardingForm = () => {
             {/* Birthday */}
             <div>
               <label className="block text-[#374151] mt-4 pr-8 pb-1">
-                Birthday*
+                Date of Birth*
               </label>
               <input
                 type="date"
@@ -242,7 +280,7 @@ const OnboardingForm = () => {
             {/* Present Address */}
             <div>
               <label className="block text-[#374151] mt-4 pr-8 pb-1">
-                Present Address*
+                Present Address with PIN Code*
               </label>
               <textarea
                 value={presentAddress}
@@ -281,11 +319,11 @@ const OnboardingForm = () => {
                 onChange={(e) => setPhoto(e.target.files[0])}
                 required
               />
-              <p className="mt-1 text-sm">
+              <div className="mt-1 text-sm font-medium">
                 Please upload a latest, clear, high resolution photograph of
                 yourself. This will be uploaded on the App and will be available
                 for Users to view.{" "}
-              </p>
+              </div>
             </div>
             {/* Brief About Yourself */}
             <div>
@@ -330,10 +368,10 @@ const OnboardingForm = () => {
                 onChange={(e) => setCertificates(e.target.files[0])}
                 required
               />
-              <p className="mt-1 text-sm">
-                Upload a Single PDF containing all your degrees and
-                certificates. UG and above.
-              </p>
+              <div className="mt-1 text-sm font-medium">
+                Upload a single pdf containing UG and PG Degrees and
+                certifications (if any)
+              </div>
             </div>
           </div>
 
@@ -345,7 +383,7 @@ const OnboardingForm = () => {
             {/* Years of Full Time Work Experience */}
             <div className="money">
               <label className="block text-[#374151] mt-4 pr-8 pb-1 ">
-                Years of Full Time Work Experience*
+                Years of Full Time Experience in Psychology*
               </label>
               <input
                 type="number"
@@ -458,6 +496,16 @@ const OnboardingForm = () => {
                   <label className="text-[#374151] pr-8 pb-1">Other</label>
                 </div>
               </fieldset>
+              {isOtherSelected && (
+                <input
+                  type="text"
+                  className="md:w-3/5 w-full p-2 rounded-sm border border-[#d1d5db] w-max-[20rem]"
+                  placeholder="Please specify other specialization"
+                  value={otherSpecialization}
+                  onChange={handleOtherSpecializationChange}
+                  required
+                />
+              )}
             </div>
 
             {/* Reference */}
@@ -496,7 +544,7 @@ const OnboardingForm = () => {
             {/* PAN */}
             <div>
               <label className="block text-[#374151] mt-4 pr-8 pb-1">
-                PAN*
+                PAN Number*
               </label>
               <input
                 className="md:w-3/5 w-full p-2 rounded-sm border border-[#d1d5db] w-max-[20rem]"
@@ -534,7 +582,7 @@ const OnboardingForm = () => {
             {/* Upload Aadhar Card */}
             <div>
               <label className="block text-[#374151] mt-4 pr-8 pb-1">
-                Upload Aadhar Card*
+                Upload Aadhar Card (Front and Back)*
               </label>
               <input
                 className="md:w-3/5 w-full p-2 rounded-sm border border-[#d1d5db] w-max-[20rem]"
@@ -628,7 +676,7 @@ const OnboardingForm = () => {
             {/* Upload Cancelled Cheque */}
             <div>
               <label className="block text-[#374151] mt-4 pr-8 pb-1">
-                Upload Cancelled Cheque*
+                Upload Cancelled Cheque/Passbook Front Page*
               </label>
               <input
                 className="md:w-3/5 w-full p-2 rounded-sm border border-[#d1d5db] w-max-[20rem]"
@@ -643,7 +691,7 @@ const OnboardingForm = () => {
           <div className="mb-8">
             <div className="mb-2 text-xl font-medium">General Information</div>
             {/* Preferred Timings */}
-            <div>
+            {/* <div>
               <label className="block text-[#374151] mt-4 pr-8 pb-1">
                 Preferred Timings (IST)*
               </label>
@@ -654,20 +702,135 @@ const OnboardingForm = () => {
                 onChange={(e) => setPreferredTimings(e.target.value)}
                 required
               />
-            </div>
-            {/* Preferred Language */}
+            </div> */}
+
+            {/* Preferred Timings */}
             <div>
               <label className="block text-[#374151] mt-4 pr-8 pb-1">
-                Preferred Language*
+                Preferred Timings (IST)*
               </label>
-              <input
-                className="md:w-3/5 bg-white w-full p-2 rounded-sm border border-[#d1d5db] w-max-[20rem]"
-                value={preferredLanguage}
-                placeholder="English, Hindi, Other"
-                onChange={(e) => setPreferredLanguage(e.target.value)}
-                required
-              />
+              <div>
+                <input
+                  type="checkbox"
+                  id="morning"
+                  value="9am to 9pm"
+                  checked={preferredTimings.includes("9am to 9pm")}
+                  onChange={(e) =>
+                    setPreferredTimings((prevTimings) =>
+                      e.target.checked
+                        ? [...prevTimings, e.target.value]
+                        : prevTimings.filter(
+                            (timing) => timing !== e.target.value
+                          )
+                    )
+                  }
+                />
+                <label htmlFor="morning" className="ml-2">
+                  9am to 9pm
+                </label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="evening"
+                  value="9pm to 9am"
+                  checked={preferredTimings.includes("9pm to 9am")}
+                  onChange={(e) =>
+                    setPreferredTimings((prevTimings) =>
+                      e.target.checked
+                        ? [...prevTimings, e.target.value]
+                        : prevTimings.filter(
+                            (timing) => timing !== e.target.value
+                          )
+                    )
+                  }
+                />
+                <label htmlFor="evening" className="ml-2">
+                  9pm to 9am
+                </label>
+              </div>
             </div>
+            {/* Preferred Language */}
+            {/* Languages You're Proficient with for Taking Sessions */}
+            <div>
+              <label className="block text-[#374151] mt-4 pr-8 pb-1">
+                Languages You're Proficient with for Taking Sessions*
+              </label>
+              <div>
+                <input
+                  type="checkbox"
+                  id="english"
+                  value="English"
+                  checked={languages.includes("English")}
+                  onChange={(e) =>
+                    setLanguages((prevLanguages) =>
+                      e.target.checked
+                        ? [...prevLanguages, e.target.value]
+                        : prevLanguages.filter(
+                            (lang) => lang !== e.target.value
+                          )
+                    )
+                  }
+                />
+                <label htmlFor="english" className="ml-2">
+                  English
+                </label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="hindi"
+                  value="Hindi"
+                  checked={languages.includes("Hindi")}
+                  onChange={(e) =>
+                    setLanguages((prevLanguages) =>
+                      e.target.checked
+                        ? [...prevLanguages, e.target.value]
+                        : prevLanguages.filter(
+                            (lang) => lang !== e.target.value
+                          )
+                    )
+                  }
+                />
+                <label htmlFor="hindi" className="ml-2">
+                  Hindi
+                </label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="other"
+                  value="Other"
+                  checked={languages.includes("Other")}
+                  onChange={(e) => {
+                    if (e.target.checked) {
+                      setLanguages([...languages, "Other"]);
+                      setOtherLanguage(""); // Reset other language field when "Other" is checked
+                    } else {
+                      setLanguages(
+                        languages.filter((lang) => lang !== "Other")
+                      );
+                      setOtherLanguage(""); // Reset other language field when "Other" is unchecked
+                    }
+                  }}
+                />
+                <label htmlFor="other" className="ml-2 ">
+                  Other
+                  <br />
+                </label>
+                {languages.includes("Other") && (
+                  <input
+                    type="text"
+                    className="md:w-3/5 w-full p-2 rounded-sm border border-[#d1d5db] w-max-[20rem] mt-2"
+                    placeholder="Please specify other languages"
+                    value={otherLanguage}
+                    onChange={(e) => setOtherLanguage(e.target.value)}
+                    required
+                  />
+                )}
+              </div>
+            </div>
+
             {/* Consent */}
             <div className="mt-4 mb-2">
               <div className="mt-3 mb-1">
