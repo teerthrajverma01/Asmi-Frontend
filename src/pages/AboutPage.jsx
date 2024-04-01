@@ -118,6 +118,7 @@ const AboutPage = () => {
                   <div className="p-4"></div>
                   <div className="flex items-center justify-start gap-x-4 gap-y-4 wrap">
                     <NavLink
+                      onClick={() => window.scrollTo(0, 0)}
                       to={"/contact-us"}
                       className="gap-x-1 text-[color:var(--neutral-900)] whitespace-nowrap justify-start items-center font-semibold no-underline transition-[color] duration-[0.2s] flex"
                     >
@@ -605,6 +606,7 @@ const AboutPage = () => {
         </p>
         <div className="flex justify-center transition duration-300 ease-in-out  hover:translate-y-[-2px]">
           <NavLink
+            onClick={() => window.scrollTo(0, 0)}
             className="p-3 font-semibold bg-white border border-solid rounded-md hover:bg-neutral-200 border-neutral-300 text-neutral-900 "
             to={"/assessment"}
           >

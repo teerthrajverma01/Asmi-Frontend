@@ -248,7 +248,7 @@ const Assessment = () => {
                 </div>
                 <hr />
 
-                <NavLink to={"/"}>
+                <NavLink onClick={() => window.scrollTo(0, 0)} to={"/"}>
                   <button className="px-4 mx-auto btn assessmentbtn w-fit">
                     Go to Home Page
                   </button>

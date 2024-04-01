@@ -112,7 +112,7 @@ const counselorImages = [
 const Carousal = () => {
   return (
     <div className="max-w-[95%] mt-20">
-      <NavLink to={"/counselors"}>
+      <NavLink onClick={() => window.scrollTo(0, 0)} to={"/counselors"}>
         <div className="mb-12 font-sans text-4xl font-semibold text-center text-neutral-900 md:text-5xl">
           Meet Our Counselors
         </div>
