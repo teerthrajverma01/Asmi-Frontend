@@ -54,7 +54,7 @@ const EatingProblem = ({ username, email }) => {
           </div>
           {/* form type */}
           <div className="p-4 text-2xl text-center bg-orange-300 sm:text-5xl">
-            Questionnaire for Eating Problem
+            Questionnaire for Changes in Appetite
           </div>
           {/* form */}
           <div className="mx-3 my-12 text-xl sm:mx-12 ">

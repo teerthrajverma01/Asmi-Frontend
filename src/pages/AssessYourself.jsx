@@ -97,18 +97,18 @@ const AssessYourself = () => {
             <div className="">
               {/* individual assessments */}
               <div className="grid gap-6 sm:gap-8 sm:grid-cols-2">
-                {/* eating problem */}
+                {/* Changes in Appetite */}
                 <div className="grid grid-cols-5 gap-4 overflow-hidden border md:grid-cols-4 rounded-3xl">
                   <div className="flex col-span-2 md:col-span-1">
                     <img
                       className="object-contain"
                       src={eating}
-                      alt="Eating Problem"
+                      alt="Changes in Appetite"
                     />
                   </div>
                   <div className="self-center col-span-3">
                     <div className="mt-4 mb-2 text-xl font-medium sm:text-3xl">
-                      Eating Problem
+                      Changes in Appetite
                     </div>
                     <div className="sm:mb-4 sm:text-xl">
                       Do you think your appetite is fluctuating? Take a test to
