@@ -4,8 +4,10 @@ import { Link, useParams, useLocation } from "react-router-dom";
 const FormSubmitRedirect = () => {
   const { result } = useParams();
   const location = useLocation();
-  const message = location.state?.mymessage || "";
-  console.log(message);
+  const positivemessage = location.state?.positivemessage || "";
+  const negativemessage = location.state?.negativemessage || "";
+  console.log(positivemessage);
+  console.log(negativemessage);
   console.log(result);
 
   useEffect(() => {
@@ -18,8 +20,9 @@ const FormSubmitRedirect = () => {
           <div className="flex justify-center align-middle ">
             <div className="max-w-sm sm:max-w-[70%] p-6 bg-white border border-gray-200 rounded-lg shadow ">
               <h5 className="mb-2 text-3xl font-bold tracking-tight text-red-400">
-                You are warranted for further questioning and more comprehensive
-                assessment {message ? `for ${message}` : ""}.
+                {positivemessage
+                  ? positivemessage
+                  : "Your results seem to be indicating concerns"}
               </h5>
 
               <p className="mt-8 mb-3 text-2xl font-normal text-gray-800 ">
@@ -53,8 +56,9 @@ const FormSubmitRedirect = () => {
           <div className="flex justify-center align-middle ">
             <div className="max-w-sm  sm:max-w-[70%]  p-6 bg-white border border-gray-200 rounded-lg shadow">
               <h5 className="mb-2 text-3xl font-bold tracking-tight text-green-800 ">
-                You are not warranted for further assessment as per this
-                questionnaire.
+                {negativemessage
+                  ? negativemessage
+                  : "You are not warranted for further assessment as per this questionnaire."}
               </h5>
 
               <p className="mb-3 text-2xl font-normal text-gray-700 ">

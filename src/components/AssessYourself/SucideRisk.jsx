@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import formheader from "../../assets/image/assessyourself/formheader.png";
 
 import BASE_URL from "../../apis/Config";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 
 const SucideRisk = ({ username, email }) => {
   const { id } = useParams();
@@ -49,7 +49,12 @@ const SucideRisk = ({ username, email }) => {
         return response.json();
       })
       .then((result) => {
-        navigate(`/submitassessment/${result.result}`);
+        navigate(`/submitassessment/${result.result}`, {
+          state: {
+            positivemessage: result.positivemessage,
+            negativemessage: result.negativemessage,
+          },
+        });
       })
       .catch((error) => {
         console.error("Error while submitting form:", error);

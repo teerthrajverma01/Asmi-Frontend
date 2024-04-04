@@ -75,7 +75,10 @@ const Das = ({ username, email }) => {
       })
       .then((result) => {
         navigate(`/submitassessment/${result.result}`, {
-          state: { mymessage: result.mymessage },
+          state: {
+            positivemessage: result.positivemessage,
+            negativemessage: result.negativemessage,
+          },
         });
       })
       .catch((error) => {
